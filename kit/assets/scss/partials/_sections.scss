@@ -1,0 +1,130 @@
+section * {
+  z-index: 3;
+  position:	relative;
+}
+
+/*----------------------------------------------   
+--Content - Sections
+-----------------------------------------------  */
+.sect-content {
+  padding: 3em 0;
+  
+  /* Remove header margins for even padding */
+  h2, h3, h4{
+  	margin-top: 0;
+  }
+  
+  &.no-bottom{
+  	padding-bottom: 0;
+  }
+}
+
+/*----------------------------------------------   
+--Sect: padding-Modifier
+-----------------------------------------------  */
+.title{
+	padding: 4em 0em;
+	@include center-all;
+	
+	p{
+		@include title-text;
+	}
+	
+	h1, h2, h3{
+		margin-top: 0 !important;
+	}
+}	
+
+/*----------------------------------------------   
+--Banners - sections with full width background images
+-----------------------------------------------  */
+.sect-banner {
+  position: relative;
+  background-size: 150%;
+  color: white;
+  overflow: hidden;
+  padding: 15% 0;
+  
+  @media (min-width: $mq-med) {
+    padding: 7% 0;
+    background-size: cover;
+  }
+   h1, h2, h3{
+    line-height: 1;
+  }
+  
+  p{
+  	font-size: 110%;
+   @media (min-width: $mq-med) {
+      font-size: 125%;
+   } 
+  }
+  
+  br{
+    display: none;
+    
+    @media (min-width: $mq-small) {
+      display: block;
+    }
+  }
+  
+  .center-all{
+    padding-left: 5%;
+    padding-right: 5%;
+  
+    @media (min-width: $mq-med) {
+      padding-left: 12%;
+      padding-right: 12%;
+    }
+  }
+}
+
+
+/*----------------------------------------------   
+--JS Parallax: parallax bg images
+-----------------------------------------------  */
+.js-parallax{
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  
+  @media (max-width: $mq-med) {
+    background-position: top center !important;
+    background-attachment: scroll !important;
+  }
+  
+  @media (min-width: $mq-med) {
+    background-attachment: fixed !important;
+  }
+}
+
+
+/*----------------------------------------------   
+-Sect - Video Banners
+-----------------------------------------------  */
+.bg-vid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: 50% 50% no-repeat;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  background-size: auto 200%;
+
+  @media (min-width: $mq-med) {
+  background-size: cover;
+  }
+}
+
+.sect-banner #bgVideo {
+  overflow: hidden;
+}
+
+.sect-banner #bgVideo > video {
+  position: absolute !important;
+  top: 0 !important;
+}
+
+

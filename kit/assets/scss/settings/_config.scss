@@ -1,0 +1,85 @@
+/*----------------------------------------------   
+--Fonts
+-----------------------------------------------  */
+$font-header: "verlag", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-paragraph: "minion-pro", georgia, times, serif;
+
+/*----------------------------------------------   
+--Font Sizes: Base
+-----------------------------------------------  */
+$font-h1:	2.55em;
+$font-h2:	2.1em;
+$font-h3:	1.7em;
+$font-h4:	1.2em;
+$font-h5:	1em;
+
+/*----------------------------------------------   
+--Font Sizes: supporting
+-----------------------------------------------  */
+$font-xsmall: .6em;
+$font-small: .75em;
+$font-base: 1em;
+$font-large: 2.75em;
+$font-xlarge: 3.25em;
+
+/*----------------------------------------------   
+--Line Height
+-----------------------------------------------  */
+$base-lineheight: 1.6;
+
+/*----------------------------------------------   
+--Grid
+-----------------------------------------------  */
+/* Row Container */
+$row-max-width: 60em;
+
+/* Columns Grid */
+$col: 100% / 12;
+$col-padding: 0.5em;
+$base-gutter: 0.5em;
+
+/* MQs Min-Width */
+$mq-xsmall: 22em;
+$mq-small: 32em;
+$mq-med: 54em;
+$mq-large: 76em;
+$mq-xlarge: 95em;
+$mq-xxlarge: 115em;
+$mq-xxxlarge: 130em;
+
+/*----------------------------------------------   
+--Layouts
+-----------------------------------------------  */
+$sect-headings: 1em 0;
+$sect-title: 6em 0 7em;
+$sect-content: 3em 0; 
+$sect-bg: 6em 0 7em;
+$pad-p: 0.25em 0 0.5em;
+
+/*----------------------------------------------   
+--Borders
+-----------------------------------------------  */
+$base-borderradius: 4px;
+$form-borderwidth: 2px;
+
+
+/*----------------------------------------------   
+--Colors
+-----------------------------------------------  */
+$color-alpha:  #38d397;
+$color-beta:   #003a49;
+$color-delta:  #d15424;
+$color-zeta:   #1b7091;
+$color-white:     #fff;
+$color-headers: #133E49;
+$color-light:     rgba(255,255,255,0.8);
+$color-dark:      rgba(0,0,0,0.9);
+$color-grey:      #cdcdcd;
+$color-lightgrey: #eee;
+$color-darkgrey:  #586B72;
+$color-alert:     #e74c3c;
+$color-ok:        #1ABC9C;
+
+
+
+

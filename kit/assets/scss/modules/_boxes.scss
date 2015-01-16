@@ -1,0 +1,47 @@
+.box{
+	background: $color-white;
+	padding: 0 0 1em;
+	line-height: 1.5;
+	@include prefix(box-shadow, 0 1px 3px rgba(0,0,0,0.4));
+  
+  & h3, & h4{
+    margin: .8em 0 .5em;
+    line-height: 1.4;
+  }
+  
+  & p{
+    font-size: 85%;
+    margin: 0;
+  }
+  
+  & .meta{
+    font-size: 75%;
+    padding: .4em 0 .1em;
+  }
+  
+  & img{
+   width: 100%;
+   margin: 0 auto;
+   display: block;
+  }
+  
+  & .box-inner{
+	padding: 0em 1em .5em;
+	clear: right;
+  }
+  & .box-inner-2{
+  padding: 0em 1.5em .5em;
+  clear: right;
+  }
+  
+  &.stacked{
+    border-top: 1px solid $color-grey;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 
+    	0 4px 0 -1px #FFF, 
+    	0 4px 1px 0px rgba(0, 0, 0, 0.19), 
+    	0 8px 0 -2px #FFF, 
+    	0 8px 2px -1px rgba(0, 0, 0, 0.17);
+  }
+
+  @media (min-width: $mq-med) {}
+}

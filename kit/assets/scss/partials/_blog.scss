@@ -1,0 +1,234 @@
+/*----------------------------------------------   
+--Blog  - archive
+-----------------------------------------------  */
+.blog main{
+  padding-top: 3em;
+}
+.post-single main{
+  padding-top: 7em;
+  padding-bottom: 3em;
+}
+.post-single header{
+  background-color: $color-zeta;
+}
+
+article .block-wrap .block-text{
+  border-bottom: 1px solid $color-grey;
+}
+article h1.entry-title{
+  margin: 0.3em 0 .2em;
+  
+  @media only screen and (max-width: $mq-med) {
+  font-size: 2.15em;
+  line-height: 1.3;
+  }
+}
+
+article .block-text{
+  h2{
+    margin: 0.3em 0;
+    font-size: 1.5em;
+    
+    @media (min-width: $mq-med) {
+      font-size: 1.75em;
+    }
+  }
+}
+
+
+/*----------------------------------------------   
+--Blog - single
+-----------------------------------------------  */
+article h1.entry-title{
+  margin: 0.3em 0 .2em;
+  letter-spacing: -1px;
+}
+
+.post-single article p:first-of-type {
+  font-size: 165%;
+  font-weight: 600;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  margin: 0.2em 0;
+  line-height: 1.3;
+}
+
+.post-single figure{
+  margin: 0 0 0.5em;
+}
+
+aside {
+
+  *{
+    clear: right;
+    line-height: 1.4;
+    
+    @media only screen and (min-width: $mq-med) {
+     float: right;
+     text-align: right;
+    }
+  }
+  
+  h4{
+    margin: 0.3em 0 0;
+  }
+  
+  p, ul{
+      font-size: 85%;
+      margin: 0.2em 0 0;
+  
+  }
+  
+  ul li{
+    list-style: none;
+    padding: 0 0 0.1em;
+  }
+  
+  
+  hr.sep {
+    display: block;
+    width: 100%;
+    margin: .7em 0em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    
+    @media only screen and (min-width: $mq-med) {
+    width: 60%;
+    }
+  }
+  
+  @media only screen and (min-width: $mq-med) {
+  max-width: 50%;
+  float: right;
+  }
+}
+
+.grid-breaking{
+
+  @media (min-width: $mq-med) {
+  margin-right: -6%;
+  margin-left: -6%;
+  }
+}
+
+/*----------------------------------------------   
+--Blog  - single - Metas
+-----------------------------------------------  */
+@media only screen and (max-width: $mq-med) {
+aside .avatar{
+  float: left;
+  width: 4em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+}
+
+.post-meta-avatar {
+  width: 2em;
+  height: 2em;
+  margin-right: .5em;
+  line-height: 2;
+  margin-right: .4em;
+  margin-bottom: -.6em;
+  display: none;
+  @media only screen and (min-width: $mq-med) {
+  display: inline-block;
+  }
+}
+.post-meta-byline{
+  font-size: 80%;
+}
+
+.post-meta{
+  padding: 0.3em 0;
+  margin: 0 0 .7em;
+  color: #999;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  font-family: $font-paragraph;
+}
+
+ul.post-meta li{
+  list-style: none;
+}
+
+
+.post-meta-avatar {
+  width: 2em;
+  height: 2em;
+  margin-right: .5em;
+  line-height: 2;
+  margin-right: .4em;
+  margin-bottom: -.6em;
+}
+.post-meta-byline{
+  font-size: 85%;
+}
+
+
+/*----------------------------------------------   
+--Blog  - single - pagination
+-----------------------------------------------  */
+
+.pagination {
+  margin-bottom: 0;
+  width: auto;
+  text-align: left;
+  
+  @media only screen and (max-width: $mq-med) {
+  display: none;
+  }
+  
+  a, a:hover {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  
+}
+
+#older-nav a, 
+#newer-nav a {
+  top: 54%;
+  @include transition(margin, 0.2s, ease-in-out);
+  position: fixed;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.55em 0.5em 0.5em;
+  z-index: 10;
+  top: 44%;
+  width: 9em;
+}
+
+#newer-nav a {
+  right: -6.5em;
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+  
+  &:hover {
+  margin-right: 6em;
+  color: $color-alpha;
+}
+}
+
+#older-nav a {
+  left: -6.7em;
+  border-top-right-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+  float: left;
+  text-align: right;
+
+  &:hover {
+    margin-left: 6em;
+    color: $color-alpha;
+  }
+}
+
+.pagination .icon-chev-righ-2,
+.pagination .icon-chev-left-2{
+  position: relative;
+  top: 2px;
+}
+
+.pagination-sep{
+  display: none;
+}
