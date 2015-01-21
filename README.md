@@ -12,7 +12,7 @@ Maybe one of these days. This is more for me.
 ## Project Structre
 Code kit allows you to rock includes for shared elements, like a header and footer. It also enables importing of js files, which is great for organization. So, I structre my projects with a working and build folders. The working folders make use of .kit files for html, and scss & js folders that compress and output to a similarly named build assets folder. Looks like this:
 
-
+```
 |-- assets/                   # The Build folder
 |   |-- css/      
 |       |-- app.min.scss      # all styles minified
@@ -71,3 +71,4 @@ Code kit allows you to rock includes for shared elements, like a header and foot
 |       |-- home.kit        # .kit files that compile to html
 |       |-- about.kit
 |       |-- etc...
+```
