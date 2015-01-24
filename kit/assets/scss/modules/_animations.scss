@@ -47,17 +47,6 @@ a.fade-img img:hover{
   opacity: 1;
 }
 
-
-
-/*----------------------------------------------   
---On fademe's make main bg color same as wrapper
------------------------------------------------  */
-.pages-environmentalism, .pages-story, .products-show, .products-details{
-  main{
-    background-color: $bg-medium;
-  }
-}
-
 /*----------------------------------------------   
 --Fade Up
 -----------------------------------------------  */
@@ -96,10 +85,6 @@ a.fade-img img:hover{
 .fade-left{
   @include animation(fade-left ease-in-out 1s .1s both);
 }
-.fade-left-2{
-  @include animation(fade-left ease-in-out 1.2s .2s both);
-}
-
 @include keyframes(fade-left) {
   0%{
     opacity: 0;
@@ -117,9 +102,7 @@ a.fade-img img:hover{
 .fade-right{
   @include animation(fade-right ease-in-out 1s .1s both);
 }
-.fade-right-2{
-  @include animation(fade-right ease-in-out 1.2s .2s both);
-}
+
 @include keyframes(fade-right) {
   0%{
     opacity: 0;
