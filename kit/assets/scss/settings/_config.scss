@@ -4,14 +4,6 @@
 $font-header: "verlag", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-paragraph: "minion-pro", georgia, times, serif;
 
-/*----------------------------------------------   
---Font Sizes: Base
------------------------------------------------  */
-$font-h1:	2.55em;
-$font-h2:	2.1em;
-$font-h3:	1.7em;
-$font-h4:	1.2em;
-$font-h5:	1em;
 
 /*----------------------------------------------   
 --Font Sizes: supporting
@@ -25,7 +17,7 @@ $font-xlarge: 3.25em;
 /*----------------------------------------------   
 --Line Height
 -----------------------------------------------  */
-$base-lineheight: 1.6;
+$base-lineheight: 1.71em;;
 
 /*----------------------------------------------   
 --Grid
@@ -35,16 +27,21 @@ $row-max-width: 60em;
 
 /* Columns Grid */
 $col: 100% / 12;
-$col-padding: 0.5em;
-$base-gutter: 0.5em;
+$col-padding: 0.75em;
+$base-gutter: 0.75em;
 
+/* MQs Min-Width */
 /* MQs Min-Width */
 $mq-xsmall: 22em;
 $mq-small: 32em;
 $mq-med: 54em;
-$mq-large: 76em;
-$mq-xlarge: 95em;
+//laptop
+$mq-large: 65em;
+//Past laptop
+$mq-xlarge: 91em;
+//Mid Size monitor
 $mq-xxlarge: 115em;
+//Thunderbold goes to 157em
 $mq-xxxlarge: 130em;
 
 /*----------------------------------------------   

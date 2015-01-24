@@ -6,99 +6,94 @@
 }
 
 /*----------------------------------------------   
---Row Class
+-Row Class (container)
 -----------------------------------------------  */
 .row{  
-  width: 98%;
-  max-width: $row-max-width;
-  margin-left: auto;
-  margin-right: auto;
-  
-  @media (min-width: $mq-med) {
-    width: 94%
-  }
-  
-  @media (min-width: $mq-large) {
-  	margin: 0 auto; 
-   	max-width: 56em;
-   	width: 85%
- 	}
- 	
- 	@media (min-width: $mq-xlarge) {
-  	margin: 0 auto; 
-   	max-width: 56em;
-   	width: 85%
- 	}
- 	
- 	@media (min-width: $mq-xlarge) {
-   max-width: 62em;
-   width: 85%
- 	}
+	width: 95%;
+	max-width: $row-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@media (min-width: $mq-med) {
+	 width: 94%;
+	}
+	
+	@media (min-width: $mq-large) {
+		margin: 0 auto; 
+	 max-width: 56em;
+	 width: 85%
+	}
+	
+	@media (min-width: $mq-xlarge) { 
+	 max-width: 56em;
+	}
+	
+	@media (min-width: $mq-xxlarge) {
+	 max-width: 62em;
+	}
  
- /* Go Almost Full Width */
-
-	.xl & {
-	  max-width: 98%; 
-	  width:98%;
+/*----------------------------------------------   
+--Row: Wider
+-----------------------------------------------  */
+	.xl &, &.xl {
+		max-width: 98%; 
+		width:98%;
 	}
 
- /* Go Full Width */ 
- .xxl &{
-   width: 100%;
-   max-width: 100%;
- }
- 
-  &.g-full, &[class*="g-"]{
-    padding-left:$col-padding;
-    padding-right: $col-padding;
-  }
+	/* Go Full Width */ 
+	.xxl &, &.xxl{
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	&.g-full, &[class*="g-"]{
+		padding-left:$col-padding;
+		padding-right: $col-padding;
+	}
 }
-
-/* For Nesting Columns */
-.row .row { 
-  width:auto; 
-  max-width:none; 
-  min-width:0; 
-  margin: 0 -$base-gutter; 
-  
-  @media (min-width: $mq-med) {
-    width:auto; 
-    max-width:none; 
-    min-width:0; 
-    margin:0 -$base-gutter;
-  }
-}
-
 
 /*----------------------------------------------   
---Columns
+-Row : Nested
+-----------------------------------------------  */
+.row .row { 
+	width:auto; 
+	max-width:none; 
+	min-width:0; 
+	margin: 0 -$base-gutter; 
+ 
+	@media (min-width: $mq-med) {
+	 width:auto; 
+	 max-width:none; 
+	 min-width:0; 
+	 margin:0 -$base-gutter;
+	}
+}
+
+/*----------------------------------------------   
+-Columns
 -----------------------------------------------  */
 .cols{ 
-  float:left;
-  min-height:1px;
-  position:relative;
-  width: 100%;
-  
-  .row &{
-  padding-left:$col-padding;
-  padding-right:$col-padding;
-	  @media (min-width: $mq-small) {
-	  	padding:0 2em;
-	  }
-	  @media (min-width: $mq-med) {
-	  	padding-left:$col-padding;
-	  	padding-right:$col-padding;
-	  }
-  }
+	float:left;
+	min-height:1px;
+	position:relative;
+	width: 100%;
+	
+	.row &{
+		padding-left:$col-padding;
+		padding-right:$col-padding;
+	}
 }
 
-.half-pad .row {
+/*----------------------------------------------   
+-Row with half the paddings
+-----------------------------------------------  */
+.half-pad .row, .half-pad .row .cols {
   padding: 0 $base-gutter/2;
 }
 
-.half-pad .row .cols{
-  padding: 0 $base-gutter/2;
-}
+/*----------------------------------------------   
+-Row with no padding cols
+-----------------------------------------------  */
 .row.nopad .cols { 
   padding:0
 }
@@ -107,47 +102,44 @@
   margin:0 -$col-padding;
 }
 
+/*----------------------------------------------   
+-Cols: Float last col right
+-----------------------------------------------  */
 @media only screen and (min-width: $mq-med) {
 [class*="cols"]+[class*="cols"]:last-child { 
   float:right
 }
 
-.cols.stayleft{
-  float: left !important;
-  }
-}
-
-ul.cols{
-  padding-left: 1em;
-  padding-right: 8%;
-  margin-bottom: 0;
-  @media only screen and (min-width: $mq-med) {
-  padding-right: 0;
-  }
+/*----------------------------------------------   
+--Cols: stay left
+-----------------------------------------------  */
+	.cols.stayleft{
+ 	float: left !important;
+ }
 }
 
 /*----------------------------------------------   
---Grid: xtra small (also for non collapsing columns)
+-Grid Cols: xtra small (also for non collapsing columns)
 -----------------------------------------------  */
 .xsm-3, .row .xsm-3  { width: $col * 3;}
-.xsm-6, .row .xsm-6   { width: $col * 6;}
+.xsm-6, .row .xsm-6  { width: $col * 6;}
 .xsm-4, .row .xsm-4  { width: $col * 4;}
 .xsm-8, .row .xsm-8  { width: $col * 8;}
 
-@media only screen and (min-width: $mq-small) {
 /*----------------------------------------------   
---Grid: small
+-Grid Cols Small
 -----------------------------------------------  */
+@media only screen and (min-width: $mq-small) {
 .sm-6, .row .sm-6   { width: $col * 6;}
 .sm-4, .row .sm-4  { width: $col * 4;}
 .sm-3, .row .sm-3  { width: $col * 3;}
 .sm-8, .row .sm-8  { width: $col * 8;}
 }
 
-@media only screen and (min-width: $mq-med) {
 /*----------------------------------------------   
---Grid: main
+-Grid Cols Main: after med
 -----------------------------------------------  */
+@media only screen and (min-width: $mq-med) {
 .g-1,  .row .g-1  { width: $col;}
 .g-2,  .row .g-2  { width: $col * 2;}
 .g-3,  .row .g-3  { width: $col * 3;}
@@ -162,7 +154,7 @@ ul.cols{
 .g-12, .row .g-12 { width: $col * 12;}
 
 /*----------------------------------------------   
---Offsets
+-Offsets: after med
 -----------------------------------------------  */ 
 .row .offset1 {margin-left: $col}
 .row .offset2 {margin-left: $col * 2}
@@ -175,42 +167,82 @@ ul.cols{
 .row .offset9 {margin-left: $col * 9}
 .row .offset10{margin-left: $col * 10}
 
-.source-reverse{
-  float: right !important;
-}
-.push-right{
-  position: relative;
-  right: -50%;
+/*---------------------------------------------   
+-Source Order: after med
+----------------------------------------------- */
+
+	.source-reverse{
+	  float: right !important;
+	}
+	.push-right{
+	  position: relative;
+	  right: -50%;
+	}
+	.pull-left{
+	  position: relative;
+	  left: -50%;
+	}
+	.pull-9{
+	  right: 75%;
+	}
+	.push-3 {
+	  left: 25%;
+	}
 }
 
-.pull-left{
-  position: relative;
-  left: -50%;
-}
-
-.pull-9{
-  right: 75%;
-}
-.push-3 {
-  left: 25%;
-}
-}
-
-@media only screen and (min-width: $mq-med)  and (max-width: $mq-large) {
-.row.foldy .g-3  { width: $col * 6 !important;}
-}
-
-
-
-/*----------------------------------------------   
---Full Width Images
------------------------------------------------  */
-img.full{
-	width: 100%;
-}
-img.img-contain{
-	margin: 0 auto;
-	display: block;
+/*---------------------------------------------   
+-Containerless Grid modifer
+----------------------------------------------- */
+.row.is-table{
+	display:	block;
+	width:	100%;
+	max-width:	none;
+	
+	//remove space created from microclearfix
+	margin-left:	-0.1%;
+	width: 100.4%;
+	
+	@media (min-width: $mq-med) {
+		display:	table;
+	}
+	
+	.cols{
+		padding:	10% $col-padding;
+		float:	none;
+		width:	100%;
+		
+		@media (min-width: $mq-med) {
+			padding:	6% 5%;
+			width:	50%;
+			display:	table-cell;
+			vertical-align:	middle;
+		}
+		
+		&.has-map{
+			padding:	0;
+			margin:	0;
+			@media (min-width: $mq-med) {
+				padding:	0;
+				margin:	0;
+			}
+		}
+		
+		h1, h2, h3, h4{
+			margin:	0;
+		}
+		
+		&.has-bgimg{
+			background-size:	cover;
+			background-position:	50%;
+			min-height:	20em;
+		}
+		&[class*="bg-"] {
+			color:	$color-dark;
+		}
+		.content{
+			vertical-align:	middle;
+		}
+	}
 }
 
 /*---------------------------------------------   
@@ -260,119 +292,6 @@ img.img-contain{
 	}
 }
 
-
-
-/*---------------------------------------------   
---Containerless Grid
------------------------------------------------ */
-
-.block-wrap {
-  display: table;
-  width: 100%;
-  float: left;
-  background: #fff;
- background-color: $color-delta;
-
-  h2{
-    margin: 0.2em 0 0;
-  }
-}
-
-.block-half {
-  text-align: left;
-  width: 100%;
-  display: block;
-  vertical-align: middle;
-  text-align: center;
-  padding: 7.5em 0;
-  
-  @media only screen and (min-width: $mq-med) {
-  width: 50% !important;
-  display: table-cell !important;
-  padding: 12% 0;
-  }
-
-  &.block-text {
-    padding: 1em $base-gutter 2em;
-    text-align: left;
-    background-color: #fff;
-    
-    @media only screen and (min-width: $mq-med) {
-      padding: 2em 0.5em; 
-    }
-    @media only screen and (min-width: $mq-xlarge) {
-      padding: 2em 1em; 
-    }
-}
-  &.block-text article,
-  &.block-text div {
-    margin: 0 auto;
-    max-width: 92%;
-}
-
-  &.block-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 180%;
-    background-color: $color-delta;
-    position: relative;
-    text-align: center;
-    opacity: 1;
-
-    @media only screen and (min-width: $mq-small) {
-      background-size: cover;
-    }
-}
-}
-
-.block-third {
-  text-align: left;
-  width: 100%;
-  display: block;
-  vertical-align: middle;
-  text-align: center;
-  padding: 7.5em 0;
-  
-  @media only screen and (min-width: $mq-med) {
-  width: 33.33% !important;
-  display: table-cell !important;
-  padding: 12% 0;
-  }
-
-  &.block-text {
-    padding: 1em $base-gutter 2em;
-    text-align: left;
-    background-color: #fff;
-    
-    @media only screen and (min-width: $mq-med) {
-      padding: 2em 0.5em; 
-    }
-    @media only screen and (min-width: $mq-xlarge) {
-      padding: 3em 1em; 
-    }
-}
-  &.block-text article,
-  &.block-text div {
-    margin: 0 auto;
-    max-width: 92%;
-}
-
-  &.block-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 180%;
-    background-color: $color-delta;
-    position: relative;
-    text-align: center;
-    opacity: 1;
-
-    @media only screen and (min-width: $mq-small) {
-      background-size: cover;
-    }
-}
-}
-
-
 /*---------------------------------------------   
 Form Grid
 ----------------------------------------------- */
@@ -393,8 +312,26 @@ form .cols{
   padding: 0 0.5em;
 }
 
+
 /*---------------------------------------------   
-Grid Blocks
+Multi Col Layout
+----------------------------------------------- */
+.multicol-2 {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 2em;
+  -webkit-column-width: 48.571%;
+  -moz-column-count: 2;
+  -moz-column-gap: 2.857%;
+  -moz-column-width: 48.571%;
+  column-count: 2;
+  column-gap: 2em;
+  column-width: 48.571%;
+  text-align: justify;
+}
+
+
+/*---------------------------------------------   
+Grid Blocks / List Grid
 ----------------------------------------------- */
 
 @media only screen {
@@ -482,19 +419,6 @@ Grid Blocks - Med
 .med-g-block-8 > li:nth-of-type(8n+1), {
  clear: both;
 }
-
-.multicol-2 {
-  -webkit-column-count: 2;
-  -webkit-column-gap: 2em;
-  -webkit-column-width: 48.571%;
-  -moz-column-count: 2;
-  -moz-column-gap: 2.857%;
-  -moz-column-width: 48.571%;
-  column-count: 2;
-  column-gap: 2em;
-  column-width: 48.571%;
-  text-align: justify;
-}
 }
 
 /*---------------------------------------------   
@@ -532,11 +456,7 @@ Grid Blocks - Large
 .lg-g-block-8 > li:nth-of-type(8n+1), {
   clear: both;
 }
-
 }
 
 
-@media only screen and (min-width: $mq-large) {}
-@media only screen and (min-width: $mq-xlarge) {}
-@media only screen and (min-width: $mq-xxlarge) {}
 

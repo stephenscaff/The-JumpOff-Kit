@@ -88,80 +88,54 @@
 	@include transform(translateY(-50%));
 }
 
-/*----------------------------------------------   
---Paddings
------------------------------------------------  */
-$sect-headings: 1em 0;
-$sect-content: 2em 0 3em; 
-$sect-header: 5em 0 6em;
-$pad-p: 0.25em 0 0.5em;
-$sect-bigpad: 5em 0 7em;
 
 
 /*----------------------------------------------   
 --Links
 -----------------------------------------------  */
-@mixin link-light{
-	a{
-		color: #fff;
-		@include transition(color .7s ease-in-out);
-	}
-	
-	a:hover{
-		color: $color-alpha;
-		@include transition(color .7s ease-in-out);
-	}
+@mixin link-styles($linkColor: $color-alpha){
+ color: $linkColor;
+ text-decoration: none; 
+ line-height:inherit;
+ @include transition(color 0.6s ease-in-out);
+ 
+ &:hover{
+ 	@include transition(color 0.6s ease-out-out);
+ 
+ @if lightness($linkColor) > 40% {
+   color:darken($linkColor,20);
+  } @else {
+    color:lighten($linkColor,20);
+  }
+ } 
+ &:active{
+ 	color: $color-alpha;
+ }
 }
 
 /*----------------------------------------------   
---Links
+--Header Font Defualts
 -----------------------------------------------  */
-@mixin link-dark{
-	a{
-		color: $color-dark;
-		@include transition(color .7s ease-in-out);
-	}
-	
-	a:hover{
-		color: $color-alpha;
-		@include transition(color .7s ease-in-out);
-	}
+@mixin font-header-styles($letterSpacing: 0.9em, $fontWeight: 600){
+	font-family:	$font-header;
+	text-transform:	uppercase;
+	letter-spacing:	$letterSpacing;
+	font-weight:	$fontWeight;
 }
-@mixin link-invert{
-		color: $color-beta;
-		@include transition(color .7s ease-in-out);
-	
-	&:hover{
-		color: $color-alpha;
-		@include transition(color .7s ease-in-out);
-	}
-}
-@mixin link-grey{
-	a{
-		color: $color-grey;
-		@include transition(color .7s ease-in-out);
-	}
-	
-	a:hover{
-		color: $color-alpha;
-		@include transition(color .7s ease-in-out);
-	}
-}
-
-
-
 /*----------------------------------------------   
 --H1
 -----------------------------------------------  */
 @mixin font-h1{
-	font-size: 1.75em;
-	letter-spacing: 0.02em;
+	font-size: 5.625em;
+	  line-height: 1.214814816em;
+	  margin-top: 0.60740741em;
+	  margin-bottom: 0.3037037em;
 	
 	@media (min-width: $mq-med) {
-	  font-size: 2em;
+	  //font-size: 2em;
 	} 
 	@media (min-width: $mq-xxlarge) {
-	  font-size: 2.55em;
+	  //font-size: 2.55em;
 	}  
 }
 
@@ -170,14 +144,16 @@ $sect-bigpad: 5em 0 7em;
 --H2
 -----------------------------------------------  */
 @mixin font-h2{
-	font-size: 1.5em;
-	letter-spacing: 0.02em;
+	font-size: 3.166666667em;
+	  line-height: 1.078947368em;
+	  margin-top: 1.07894737em;
+	  margin-bottom: 0.53947368em;
 	
 	@media (min-width: $mq-med) {
-	  font-size: 1.5em;
+	  //font-size: 1.5em;
 	} 
 	@media (min-width: $mq-xxlarge) {
-	  font-size: 2.2em;
+	  //font-size: 2.2em;
 	}  
 }
 
@@ -186,34 +162,59 @@ $sect-bigpad: 5em 0 7em;
 --H3
 -----------------------------------------------  */
 @mixin font-h3{
-	font-size: 1.35em;
-	letter-spacing: 0.02em;
+	font-size: 1.791666667em;
+	  line-height: 1.906976744em;
+	  margin-top: 0.95348837em;
+	  margin-bottom: 0.95348837em;
 	
-	@media (min-width: $mq-med) {
-	  font-size: 1.5em;
-	} 
-	@media (min-width: $mq-xxlarge) {
-	  font-size: 2em;
-	}  
+	@media (min-width: $mq-med) {} 
+	@media (min-width: $mq-xxlarge) {}  
 }
 
 /*----------------------------------------------   
 --H4
 -----------------------------------------------  */
 @mixin font-h4{
-	font-size: 1.25em;
-	letter-spacing: 0.02em;
+	font-size: 1.5em;
+	 line-height: 1.708333333em;
+	 margin-top: 1.70833333em;
+	 margin-bottom: 1.70833333em;
 	
-	@media (min-width: $mq-med) {
-	  font-size: 1.5em;
-	} 
-	@media (min-width: $mq-xxlarge) {
-	  font-size: 1.7em;
-	}  
+	@media (min-width: $mq-med) {} 
+	@media (min-width: $mq-xxlarge) {}  
+}
+
+/*----------------------------------------------   
+--H5
+-----------------------------------------------  */
+@mixin font-h5{
+	font-size: 1em;
+	 line-height: 1.708333333em;
+	 margin-top: 1.70833333em;
+	 margin-bottom: 1.70833333em;
+	
+	@media (min-width: $mq-med) {} 
+	@media (min-width: $mq-xxlarge) {}  
 }
 
 
+/*----------------------------------------------   
+--Font size: custom
+-----------------------------------------------  */
 
+@mixin font-biggie($fontSmall, $fontMed, $font-Large){
+	font-size: $fontSmall;
+	
+	@media (min-width: $mq-med) {
+	  font-size: $fontMed;
+	} 
+	@media (min-width: $mq-large) {
+	  font-size: $fontLarge;
+	}
+	@media (min-width: $mq-xlarge) {
+	  font-size: $fontLarge;
+	}  
+}
 /*----------------------------------------------   
 --Font size: biggie
 -----------------------------------------------  */
@@ -228,7 +229,6 @@ $sect-bigpad: 5em 0 7em;
 	  font-size: 3.5em;
 	}  
 }
-
 
 /*----------------------------------------------   
 --Font size: small
@@ -246,23 +246,6 @@ $sect-bigpad: 5em 0 7em;
 	}  
 }
 
-/*----------------------------------------------   
---Page Titles
------------------------------------------------  */
-@mixin title-page{
-	font-family: $font-subheader;
-  font-size: 2.2em;
-  letter-spacing: 0.01em;
-  text-align: center;
-  
-  @media (min-width: $mq-med) {
-    font-size: 4em;
-  } 
-
-  @media (min-width: $mq-large) {
-    font-size: 3.5em;
-  } 
-}
 
 /*----------------------------------------------   
 --Page Titles
@@ -371,8 +354,7 @@ $sect-bigpad: 5em 0 7em;
 /*----------------------------------------------   
 --overlay
 -----------------------------------------------  */
-
-@mixin overlay{
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
 	&:after{
 	content: '';
 	position: absolute;
@@ -380,19 +362,12 @@ $sect-bigpad: 5em 0 7em;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: rgba(0,0,0,0.6);
-	z-index: -1;
+	background: rgba($bgColor, $bgOpacity);
+	z-index: 0;
 	}
-}
-
-
-@mixin overlay-psedu{
-	background: rgba(0,0,0,0.7);
-	content: "";
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 1;
+	
+	.row{
+		position:	relative;
+		z-index:	2;
+	}
 }

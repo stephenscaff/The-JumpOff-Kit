@@ -68,28 +68,23 @@ h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{
 }
 
 h1, .font-h1 {
-    font-size: $font-h1;
-    margin: 0.6em 0;
+    @include font-h1;
 }
 
 h2, .font-h2 {
-    font-size: $font-h2;
-    margin: 1.1em 0 .6em;
+    @include font-h2;
 }
 
 h3, .font-h3 {
-    font-size: $font-h3;
-    margin: 1em 0 .3em;
+    @include font-h3;
 }
 
 h4, .font-h4 {
-    font-size: $font-h4;
-    margin: .75em 0 0.3em;
+    @include font-h4;
 }
 
 h5, .font-h5 {
-    font-size: $font-h5;
-    margin: .75em 0 0.3em;
+    @include font-h5;
 }
 
 /*----------------------------------------------   

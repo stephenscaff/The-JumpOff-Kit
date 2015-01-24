@@ -20,6 +20,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/images\/logo-jumpoff-dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2061,
+		"inputAbbreviatedPath": "\/assets\/images\/logo-jumpoff-dark.png",
+		"outputAbbreviatedPath": "\/assets\/images\/logo-jumpoff-dark.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/logo-jumpoff-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2064,
+		"inputAbbreviatedPath": "\/assets\/images\/logo-jumpoff-white.png",
+		"outputAbbreviatedPath": "\/assets\/images\/logo-jumpoff-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/js\/jquery.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -74,61 +96,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/images\/img-1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 72113,
-		"inputAbbreviatedPath": "\/images\/img-1.jpg",
-		"outputAbbreviatedPath": "\/images\/img-1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/img-2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 389558,
-		"inputAbbreviatedPath": "\/images\/img-2.jpg",
-		"outputAbbreviatedPath": "\/images\/img-2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Italy_001.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3.50726e+06,
-		"inputAbbreviatedPath": "\/images\/Italy_001.png",
-		"outputAbbreviatedPath": "\/images\/Italy_001.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo-jumpoff-dark.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2061,
-		"inputAbbreviatedPath": "\/images\/logo-jumpoff-dark.png",
-		"outputAbbreviatedPath": "\/images\/logo-jumpoff-dark.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo-jumpoff-white.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2064,
-		"inputAbbreviatedPath": "\/images\/logo-jumpoff-white.png",
-		"outputAbbreviatedPath": "\/images\/logo-jumpoff-white.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/index.html": {
 		"fileType": 8192,
@@ -227,6 +194,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/kit\/assets\/js\/plugins\/_form 2.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_form 2.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_form 2-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/kit\/assets\/js\/plugins\/_form.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -266,6 +244,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_inview.js",
 		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_inview-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/kit\/assets\/js\/plugins\/_mc-signup.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_mc-signup.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_mc-signup-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -971,8 +960,8 @@
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,

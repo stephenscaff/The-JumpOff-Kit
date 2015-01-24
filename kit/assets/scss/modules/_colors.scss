@@ -2,19 +2,7 @@
 --Links
 -----------------------------------------------  */
 a{
-  color: $color-alpha;
-  text-decoration: none; 
-  line-height:inherit;
-  @include transition(color, 0.6s, ease-in);
-  
-  &:hover{
-  color:darken($color-alpha,30);
-  @include transition(color, 0.6s, ease-out);
-  }
-  
-  &:active{
-  color: $color-alpha;
-  }
+  @include link-styles($color-beta);
 }
 
 a.invert, .invert a{
