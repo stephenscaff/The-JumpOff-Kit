@@ -23,16 +23,8 @@ section * {
 --Sect: padding-Modifier
 -----------------------------------------------  */
 .title{
-	padding: 4em 0em;
+	padding: 3em 0em;
 	@include center-all;
-	
-	p{
-		@include title-text;
-	}
-	
-	h1, h2, h3{
-		margin-top: 0 !important;
-	}
 }	
 
 /*----------------------------------------------   

@@ -1,0 +1,130 @@
+/*----------------------------------------------   
+--Blocks: image and content blocks with hover
+-----------------------------------------------  */	
+.sect-blocks{
+	h2, h3, h4{
+		text-align:	center;
+	}
+
+	article{
+		
+		h4, h3{
+			margin:	0.25em 0;
+			font-family:	$font-paragraph;
+			text-transform:	none;
+			letter-spacing: 0.04em
+		}	
+		& a{
+			position:	relative;
+			z-index:	0;
+			display:	block;
+			overflow:	hidden;
+		}
+		
+		img{
+			width:	100%;
+			display:	block;
+			@include transition(all 0.7s ease);
+			-webkit-backface-visibility: hidden;
+			
+		}
+					
+		.hover{
+			position: absolute !important;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 4;
+			@include transition(all 1s ease);
+			background:	rgba($color-alpha, 0.9);
+					
+			
+			span{
+				color: #fff;
+				@include vcenter;
+				text-align: center;
+				font-size: 1.4em;
+				margin:	0 auto;
+				display:	block;
+				width:	60%;
+				line-height:	1;
+				
+				&.btn-hover{
+					border:	1px	solid	#fff;
+					padding:	.3em .4em .4em;
+				}
+			}
+		}	
+			
+		a:hover{
+			.hover{
+				opacity:	1;
+				@include transition(all 1s ease);
+			}
+			
+			img{
+				@include transition(all 0.7s ease);
+				@include transform(scale(1.1) rotate(0.2deg));
+				-webkit-backface-visibility: hidden;
+			}
+		}
+	}
+	
+	&.studio, & .studio, & .hover-beta{
+		.hover{
+			background:	rgba($color-beta, 0.9);
+		}
+	}
+}
+
+
+
+/*----------------------------------------------   
+--color hovers
+-----------------------------------------------  */
+
+
+	a.hovers-alpha {
+  display: block;
+  position: relative;
+  background-position:	50%;
+  @include overlay($color-alpha, 0.0);
+  @include transition(all 1s ease);
+  
+  img{
+  	display:	block;
+  }
+
+	&:hover{
+		@include hover-overlay($color-alpha, 0.5);
+		@include transition(all 1s ease);
+	}
+
+	&:after{
+		@include transition(all 1s ease);
+	} 
+}
+
+	a.hovers-beta {
+  display: block;
+  position: relative;
+  background-position:	50%;
+  @include overlay($color-beta, 0.0);
+  @include transition(all 1s ease);
+  
+  img{
+  	display:	block;
+  }
+	
+	&:hover{
+		@include hover-overlay($color-beta, 0.5);
+		@include transition(all 1s ease);
+	}
+
+	&:after{
+		@include transition(all 1s ease);
+		z-index:	9;
+	} 
+}
