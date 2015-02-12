@@ -1,14 +1,12 @@
-
-
 /*----------------------------------------
 Sticky Nav - on scroll
 ------------------------------------------*/
 $(window).scroll(function() {
-  if ($("header.mast").offset().top > 0) {
-        $("header.mast").addClass("sticky")
-      } else {
-        $("header.mast").removeClass("sticky")
-      }
+ if ($("header.mast").offset().top > 0) {
+  $("header.mast").addClass("sticky");
+  } else {
+    $("header.mast").removeClass("sticky");
+  }
 });
 
 
@@ -27,7 +25,7 @@ $('header, #copyright, .mobileNav, #mobileNav').localScroll({
 });
 
 $(".scroll_to_top").click(function() {$.scrollTo($("body").position().top, 300)});
-$(".js-contact-us").click(function() {$.scrollTo($("body").position().top, 1100)});
+
 
 
 /*----------------------------------------
@@ -45,41 +43,33 @@ $(window).scroll(function(){
 /*----------------------------------------
 Scroll to anchor on new page load
 ------------------------------------------*/
- $(document).ready(function() {
+$(document).ready(function() {
 
-        if (window.location.hash) {
-            setTimeout(function() {
-                $('html, body').scrollTop(0).show();
-                $('html, body').animate({
-                    scrollTop: $(window.location.hash).offset().top-50
-                    }, 2000, 'easeInOutQuad')
-            }, 2);
-        }
+ if (window.location.hash) {
+		setTimeout(function() {
+			$('html, body').scrollTop(0).show();
+			$('html, body').animate({
+		
+		scrollTop: $(window.location.hash).offset().top-50
+				}, 2000, 'easeInOutQuad')
+			}, 2);
+		}
 
-    });
+});
 
 
  /*----------------------------------------------   
  -Simple Scroll To Anchor
  -----------------------------------------------  */  	
 
- 	$('.home a.js-scroll-features').on('click',function (e) {
- 		    e.preventDefault();
- 	
- 		    var target = "#sect-features",
- 		    $target = $(target);
- 	
- 		    $('html, body').stop().animate({
- 		        'scrollTop': $target.offset().top - 70
- 		    }, 800, 'swing');	
- 		});
-$('.home a.js-scroll-pricing').on('click',function (e) {
-	    e.preventDefault();
+$('.home a.js-scroll-features').on('click',function (e) {
+ e.preventDefault();
 
-	    var target = "#sect-pricing",
-	    $target = $(target);
+ var target = "#sect-features",
+ $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top - 70
-	    }, 800, 'swing');	
-	}); 
+ $('html, body').stop().animate({
+     'scrollTop': $target.offset().top - 70
+ }, 800, 'swing');	
+});
+

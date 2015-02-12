@@ -1,201 +1,128 @@
 /*----------------------------------------------   
 --Buttons
 -----------------------------------------------  */
- .btn, .button, button {
-   color: #333;
-   background-color: #fff;
-   border:	1px solid #bbb;
-   font-family: $font-header;
-   text-align: center;
-   display: inline-block;
-   vertical-align:	middle;
-   white-space:	nowrap;
-   margin: 0.6em 0;
-   padding: 0.25em 1.25em 0.3em;
-   text-decoration: none; 
-   width: auto;
-   position: relative;
-   font-size: $font-base;
-   line-height: $base-lineheight;
-   border-radius:  $base-borderradius;
-   user-select:none;
-   outline:	none;
-   -ms-touch-action: manipulation;
-   touch-action: manipulation;
-   cursor: pointer;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-   background-image: none;
-   @include transition(all, 0.25s, ease-in);
-  
-  &:focus {outline:none;}
-  &::-moz-focus-inner {border:0;}
-  
-  &:hover {
-   //background-color: lighten($color-alpha,10);
-   background-color:	#ddd;
-   color:	#333;
-   @include transition(all, 0.25s, ease-in); 
-  }
+.btn, button{
+  color: $color-white;
+  background-color: $color-alpha;
+  font-family: $font-header;
+  text-align: center;
+  display: inline-block;
+  vertical-align:	middle;
+  margin: .1em 0 1em;
+  padding: 0.15em 2.15em 0.25em;
+  text-decoration: none; 
+  width: auto;
+  font-size: 100%;
+  line-height: $base-lineheight;
+  border-radius:  0;
+  @include transition(background-color, 0.25s, ease-in);
+  position:	relative;
  
-  &:active {
-   background-color: #ccc;
-   box-shadow: 0 !important;
-   top: 2px;
-   @include transition(background-color, 0.2s, linear);
-   //@include prefix(box-shadow, none);
-   box-shadow:	inset 0 3px 5px rgba(0,0,0,.125);
- }
- 
- /*----------------------------------------------   
- --Btn Colors: Grey
- -----------------------------------------------  */ 
- &.btn-grey{
-  background-color: rgba(0,0,0,0.2);
-  color: $color-dark;
- }
- &.btn-grey:hover{
-  background-color: rgba(0,0,0,0.3);
- }
- &.btn-grey:active{
-  background-color: rgba(0,0,0,0.4);
- }
-/*----------------------------------------------   
---Btn Colors: Alpha
------------------------------------------------  */ 
- &.btn-alpha{
-   background-color: $color-alpha;
-   border:	1px	solid	$color-alpha;
-   color:	#fff;
- }
- &.btn-alpha:hover{
-   background-color: lighten($color-alpha,10);
-   color:	#fff;
- }
- &.btn-alpha:active{
-   background-color: darken($color-alpha,5);
- }
- 
- /*----------------------------------------------   
- --Btn Colors: Beta
- -----------------------------------------------  */ 
- &.btn-beta{
-   background-color: $color-beta;
-   border:	1px	solid	$color-beta;
-   color:	#fff;
- }
- &.btn-beta:hover{
-   background-color: lighten($color-beta,10);
- }
- &.btn-beta:active{
-  background-color: darken($color-beta,5);
- }
- /*----------------------------------------------   
- --Btn Colors: Alert
- -----------------------------------------------  */ 
- &.btn-alert{
-  background-color: $color-alert;
-  border:	1px	solid	$color-alert;
-  color:	#fff;
- }
- &.btn-alert:hover{
-  background-color: lighten($color-alert,10);
- }
- &.btn-alert:active{
-  background-color: darken($color-alert,5);
- }
- /*----------------------------------------------   
- --Btn Colors: ok
- -----------------------------------------------  */ 
- &.btn-ok{
-  background-color: $color-ok;
-  border:	1px	solid	$color-ok;
-  color:	#fff;
- }
- &.btn-ok:hover{
-  background-color: lighten($color-ok,10);
- }
- &.btn-ok:active{
-  background-color: darken($color-ok,5);
+ &:hover {
+  background-color: lighten($color-alpha,10);
+  color: $color-white;
+  @include transition(all, 0.25s, ease-in); 
  }
 
+ &:active {
+  background-color: darken($color-alpha,5); 
+  @include transition(background-color, 0.2s, linear);
+}
+
+/*----------------------------------------------   
+--Btn Colors
+-----------------------------------------------  */ 
+&-beta{
+  background-color: $color-beta;
+
+ &:hover{
+   background-color: lighten($color-beta,10);
+ }
+ &:active{
+  background-color: darken($color-beta,5);
+ }
+}
 
 /*----------------------------------------------   
 --Button Sizes
 -----------------------------------------------  */
- &.btn-large{
-   font-size: 107%;
-   padding: 0.4em 2.75em;
- }
- &.btn-med{
-   font-size: 90%;
-   min-width:	7em;
- }
- &.btn-small{
-   font-size: 80%;
- }
- &.btn-block{
-   display:	block;
-   width:	100%;
- }
- 
- 
-/*----------------------------------------------   
---Almost Flat Button
------------------------------------------------  */
- &.btn-aflat {
-   @include prefix(box-shadow, inset 0px -2px 0px rgba(0,0,0,0.3));
- }
- &.btn-aflat:active {
-   @include prefix(box-shadow, none);
- }
+&-large{
+  font-size: 107%;
+  padding: 0.4em 2.75em;
+}
+
+&-small{
+  font-size: 80%;
+  padding: 0.5em 1.75em 0.45em;
+}
+&-full{
+  width: 100%;
+  display:	block;
+}
+&-block{
+  min-width: 12em;
+  display:	block;
+}
 
 /*----------------------------------------------   
 --Clear buttons
 -----------------------------------------------  */
 
-  &.btn-clear {
-    background:	transparent;
-
-  &.btn-clear:hover {
-    background-color:	#ddd;
-    border-color:	#ccc;
-  }
-  &.btn-clear:active {
-    border-color:	#ddd;
-    color:	#333;
-  }
-  &.btn-grey{
-    border-color: #999;
-    color: $color-beta;
-  }
-  &.btn-grey:hover{
-    border-color: #999;
-    background-color: #999;
-    color: $color-beta;
-  }
-  &.btn-alpha{
-    border-color: $color-alpha;
-    color: $color-alpha;
-  }
-  &.btn-alpha:hover{
-   border-color: $color-alpha;
-   background: $color-alpha;
-   color: rgba(255, 255, 255, 0.75);
-  }
-  &.btn-beta{
-    border-color: $color-beta;
-    color: $color-beta;
-  }
-  &.btn-beta:hover{
-    border-color: $color-beta;
-    color: #fff;
-    background-color: $color-beta;
-  }   
+ &-clear {
+   background: none;
+   background-color:	transparent;
+   border: 1px solid $color-dark;
+   font-weight: 400;
+   color: $color-dark;
+   display: inline-block;
+   position:	relative;
+   z-index:	2;
+   
+ &:hover,
+ &:focus {
+   background: transparent;
+   background-color:	transparnet;
+   border-color:	$color-dark;
+   color: #fff;  
  }
-} 
+ &:before{
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	width: 100%;
+  	height: 0;
+  	background: $color-dark;
+  	left: 0;
+  	@include transition(all .3s ease-in-out);
+  	z-index:	-1;
+  }
+  
+  &:hover:before{
+  	top:	0;
+  	opacity:	1;
+  	height:	100%;
+  	@include transition(all .3s ease-in-out);
+  }
+ }
+ &-white{
+  border-color: #fff;
+  color: #fff;
+  background:	transparent;
+  border-radius:	0px;
+
+  &:hover{
+    border-color: #fff;
+    //background: #fff;
+    color: #000 !important;
+  }
+  &:before{
+  	background-color:	#fff;
+		}   
+	}
+}
+
+
+
 
 /*----------------------------------------------   
 --Buttons w/ Icons: this may take some tweaking 
@@ -263,28 +190,27 @@ due to the nature of ems and subpixel rounding errors.
 	}
 }
 
-
 .btn-split > .btn {
-position: relative;
-float: left;
-width:	auto;
+	position: relative;
+	float: left;
+	width:	auto;
 
-&:hover{
-	cursor:	pointer;
-}
+	&:hover{
+		cursor:	pointer;
+	}
 
-&:last-child{
-	width:	3em;
+	&:last-child{
+		width:	3em;
 	
 	i, .icon{
 		left:	-3px;
 		top:	1px;
 	}
 	
-	&.has-caret::after{
-		left:	-6px;
+		&.has-caret::after{
+			left:	-6px;
+		}
 	}
-}
 }
 
 

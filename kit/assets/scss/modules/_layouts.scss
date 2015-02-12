@@ -14,138 +14,52 @@
   display: block;
 }
 
-.center-all,
-.center-all g-full.cols{
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  float: none;
+.center-all{
+	@include center-all;
 }
-
-
 /*----------------------------------------------   
 --Vertical Center
 -----------------------------------------------  */
 .v-center{
-  display: table;
-  width: 100%;
-
-  & > div{
-  display: table-cell;
-  vertical-align: middle;
-  margin-top: 0;
-  margin-bottom: 0;
-  float: none;
-  padding: 7% 0;
-  }
-  &.row > *,
-  &.row > * {
-    display: block;
-    vertical-align: baseline;
-  }
+  @include v-center;
 }
-.v-center.lesspad > div{
-  padding: 6% 0;
-}
-
 /*----------------------------------------------   
 --Inline Lists
 -----------------------------------------------  */
-.inline-list {
-  margin: 0 auto 1.0625em auto;
-  margin-left: -1.375em;
-  margin-right: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;   
-  
-  > li {
-    list-style: none;
-    float: left;
-    margin-left: 1.375em;
-    display: block; 
-  }  
-  
-  > li > * {
-  display: block; 
-  }
+.list-inline {
+ @include list-inline;
 }
-
 
 /*----------------------------------------------   
---Link Lists
+--List-nav
 -----------------------------------------------  */
-ul.link-list{
-  margin:0 0 1em -1em;
-  padding:0;
-  list-style:none;
-  overflow:hidden
-  
- li{
-    list-style:none;
-    float:left;
-    margin-left:1em;
-    display:block
-  }
-
-  li a{
-    display:block
-  }
+.list-nav{
+	@include list-nav(margin-right, 1em);
 }
 
-/*For vertical link lists*/
-ul.vert-list{
-  list-style: none;
-  line-height: 2;
-  padding: 0;
-  
-  li{
-  list-style: none;
-  }
+/*----------------------------------------------   
+--List-vert
+-----------------------------------------------  */
+.list-vert{
+	@include list-vert(2, 1em);
 }
-
 
 /*----------------------------------------------   
 --Stop line breaks Turncate 
 -----------------------------------------------  */
-
 .turncate{
-  max-width: 95%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  @include truncate;
 }
 
-
 /*----------------------------------------------   
--Paddings 
+-Margins, Paddings
 -----------------------------------------------  */
-
-.nomargin{
+.no-margin{
   margin: 0;
 }
-
-
-/*----------------------------------------------   
--Visibilities
------------------------------------------------  */
-.show-small{
-  display: block;
-  
-  @media (min-width: $mq-small) {
-    display: none !important;
-  }
+.no-padding{
+  padding: 0;
 }
-
-.hide-small{
-  display: none;
-  
-  @media (min-width: $mq-small) {
-    display: block !important;
-  }
-}
-
-
 /*----------------------------------------------   
 --L to R Scroll on mobile
 -----------------------------------------------  */

@@ -23,17 +23,6 @@ $("#trigger-nav, .closed, .siteoverlay").click(function (e) {
   });
 
 /*----------------------------------------------   
--Simple Scroll To Anchor
------------------------------------------------  */
-    $('a[href^="#"]').on('click', function(e) {
-      e.preventDefault();
-      var target = "#js-scrolly",
-        $target = $(target);
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top - 70
-      }, 600, 'swing');
-    });
-/*----------------------------------------------   
 -Disable hovers on scroll
 -----------------------------------------------  */
     var body = document.body,

@@ -1,4 +1,3 @@
-
 /*----------------------------------------------   
 --Header + Nav
 -----------------------------------------------  */
@@ -11,7 +10,7 @@ header.header-main{
   display: block;
   z-index: 8;
   
-   .row {
+  .row {
     width: 100%;
   }
   
@@ -31,8 +30,6 @@ header.header-main{
       float: right; 
       display: inline-block; 
     }
-    
-    @media (min-width: $mq-large) {}
   
     ul{padding: 0;}
     

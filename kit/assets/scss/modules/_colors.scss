@@ -1,3 +1,5 @@
+
+
 /*----------------------------------------------   
 --Links
 -----------------------------------------------  */
@@ -5,26 +7,9 @@ a{
   @include link-styles($color-beta);
 }
 
-a.invert, .invert a{
-  color:darken($color-alpha,70);
-  
-  &:hover{
-  color: $color-alpha;
-  }
+a.link-line, nav a{
+	@include link-line();
 }
-
-a.secondary{
-  color: $color-beta;
-  
-  &:hover{
-  color:darken($color-beta,70);
-  }
-  
-  &:active{
-  color: $color-beta;
-  }
-}
-
 /*----------------------------------------------   
 --Arrow Link
 -----------------------------------------------  */
@@ -52,15 +37,15 @@ a.secondary{
   background-color: $color-beta;
 }
 
-.bg-delta{
-  background-color: $color-delta;
-}
-
-.bg-zeta{
-  background-color: $color-zeta;
+.bg-dark{
+  background-color: $color-dark;
 }
 
 .bg-grey{
+  background-color: $color-grey;
+}
+
+.bg-lightgrey{
   background-color: $color-lightgrey;
 }
 
@@ -82,27 +67,6 @@ a.secondary{
   opacity: 0.95;
 }
 
-/*----------------------------------------------   
---Overlays
------------------------------------------------  */
-[class*="overlay"] {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: 5;
-	display: block;
-	top: 0;
-	left: 0;
-	@include transition(background-color 1s ease);
-}
-
-.overlay{
-	background-color: rgba(0,0,0,0.2);
-}
-
-.overlay-alpha{
-  background-color: #5094A0;
-}
 
 /*----------------------------------------------   
 --Light & Dark Themes

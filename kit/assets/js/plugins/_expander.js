@@ -29,3 +29,29 @@ function accordion() {
   });
 }
 accordion();
+
+
+
+/*----------------------------------------------   
+Accordion: Alt
+-----------------------------------------------  */
+$(".js-trigger").click(function() {
+$(".js-trigger").removeClass("active");
+
+var activeTab = $(this).attr("href");
+
+if($(activeTab).is(":visible")) {
+$(".content").slideUp().removeClass("is-showing");
+$(this).removeClass("active");
+
+} else {
+if ($(".is-showing").length > 0) {
+$(".is-showing").slideUp(function() {
+$(activeTab).hide().slideDown().addClass("is-showing");
+} ).removeClass("is-showing");
+
+} else {
+$(activeTab).hide().slideDown().addClass("is-showing");
+} $(this).addClass("active");
+} return false;
+});

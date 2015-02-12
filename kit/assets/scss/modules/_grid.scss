@@ -17,17 +17,12 @@
 	@media (min-width: $mq-med) {
 	 width: 94%;
 	}
-	
 	@media (min-width: $mq-large) {
-		margin: 0 auto; 
 	 max-width: 56em;
-	 width: 85%
 	}
-	
 	@media (min-width: $mq-xlarge) { 
 	 max-width: 56em;
 	}
-	
 	@media (min-width: $mq-xxlarge) {
 	 max-width: 62em;
 	}
@@ -39,13 +34,16 @@
 		max-width: 98%; 
 		width:98%;
 	}
-
+	
 	/* Go Full Width */ 
 	.xxl &, &.xxl{
 		width: 100%;
 		max-width: 100%;
 	}
 	
+	/*----------------------------------------------   
+	--padding for single cols
+	-----------------------------------------------  */
 	&.g-full, &[class*="g-"]{
 		padding-left:$col-padding;
 		padding-right: $col-padding;
@@ -113,7 +111,7 @@
 /*----------------------------------------------   
 --Cols: stay left
 -----------------------------------------------  */
-	.cols.stayleft{
+	.cols.is-left{
  	float: left !important;
  }
 }
@@ -166,47 +164,76 @@
 .row .offset8 {margin-left: $col * 8}
 .row .offset9 {margin-left: $col * 9}
 .row .offset10{margin-left: $col * 10}
+}
 
 /*---------------------------------------------   
 -Source Order: after med
 ----------------------------------------------- */
-
-	.source-reverse{
-	  float: right !important;
+.source-reverse{
+ .cols:first-child{
+ 	@media (min-width: $mq-med) {
+ 		right:	-50%;
+ 	}
+ }
+ .cols:last-child{
+ 	@media (min-width: $mq-med) {
+ 		left:	-50%;
+ 	}
+ }
+}
+.push-right{
+	@media (min-width: $mq-med) {
+  position: relative;
+  right: -50%;
 	}
-	.push-right{
-	  position: relative;
-	  right: -50%;
-	}
-	.pull-left{
-	  position: relative;
-	  left: -50%;
-	}
-	.pull-9{
-	  right: 75%;
-	}
-	.push-3 {
-	  left: 25%;
+}
+.pull-left{
+	@media (min-width: $mq-med) {
+  position: relative;
+  left: -50%;
+ }
+}
+.pull-9{
+	@media (min-width: $mq-med) {
+  right: 75%;
+ }
+}
+.push-3 {
+	@media (min-width: $mq-med) {
+  left: 25%;
 	}
 }
 
 /*---------------------------------------------   
 -Containerless Grid modifer
 ----------------------------------------------- */
-.row.is-table{
+.has-table{
+	@include cf;
+
+.row-table{
 	display:	block;
 	width:	100%;
 	max-width:	none;
-	
-	//remove space created from microclearfix
-	margin-left:	-0.1%;
-	width: 100.4%;
 	
 	@media (min-width: $mq-med) {
 		display:	table;
 	}
 	
-	.cols{
+	/*-- contains g- from grid --*/
+	[class*="g-"]{
+		padding:	10% $col-padding;
+		float:	none;
+		//width:	100%;
+		
+		@media (min-width: $mq-med) {
+			padding:	6% 5%;
+			//width:	50%;
+			display:	table-cell;
+			vertical-align:	middle;
+		}
+	}
+	
+	.half{
 		padding:	10% $col-padding;
 		float:	none;
 		width:	100%;
@@ -226,11 +253,6 @@
 				margin:	0;
 			}
 		}
-		
-		h1, h2, h3, h4{
-			margin:	0;
-		}
-		
 		&.has-bgimg{
 			background-size:	cover;
 			background-position:	50%;
@@ -241,6 +263,19 @@
 		}
 		.content{
 			vertical-align:	middle;
+		}
+	}
+}
+	&.is-reversed{
+		.half:first-child{
+			@media (min-width: $mq-med) {
+				right:	-50%;
+			}
+		}
+		.half:last-child{
+			@media (min-width: $mq-med) {
+				left:	-50%;
+			}
 		}
 	}
 }
@@ -285,7 +320,6 @@
 		.g-4{
 			padding-right: .25em;
 		}
-			
 		.last{
 			margin-right: -0.25em;
 		}
@@ -295,7 +329,6 @@
 /*---------------------------------------------   
 Form Grid
 ----------------------------------------------- */
-
 form .cols,
 form .row.full{
   @media only screen and (max-width: $mq-med) {
@@ -328,7 +361,6 @@ Multi Col Layout
   column-width: 48.571%;
   text-align: justify;
 }
-
 
 /*---------------------------------------------   
 Grid Blocks / List Grid
@@ -424,7 +456,7 @@ Grid Blocks - Med
 /*---------------------------------------------   
 Grid Blocks - Large
 ----------------------------------------------- */ 
-@media only screen and (min-width: $mq-large) {
+@media only screen and (min-width: $mq-xxlarge) {
 
 .lg-g-block-1 > li { width: $col * 12;}
 .lg-g-block-2 > li { width: $col * 6;}
