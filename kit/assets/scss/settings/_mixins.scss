@@ -30,6 +30,132 @@
 }
 
 /*----------------------------------------------   
+--Positioning
+-----------------------------------------------  */
+@mixin centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float:	none;
+}
+
+@mixin center-all {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+  .cols{
+  	margin:	0 auto;
+  	float:	none;
+  	display:	block;
+  }
+}
+
+
+/*----------------------------------------------   
+--Positioning - vert center
+-----------------------------------------------  */
+@mixin v-center{
+  display: table;
+  width: 100%;
+
+  & > .vcenter{
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+  padding: 7% 0;
+  }
+  &.inner > *,
+  &.inner > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+
+/*----------------------------------------------   
+--Vert Center: Single Element
+-----------------------------------------------  */
+@mixin trans-vcenter{
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+
+/*----------------------------------------------   
+--Absolute Center
+-----------------------------------------------  */
+@mixin abs-center{
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+/* Simple Vert Center: abs */
+@mixin abs-vcenter{
+	position: absolute !important;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+
+
+/*----------------------------------------------   
+--Links
+-----------------------------------------------  */
+@mixin link-styles($linkColor: $color-alpha){
+ color: $linkColor;
+ text-decoration: none; 
+ line-height:inherit;
+ @include transition(color 0.6s ease-in-out);
+ 
+ &:hover{
+ 	@include transition(color 0.6s ease-out-out);
+ 
+ @if lightness($linkColor) > 40% {
+   color:darken($linkColor,20);
+  } @else {
+    color:lighten($linkColor,20);
+  }
+ } 
+ &:active{
+ 	color: $color-alpha;
+ }
+}
+
+/*----------------------------------------------   
+--Link: psedu line interaction
+-----------------------------------------------  */
+@mixin link-line($lineColor: $color-alpha){
+	position: relative;
+	padding-bottom: .125em;
+	display:	inline-block;
+
+	&:after{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $lineColor;
+		content: '';
+		opacity: 0;
+		@include transform(translateX(-100px));
+		@include transition(opacity .3s, transform .3s);
+	}
+ 
+	&:hover::after,
+	&:focus::after{
+		opacity: 1;
+		@include transform(translateX(0px));
+	}
+}
+
+/*----------------------------------------------   
 --Header Font Defualts
 -----------------------------------------------  */
 @mixin font-header-styles($letterSpacing: 0.9em, $fontWeight: 600){
@@ -44,7 +170,7 @@
 -----------------------------------------------  */
 @mixin font-h1{
 	font-size: 2.15em;  
-	line-height: 1.6em;
+	line-height: 1.2em;
  margin-bottom: 0.5em;
 
 	@media (min-width: $mq-med) {
@@ -59,7 +185,7 @@
 -----------------------------------------------  */
 @mixin font-h2{
 	font-size: 1.75em;
-	line-height: 1.6em;
+	line-height: 1.4em;
 	margin-bottom: 0.75em;
 	
 	@media (min-width: $mq-med) {
@@ -154,152 +280,6 @@
 	@media (min-width: $mq-xxlarge) {
 	  font-size: .9em;
 	}  
-}
-
-
-/*----------------------------------------------   
---Positioning
------------------------------------------------  */
-@mixin centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float:	none;
-}
-
-@mixin center-all {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  
-  .cols{
-  	margin:	0 auto;
-  	float:	none;
-  	display:	block;
-  }
-}
-
-
-/*----------------------------------------------   
---Positioning - vert center
------------------------------------------------  */
-@mixin v-center{
-  display: table;
-  width: 100%;
-
-  & > div{
-  display: table-cell;
-  vertical-align: middle;
-  margin-top: 0;
-  margin-bottom: 0;
-  float: none;
-  padding: 7% 0;
-  }
-  &.inner > *,
-  &.inner > * {
-    display: block;
-    vertical-align: baseline;
-  }
-}
-
-/* Absolute Center */
-@mixin abs-center{
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-}
-
-/* Simple Vert Center */
-@mixin vcenter{
-	position: relative;
-	top: 50%;
-	@include transform(translateY(-50%));
-}
-/* Simple Vert Center: abs */
-@mixin abs-vcenter{
-	position: absolute;
-	top: 50%;
-	@include transform(translateY(-50%));
-}
-
-
-
-/*----------------------------------------------   
---Links
------------------------------------------------  */
-@mixin link-styles($linkColor: $color-alpha){
- color: $linkColor;
- text-decoration: none; 
- line-height:inherit;
- @include transition(color 0.6s ease-in-out);
- 
- &:hover{
- 	@include transition(color 0.6s ease-out-out);
- 
- @if lightness($linkColor) > 40% {
-   color:darken($linkColor,20);
-  } @else {
-    color:lighten($linkColor,20);
-  }
- } 
- &:active{
- 	color: $color-alpha;
- }
-}
-
-/*----------------------------------------------   
---Link: psedu line interaction
------------------------------------------------  */
-@mixin link-line($lineColor: $color-alpha){
-	position: relative;
-	padding-bottom: .125em;
-	display:	inline-block;
-
-	&:after{
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: $lineColor;
-		content: '';
-		opacity: 0;
-		@include transform(translateX(-100px));
-		@include transition(opacity .3s, transform .3s);
-	}
- 
-	&:hover::after,
-	&:focus::after{
-		opacity: 1;
-		@include transform(translateX(0px));
-	}
-}
-
-/*----------------------------------------------   
---Transition Links: SLideIn
------------------------------------------------  */
-@mixin link-slideIn($position:"relative", $bgColor: #000, $bgOpacity: 0.9){
-	position:	$position;
-	width:	100%;
-
-	&:before{
-		content:	'';
-		background-color:	rgba($bgColor, $bgOpacity);
-		top:	0;
-		left:	-100%;
-		position:	absolute;
-		width:	100%;
-		height:	100%;		
-		@include transition(all .5s ease-in-out);
-	}
-	
-	&:hover{
-		&:before{
-			left:	0;
-			@include transition(all .5s ease-in-out);
-		}
-	}
 }
 
 /*----------------------------------------------   
@@ -422,11 +402,9 @@
 	text-overflow: ellipsis;
 }
 
-
 /*----------------------------------------------   
 --overlay
 -----------------------------------------------  */
-
 @mixin overlay($bgColor: #000, $bgOpacity: 0.6){
 	&:after{
 	content: '';
@@ -436,73 +414,14 @@
 	height: 100%;
 	width: 100%;
 	background: rgba($bgColor, $bgOpacity);
-	z-index: 2;
+	z-index: 0;
 	}
 	
-	.row{
+	.row, .content{
 		position:	relative;
-		z-index:	5;
+		z-index:	2;
 	}
 }
-
-/*----------------------------------------------   
---hover-overlay
------------------------------------------------  */
-
-@mixin hover-overlay($bgColor: #000, $bgOpacity: 0.6){
-	&:after{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background: rgba($bgColor, $bgOpacity);
-		z-index: 3;
-	}
-}
-
-/*----------------------------------------------   
---Gradient bgs
------------------------------------------------  */
-@mixin gradient-alpha{
-	@include linear-gradient(145deg, $color-alpha 0%, lighten($color-alpha, 20)90%);
-}
-@mixin gradient-beta{
-	@include linear-gradient(135deg, #ff5db1 0%,$color-beta 100%);
-}
-@mixin gradient-alpha-beta{
-	@include linear-gradient(135deg, $color-alpha 1%,$color-beta 62%);
-}
-@mixin gradient-beta-alpha{
-	@include linear-gradient(135deg, $color-beta 1%,$color-alpha 62%);
-}
-
-/*----------------------------------------------   
---Absolute bg images
------------------------------------------------  */
-@mixin abs-bgimg ($imgUrl){
-$url:"../images/#{$imgUrl}.jpg";
-background: url($url);
-height: 100% !important;
-width: 100%;
-position: absolute;
-top: 0;
-background-size: cover;
-background-repeat: no-repeat;
-z-index:	0;
-}
-
-@mixin abs-bg{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position:	50%;
-}
-
 
 /*----------------------------------------------   
 --Sect: Banners
@@ -515,8 +434,6 @@ z-index:	0;
  background-color:	$color-dark;
  color: white;
  overflow: hidden;
- display:	table;
- width:	100%;
  min-height:	30em;
  padding: 15% 0;
  @include v-center;
@@ -552,9 +469,50 @@ z-index:	0;
 
 
 /*----------------------------------------------   
+--Banner Bgs
+-----------------------------------------------  */
+@mixin banner-bg{
+	background-size: cover;
+	background-position:	50%;
+	background-repeat:	no-repeat;
+	width:	100%;
+}
+
+/*----------------------------------------------   
+--BG: abs for plax
+-----------------------------------------------  */
+@mixin bg-abs{
+	height: 100% !important;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:	50%;
+	z-index:	0;
+}
+
+
+/*----------------------------------------------   
+--Banner BG Abs url shortcut
+-----------------------------------------------  */
+@mixin bgurl-abs ($imgUrl){
+	$url:"../images/#{$imgUrl}.jpg";
+	background: url($url);
+	height: 100% !important;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index:	0;
+}
+
+
+/*----------------------------------------------   
 --Sect: Title Modifier
 -----------------------------------------------  */
-@mixin title($padding: 2em 1em){
+@mixin content-title($padding: 2em 1em){
 	padding: $padding;
 	@include center-all;
 	
@@ -568,6 +526,32 @@ z-index:	0;
 		}
 	}
 }	
+/*----------------------------------------------   
+--Transition Links: SLideIn
+-----------------------------------------------  */
+@mixin link-slideIn($position:"relative", $bgColor: #000, $bgOpacity: 0.9){
+	position:	$position;
+	width:	100%;
+
+	&:before{
+		content:	'';
+		background-color:	rgba($bgColor, $bgOpacity);
+		top:	0;
+		left:	-100%;
+		position:	absolute;
+		width:	100%;
+		height:	100%;		
+		@include transition(all .5s ease-in-out);
+	}
+	
+	&:hover{
+		&:before{
+			left:	0;
+			@include transition(all .5s ease-in-out);
+		}
+	}
+}
+
 
 /*----------------------------------------------   
 -Visibilities: Show hide
@@ -586,4 +570,16 @@ z-index:	0;
  @media (min-width: $mq-small) {
    display: block !important;
  }
+}
+
+
+
+
+/*----------------------------------------------   
+--3D Engine
+-----------------------------------------------  */
+@mixin engine3d{
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
 }

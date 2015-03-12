@@ -18,13 +18,13 @@
 	 width: 94%;
 	}
 	@media (min-width: $mq-large) {
-	 max-width: 56em;
+	 max-width: 90%;
 	}
 	@media (min-width: $mq-xlarge) { 
-	 max-width: 56em;
+	 max-width: 80%;
 	}
 	@media (min-width: $mq-xxlarge) {
-	 max-width: 62em;
+	 max-width: $row-max-width;
 	}
  
 /*----------------------------------------------   
@@ -198,6 +198,12 @@
   right: 75%;
  }
 }
+
+.pull-7{
+	@media (min-width: $mq-med) {
+  right: $col * 7;
+ }
+}
 .push-3 {
 	@media (min-width: $mq-med) {
   left: 25%;
@@ -226,7 +232,8 @@
 		//width:	100%;
 		
 		@media (min-width: $mq-med) {
-			padding:	6% 5%;
+			padding-left: 5%;
+			padding-right:	5%;
 			//width:	50%;
 			display:	table-cell;
 			vertical-align:	middle;
@@ -489,6 +496,3 @@ Grid Blocks - Large
   clear: both;
 }
 }
-
-
-

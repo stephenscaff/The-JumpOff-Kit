@@ -10,7 +10,7 @@ section * {
   padding: 3em 0;
 
 		.title{
-			@include title();
+			@include content-title();
 		}  
   &.no-top{
   	padding-top: 0;
@@ -19,7 +19,6 @@ section * {
   	padding-bottom: 0;
   }
 }
-
 
 /*----------------------------------------------   
 --Sect: Intro
