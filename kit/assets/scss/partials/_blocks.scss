@@ -81,7 +81,6 @@
 	.content {
 		position: absolute;
 		width: 100%;
-		
 		@include center-all;
 		@include abs-vcenter;
 		@include transition(all .5s ease-in-out);
@@ -113,8 +112,6 @@
 		}
 	}
 }
-
- 
 /*----------------------------------------------   
 --G-4 Thirds
 -----------------------------------------------  */

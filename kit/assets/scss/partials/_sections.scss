@@ -59,11 +59,11 @@ section * {
   }
 }
 
-.sect-banner #bgVideo {
+.sect-banner .bg-vid {
   overflow: hidden;
 }
 
-.sect-banner #bgVideo > video {
+.sect-banner .bg-vid > video {
   position: absolute !important;
   top: 0 !important;
 }
