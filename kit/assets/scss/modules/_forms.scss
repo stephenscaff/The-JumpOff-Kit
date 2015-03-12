@@ -7,15 +7,13 @@ form {
 }
 
 fieldset {
-	border: 0;
-	padding: 0;
 	margin:		1em 0;
 }
 
 textarea {
 	overflow: auto;
 	vertical-align: top;
-	width: 95%;
+	width: 99%;
 }
 
 legend {
@@ -38,32 +36,6 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	-webkit-appearance: button;
 	-webkit-font-smoothing: antialiased;
 }
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0
-}
-
-input[type="checkbox"],input[type="radio"] {
-	box-sizing: border-box;
-}
-
-input[type="search"] {
-	-webkit-appearance: textfield;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-.btn::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
 
 input:focus, 
 select:focus, 
@@ -83,17 +55,6 @@ button, .btn, input {
   overflow: visible;
   line-height: normal;
 }
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  padding: 0;
-  border: 0; 
-}
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button; 
-}
-
 
 /*----------------------------------------------   
 --Labels
@@ -538,5 +499,3 @@ input[type="submit"]{
   top: 0; 
   z-index:	9;
 }
-
-
