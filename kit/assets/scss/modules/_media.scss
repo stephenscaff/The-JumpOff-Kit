@@ -1,21 +1,6 @@
 /*----------------------------------------------   
 --Images
 -----------------------------------------------  */
-img,object,embed{
-  max-width:100%;
-  height:auto
-}
-
-img{
-  -ms-interpolation-mode:bicubic;
-  border: 0;
-}
-
-#map_canvas img,
-.map_canvas img{
-  max-width:none !important;
-}
-
 img.full-center,{
   width:100%;
   margin:0 auto;
@@ -29,7 +14,16 @@ figure img, figure, img.respond{
 }
 
 /*----------------------------------------------   
---HMaps
+--SVG-Wrap for rwd
+-----------------------------------------------  */
+.svg-wrap {
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+}
+
+/*----------------------------------------------   
+--Maps
 -----------------------------------------------  */
 #map_canvas { 
 	height: 100%; 

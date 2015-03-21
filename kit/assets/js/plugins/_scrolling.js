@@ -2,41 +2,20 @@
 Sticky Nav - on scroll
 ------------------------------------------*/
 $(window).scroll(function() {
- if ($("header.mast").offset().top > 0) {
-  $("header.mast").addClass("sticky");
+  //Scroll Top
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 30) {
+    //Sticky Nav Deal -Add classes
+    $("header.header-main").addClass("sticky").addClass(
+      "fade-down");
+    $(".mobile-nav-toggle").addClass("sticky");
   } else {
-    $("header.mast").removeClass("sticky");
+    //Sticky nav - remove class
+    $("header.header-main").removeClass("sticky").removeClass(
+      "fade-down");
+    $(".mobile-nav-toggle").removeClass("sticky");
   }
-});
-
-
-
-/*----------------------------------------
-Navigation and Scrolling
-------------------------------------------*/
-if( $(window).width() < 568 ){
-	top_offset = -385;
-} else {
-	top_offset = -59;			
-}
-
-$('header, #copyright, .mobileNav, #mobileNav').localScroll({
-	offset: {left: 0, top: top_offset}	
-});
-
-$(".scroll_to_top").click(function() {$.scrollTo($("body").position().top, 300)});
-
-
-
-/*----------------------------------------
-Scroll To Top
-------------------------------------------*/
-$(window).scroll(function(){
-	if ($(this).scrollTop() > 100) {
-		$('.scroll_to_top').fadeIn(800);
-	} else {
-		$('.scroll_to_top').fadeOut();
-	}
 });
 
 
@@ -51,25 +30,22 @@ $(document).ready(function() {
 			$('html, body').animate({
 		
 		scrollTop: $(window.location.hash).offset().top-50
-				}, 2000, 'easeInOutQuad')
+				}, 2000, 'easeInOutQuad');
 			}, 2);
 		}
-
 });
-
-
- /*----------------------------------------------   
- -Simple Scroll To Anchor
- -----------------------------------------------  */  	
-
-$('.home a.js-scroll-features').on('click',function (e) {
- e.preventDefault();
-
- var target = "#sect-features",
- $target = $(target);
-
- $('html, body').stop().animate({
-     'scrollTop': $target.offset().top - 70
- }, 800, 'swing');	
-});
-
+	
+/*----------------------------------------------   
+-Disable hovers on scroll
+-----------------------------------------------  */
+    var body = document.body,
+      timer;
+    window.addEventListener('scroll', function() {
+      clearTimeout(timer);
+      if (!body.classList.contains('disable-hover')) {
+        body.classList.add('disable-hover');
+      }
+      timer = setTimeout(function() {
+        body.classList.remove('disable-hover');
+      }, 100);
+    }, false);

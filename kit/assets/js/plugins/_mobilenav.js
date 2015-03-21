@@ -1,8 +1,8 @@
-
 /*----------------------------------------------   
---Mobile Nav
+--Simple Offcanvas Mobile Nav
+Dependancies: partials/_mobilenav.scss
 -----------------------------------------------  */ 
 $("#trigger-nav, .closed, .siteoverlay").click(function (e) {
-  $("main, header, nav, #trigger-nav, footer, .siteoverlay").addClass("js-nav-open");
+  $("main, header, nav, #trigger-nav, footer, .siteoverlay").toggleClass("js-nav-open");
   e.preventDefault();
  });

@@ -9,12 +9,11 @@
 
 /* --Vendor
 ========================================*/
-@import 'vendor/_normalize';
+@import 'vendor/_normalizer';
 
 
 /* --Modules: Reuseable UI elements
 =======================================*/
-@import 'modules/_setup';
 @import 'modules/_media';
 @import 'modules/_decor';
 @import 'modules/_forms';

@@ -1,6 +1,7 @@
 /*----------------------------------------------   
-Expand
+Expander and Accordions
 -stupid simple
+-by Stephen Scaff
 -----------------------------------------------  */
 $('.js-expander').click(function (e) {
 	e.preventDefault();

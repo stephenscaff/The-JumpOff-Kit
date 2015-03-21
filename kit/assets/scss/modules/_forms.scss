@@ -1,59 +1,12 @@
 /*----------------------------------------------   
 --Forms: Setups
 -----------------------------------------------  */
-
-form {
-	margin: 0;
-}
-
 fieldset {
 	margin:		1em 0;
 }
 
-textarea {
-	overflow: auto;
-	vertical-align: top;
-	width: 99%;
-}
-
 legend {
 	margin-left: -.75em;
-}
-
-button,input,select,textarea {
-	vertical-align: baseline;
-	vertical-align: middle;
-}
-
-/* IE7 and older */
-button,input {
-	line-height: normal;
-	overflow: visible;
-}
-
-button,input[type="button"],input[type="reset"],input[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: button;
-	-webkit-font-smoothing: antialiased;
-}
-
-input:focus, 
-select:focus, 
-textarea:focus, 
-button:focus,
-.btn:focus {
-  outline: none;
-}
-
-button.submit, .btn.submit, input, select, textarea {
-  margin: 0;
-  font-size: 100%;
-  vertical-align: middle; 
-}
-
-button, .btn, input {
-  overflow: visible;
-  line-height: normal;
 }
 
 /*----------------------------------------------   
@@ -79,10 +32,6 @@ label.placeholder{
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
-}
-
-label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
-  cursor: pointer; 
 }
 
 /*----------------------------------------------   
