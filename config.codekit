@@ -203,6 +203,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/kit\/assets\/js\/plugins\/_gmaps.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_gmaps.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_gmaps-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/kit\/assets\/js\/plugins\/_hoverintent.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -352,6 +363,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_tabs.js",
 		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_tabs-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/kit\/assets\/js\/plugins\/_validate.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_validate.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_validate-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
