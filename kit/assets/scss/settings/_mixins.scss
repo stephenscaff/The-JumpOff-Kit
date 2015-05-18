@@ -1,23 +1,9 @@
-
-/*----------------------------------------------   
---Vendor Prefix
------------------------------------------------  */
-@mixin prefix($name, $argument) {
-  -webkit-#{$name}: #{$argument};
-      -ms-#{$name}: #{$argument};
-     -moz-#{$name}: #{$argument};
-       -o-#{$name}: #{$argument};
-          #{$name}: #{$argument};
-}
-
-
-
 /*----------------------------------------------   
 --Microclearfix
 -----------------------------------------------  */
 @mixin cf() {
  & {
-     *zoom: 1;
+   *zoom: 1;
  }
  &:before,
  &:after {
@@ -60,7 +46,7 @@
   display: table;
   width: 100%;
 
-  & > .vcenter{
+  & > .vc-content{
   display: table-cell;
   vertical-align: middle;
   margin-top: 0;
@@ -154,6 +140,33 @@
 		@include transform(translateX(0px));
 	}
 }
+
+/*----------------------------------------------   
+--Transition Links: SLideIn
+-----------------------------------------------  */
+@mixin link-slideIn($position:"relative", $bgColor: #000, $bgOpacity: 0.9){
+	position:	$position;
+	width:	100%;
+
+	&:before{
+		content:	'';
+		background-color:	rgba($bgColor, $bgOpacity);
+		top:	0;
+		left:	-100%;
+		position:	absolute;
+		width:	100%;
+		height:	100%;		
+		@include transition(all .5s ease-in-out);
+	}
+	
+	&:hover{
+		&:before{
+			left:	0;
+			@include transition(all .5s ease-in-out);
+		}
+	}
+}
+
 
 /*----------------------------------------------   
 --Header Font Defualts
@@ -483,9 +496,20 @@
 /*----------------------------------------------   
 --Sect: Title Modifier
 -----------------------------------------------  */
-@mixin content-title($padding: 2em 1em){
+@mixin content-title($padding: 2em 0){
 	padding: $padding;
 	@include center-all;
+	
+	
+	h2{
+		text-transform:	uppercase;
+		letter-spacing:	0.07em;
+		font-weight:	900;
+	}
+	p{
+		font-size:	115%;
+		line-height:	1.7;
+	}
 	
 	figure img{
 		max-width:	10em;
@@ -497,31 +521,7 @@
 		}
 	}
 }	
-/*----------------------------------------------   
---Transition Links: SLideIn
------------------------------------------------  */
-@mixin link-slideIn($position:"relative", $bgColor: #000, $bgOpacity: 0.9){
-	position:	$position;
-	width:	100%;
 
-	&:before{
-		content:	'';
-		background-color:	rgba($bgColor, $bgOpacity);
-		top:	0;
-		left:	-100%;
-		position:	absolute;
-		width:	100%;
-		height:	100%;		
-		@include transition(all .5s ease-in-out);
-	}
-	
-	&:hover{
-		&:before{
-			left:	0;
-			@include transition(all .5s ease-in-out);
-		}
-	}
-}
 
 
 /*----------------------------------------------   

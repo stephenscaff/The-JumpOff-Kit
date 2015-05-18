@@ -1,5 +1,4 @@
 
-
 /*----------------------------------------------   
 --Links
 -----------------------------------------------  */
@@ -7,7 +6,7 @@ a{
   @include link-styles($color-beta);
 }
 
-a.link-line, nav a{
+a.link-line{
 	@include link-line();
 }
 /*----------------------------------------------   
@@ -55,16 +54,6 @@ a.link-line, nav a{
 
 .bg-light{
   background-color: $color-light;
-}
-
-.bg-red-gradi {
-  @include prefix(background, linear-gradient(45deg, #9a2323 12%, #242b4b 72%));
-  opacity: 0.95;
-}
-
-.bg-green-gradi{
-  @include prefix(background, linear-gradient(45deg, #1578A8 12%, #14B18B 72%));
-  opacity: 0.95;
 }
 
 

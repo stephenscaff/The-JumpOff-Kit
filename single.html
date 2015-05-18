@@ -13,18 +13,18 @@
 
 <title>Page Title | Website Title</title>
 <meta name="description" content="Lorem ipsum description of this page.">
-<meta name="keywords" content="keyword keyword keyword keyword keyword keyword keyword keyword keyword keyword keyword">
+<meta name="keywords" content="keyword keyword keyword ">
 <meta name="author" content="Stephen Scaff">
-<meta property="og:title" content="<!-- pageTitle -->" />
+<meta property="og:title" content="Page Title" />
 
 <!-- Facebook Open Graph Meta
 ================================================== -->
 <meta property="og:locale" content="en_US"/>
-<meta property="og:title" content="<!-- pageTitle -->"/>
+<meta property="og:title" content="Page Title"/>
 <meta property="og:url" content="http://stephenscaff.com"/>
-<meta property="og:site_name" content="<!-- pageTitle -->"/>
+<meta property="og:site_name" content="Page Title"/>
 <meta property="og:description" content="Lorem ipsum description of this page." />
-<meta property="og:image" content="http://stephenscaff.com/assets/images/screen.jpg"/>
+<meta property="og:image" content="assets/images/screen.jpg"/>
 <meta property="og:type" content="website" />
 
 <!-- Twitter Meta
@@ -38,7 +38,6 @@
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
 
-
 <!-- Fav and icons
 ================================================== -->	
 <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -47,7 +46,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72x72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-precomposed.png">
 
-<!-- Link Rel
+<!-- Link Rels
 ================================================== -->
 <link rel="alternate" type="application/rss+xml" href="#" title="Feed" />
 <link rel="canonical" href="#" />	
@@ -67,145 +66,58 @@
 
 <!-- Mobile Nav
 ================================================== -->
-<div class='mobile-nav-toggle right'>
-<a class='toggle' id='trigger-nav'>
-<div class='menubars'></div>
+<!-- Nav Toggle -->
+<a class='toggle-offcanvas'>
+	<div class='menubars'></div>
 </a>
-</div>
-</div>
-<nav class='mobile-nav'>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/">Services</a></li>
-<li><a href="/contact">Contact</a></li>
-<li><a href="/blog">Blog</a></li>
-</ul>
-</nav>
+
+<section class="offcanvas-bg">
+<!-- Footer-nav -->
+	<nav class='mobile-nav'>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/">Services</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+	</nav>
+
+	<!-- Footer-nav -->
+	<footer class="footer-nav">
+		<ul>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Instagram</a></li>
+			<li><a href="#">Github</a></li>
+		</ul>
+	</footer> 
+</section>
 
 <!-- Header
 ================================================== -->
-
 <header class="header-main">
-  <div class="row">
-<!-- Logo -->
-  	<a href="/#top">
-  		<h1 id="logo">
-  	 	<img class="logo left" src="assets/images/logo-jumpoff-dark.png" alt="" />
-  		</h1>
-  	</a>
+ <div class="row">
+		<!-- Logo -->
+  <a href="/"><h1 id="logo">TheJumpOff</h1></a>
 
-<!-- Main Nav-->
-    <nav role="navigation">
-  	  <ul>
-  	    <li><a href="/">Home</a></li>
-  	    <li><a href="/about">About</a></li>
-  	    <li><a href="/">Services</a></li>
-  	    <li><a href="/contact">Contact</a></li>
-  	    <li><a href="/blog">Blog</a></li>
-      </ul>  
-    </nav>
-  </div>
+		<!-- Main Nav-->
+  <nav role="navigation">
+  	<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Services</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/blog">Blog</a></li>
+   </ul>  
+  </nav>
+	</div>
 </header>
 
 
 <!-- Main
 ================================================== -->
-<main role="main" class="post-single">
+<main role="main">
 
-<!-- Thoughts - Single
-================================================== -->
-<article class="sect-post">
-
-<section class="post-mast sect-banner">
-<div id="mast-bg" class="bg-img"
-style="background-image:	url(assets/images/blog-mast-1.jpg);"></div>
-</section>
-	<div class="post-content">		
-  
-  	<header>
-  		<h1>This is an Example Post to Highlight Formatting Options</h1>
-  <span class="post-meta-byline">Written by Carlos Danger on March 18, 2014</span>
-  
-  </header>
-  
-  <hr class="sep"/>
-  
-  
-  <p>This is a lead paragraph which is slightly larger to create a nice visual effect that improves readability and ups sophistication. </p>
-  <p>East Liberty has undergone a revolution of the gentrified kind during the last few years, sparked (of course) when Whole Foods dropped it&#8217;s flag.</p>
-
-  <p>Since then, a number of business and designer lofts have flocked to the area, making this transitional neighborhood a little less transitional. What better place for the &#8216;hip&#8217; designed-minded <a href="http://www.acehotel.com/">Ace Hotel</a> to call home? The Burgh will now join the like of such other hipster Ace Hotel cities as <a href="http://www.acehotel.com/london">London</a>, <a href="http://www.acehotel.com/losangeles">Downtown LA</a>, <a href="http://www.acehotel.com/seattle">Seattle</a>, <a href="http://www.acehotel.com/newyork">NYC</a>, and <a href="http://www.acehotel.com/panama">Panama City.</a>. So, take that Portland&#8230; oh wait, they gotta Ace Hotel <a href="http://www.acehotel.com/portland">too</a>.</p>
-  
-  <blockquote class="grid-breaking">
-  This is a grid breaking blockquote used to callout a quote in a more visually interesting way, but it can stay within the grid too.
-  </blockquote>
-
-  <h3>This is a Title for Sub Headers</h3>
-  <p>Basically, the Ace Hotel is a collection of very boutique and unique joints, all designed with the area in mind. They make use of cool spaces and drop some pretty serious crafty cuts with the interior design skills. And of course, their hipster branding is very much on point. Go check their <a href="http://blog.acehotel.com/">Tumbler</a> &#8211; best believe breaded gents are well represented.</p>
-  <figure><img src="http://lorempixel.com/960/500/city/1/" alt="blog-mm-acehotel1" class="alignnone size-full wp-image-155" /></figure>
-  
-  <p>Basically, the Ace Hotel is a collection of very boutique and unique joints, all designed with the area in mind. They make use of cool spaces and drop some pretty serious crafty cuts with the interior design skills. And of course, their hipster branding is very much on point. Go check their <a href="http://blog.acehotel.com/">Tumbler</a> &#8211; best believe breaded gents are well represented.</p>
-  
-  <h3></h3>
-  <strong>This is going to be a unordered list:</strong>
-  <ul>
-  <li>Order list item one</li>
-  <li>And other list item two</li>
-  <li>Yep a third item</li>
-  </ul>
-  
-  <strong>This is going to be an ordered list:</strong>
-  <ol>
-  <li>Order list item one</li>
-  <li>And other list item two</li>
-  <li>Yep a third item</li>
-  </ol>
- </div>
-
-
-<!-- Single Footer
-================================================== -->
-<footer class="post-content post-footer">
-		<div class="post-socials">
-			<a href="#"><span class="icon icon-twitter"></span></a>
-			<a href="#"><span class="icon icon-facebook"></a>
-	</div>
-
-	<div class="post-footer-card">
-		<p class="post-footer-title">Written By</p>  
-
-		<img class="post-footer-avatar" src="assets/images/avatar-brian.png">
-		<div class="post-footer-info">
-			<h4><a href="#" title="Posts by Brian" rel="author">Brian Lee</a></h4>
-			<p>Brian Lee has over 27 years of experience as a dog trainer and behaviorist, and has worked with over 10,000 dogs and their owners.</p>
-			<a class="link-arrow" href="http://urbaninfluence.com/author/alexandra-matthiesen ">View Posts</a>           
-			</div>
-		</div>
-	</div>
-</footer>
-
-</div>
-</article>
-
-
-<div class="pagination">
-  <span id="older-nav"><a href="#" rel="prev">Last Thought <span class="icon-chev-left-2"></span></a></span>
-  <span class="pagination-sep"> // </span>
-  <span id="newer-nav"><a href="#" rel="next"><span class="icon-chev-right-2"></span> Next Thought</a></span>
-</div>  		  
-
-
-<section class="sect-next post-nav">
-	<article class="g-12 cols">
-		<a class="invert" href="#tr" style="background-image:url('assets/images/blog-mast-2.jpg');">    
-			<div class="content"> 
-				<span class="meta-readnext">Read Next</span>
-				<h3>Here is another post to keep things going</h3>			  	
-			</div>
-		</a>  
-	</article>
-</section>  
 </main>
 
 

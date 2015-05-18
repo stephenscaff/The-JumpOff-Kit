@@ -5,10 +5,18 @@
 (function() {
   $(function() {
 
-
+ 
 /*----------------------------------------------   
---Function details
+--Sticky Nav
 -----------------------------------------------  */ 
+$(window).scroll(function () {
+	var scroll = $(window).scrollTop();
+	if (scroll >= 70) {
+		$("header.header-main").addClass("sticky");
+	} else {
+		$("header.header-main").removeClass("sticky");
+	}
+});
 
 
 /*----------------------------------------------   

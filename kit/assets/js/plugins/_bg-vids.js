@@ -419,7 +419,7 @@
 
 /*----------------------------------------------   
 --Usage
------------------------------------------------  */
+-----------------------------------------------  
     if ($(window).width() > 767) {
       $(".bg-vid").vide({
         mp4: '/assets/videos/video-home.mp4',
@@ -429,7 +429,8 @@
       });
      
       $('.bg-vid').fadeIn(3000);
-      /*$('#sect-video .overlay').stop().animate({
-        "opacity": 0.6
-      });*/
+      //$('#sect-video .overlay').stop().animate({
+      //  "opacity": 0.6
+      // });
     }
+    */

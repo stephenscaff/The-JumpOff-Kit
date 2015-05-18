@@ -9,7 +9,6 @@ $('.js-expander').click(function (e) {
  $(this).toggleClass("expander-open");
 });
 
-
 /*----------------------------------------------   
 Expand: accordion
 -----------------------------------------------  */
@@ -30,8 +29,6 @@ function accordion() {
   });
 }
 accordion();
-
-
 
 /*----------------------------------------------   
 Accordion: Alt

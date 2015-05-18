@@ -63,7 +63,7 @@ input:not([type=checkbox]), textarea, select {
   float: none;
   font-weight: 400;
  -webkit-appearance: none;
- @include prefix(border-radius, $base-borderradius);
+	 border-radius:	 $base-borderradius;
  box-shadow:	none;
  @include transition(all, 0.25s, ease-in);
  

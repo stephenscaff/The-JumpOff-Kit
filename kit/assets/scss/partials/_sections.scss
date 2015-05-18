@@ -4,7 +4,7 @@ section * {
 }
 
 /*----------------------------------------------   
---Content - Sections
+--Sect: content (basic repeatable content regions)
 -----------------------------------------------  */
 .sect-content {
   padding: 3em 0;
@@ -21,7 +21,7 @@ section * {
 }
 
 /*----------------------------------------------   
---Sect: Intro
+--Sect: Intro (intro sections)
 -----------------------------------------------  */
 .sect-intro{
 	.cols, figure{
@@ -53,19 +53,14 @@ section * {
   opacity: 0.2;
   filter: alpha(opacity=20);
   background-size: auto 200%;
+  overflow: hidden;
 
   @media (min-width: $mq-med) {
   	background-size: cover;
   }
-}
-
-.sect-banner .bg-vid {
-  overflow: hidden;
-}
-
-.sect-banner .bg-vid > video {
+	& > video {
   position: absolute !important;
   top: 0 !important;
+	}
 }
-
 

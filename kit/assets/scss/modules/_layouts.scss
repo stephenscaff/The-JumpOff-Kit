@@ -64,7 +64,7 @@
 --L to R Scroll on mobile
 -----------------------------------------------  */
 @media (max-width: $mq-xsmall) {
-	.scroller {
+	.scroll-x {
 		overflow-x: scroll;
 	}
 }
