@@ -26,6 +26,7 @@
 			@include animation(fade-in ease-in-out .75s 1s both);
 			background-color:	$color-dark;
 			
+			//js add for zoom effect
 			&.zoom{
 				@include transition(all 33.6s ease);
 				@include transform(scale(1.7));

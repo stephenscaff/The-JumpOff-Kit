@@ -1,93 +1,111 @@
 /*----------------------------------------------   
---Microclearfix
+--Mixins:
+1. Typography
+2. Links
+3. Lists
+4. Positioning & Layouts
+5. Block/Section elements
+6. Effects
+7. Visibilities
 -----------------------------------------------  */
-@mixin cf() {
- & {
-   *zoom: 1;
- }
- &:before,
- &:after {
-     content: "";
-     display: table;
- }
- &:after {
-     clear: both;
- }
-}
 
 /*----------------------------------------------   
---Positioning
+--H1
 -----------------------------------------------  */
-@mixin centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float:	none;
-}
+@mixin font-h1($margin-bottom:0.25em){
+	font-size: 2.15em;  
+	line-height: 1.4;
+	margin-top:	0;
+ margin-bottom: $margin-bottom;
 
-@mixin center-all {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  
-  .cols{
-  	margin:	0 auto;
-  	float:	none;
-  	display:	block;
-  }
+	@media (min-width: $mq-xlarge) {
+	  font-size:	calc(2.75em + 40%);
+	}  
 }
 
 
 /*----------------------------------------------   
---Positioning - vert center
+--H2
 -----------------------------------------------  */
-@mixin v-center{
-  display: table;
-  width: 100%;
+@mixin font-h2($margin-bottom:0.5em){
+	font-size: 1.75em;
+	line-height: 1.4;
 
-  & > .vc-content{
-  display: table-cell;
-  vertical-align: middle;
-  margin-top: 0;
-  margin-bottom: 0;
-  float: none;
-  padding: 7% 0;
-  }
-  &.inner > *,
-  &.inner > * {
-    display: block;
-    vertical-align: baseline;
-  }
-}
-
-/*----------------------------------------------   
---Vert Center: Single Element
------------------------------------------------  */
-@mixin trans-vcenter{
-	position: relative;
-	top: 50%;
-	@include transform(translateY(-50%));
+	margin-bottom: $margin-bottom;
+	
+	@media (min-width: $mq-xlarge) {
+	  font-size:	calc(1.75em + 40%);
+	}  
 }
 
 
 /*----------------------------------------------   
---Absolute Center
+--H3
 -----------------------------------------------  */
-@mixin abs-center{
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
+@mixin font-h3($margin-bottom:0.6em){
+	font-size: 1.5em;
+	line-height: 1.35;
+	margin-bottom: $margin-bottom;
+	
+	@media (min-width: $mq-xlarge) {
+		font-size:	calc(1.5em + 40%);
+	} 
+}
+
+/*----------------------------------------------   
+--H4
+-----------------------------------------------  */
+@mixin font-h4($margin-bottom:0.4em){
+	font-size: 1.25em;
+ line-height: 1.6;
+ margin-bottom: $margin-bottom;
+	
+	@media (min-width: $mq-xlarge) {
+	  font-size:	calc(1.25em + 40%);
+	}  
+}
+
+/*----------------------------------------------   
+--H5
+-----------------------------------------------  */
+@mixin font-h5($margin-bottom:0.4em){
+	font-size: 1em;
+	line-height: 1.7;
+	margin-bottom: $margin-bottom;
+	
+	@media (min-width: $mq-xlarge) {
+	  font-size:	calc(1em + 40%);
+	}  
 }
 
 
-/* Simple Vert Center: abs */
-@mixin abs-vcenter{
-	position: absolute !important;
-	top: 50%;
-	@include transform(translateY(-50%));
+/*----------------------------------------------   
+--Font size: rwd
+-----------------------------------------------  */
+
+@mixin font-r-sizing($fontSmall, $fontMed, $font-Large){
+	font-size: $fontSmall;
+	
+	@media (min-width: $mq-med) {
+	  font-size: $fontMed;
+	} 
+	@media (min-width: $mq-large) {
+	  font-size: $fontLarge;
+	}
+	@media (min-width: $mq-xlarge) {
+	  font-size: $fontLarge;
+	}  
 }
 
+/*----------------------------------------------   
+--Header Font - Reusable defualt styles
+-----------------------------------------------  */
+@mixin font-header-styles($letterSpacing: 0.9em, $fontWeight: 600){
+	font-family:	$font-header;
+	text-transform:	uppercase;
+	letter-spacing:	$letterSpacing;
+	font-weight:	$fontWeight;
+}
 
 
 /*----------------------------------------------   
@@ -167,109 +185,44 @@
 	}
 }
 
-
 /*----------------------------------------------   
---Header Font Defualts
+--Link: psedu line interaction: Top and Bottom
 -----------------------------------------------  */
-@mixin font-header-styles($letterSpacing: 0.9em, $fontWeight: 600){
-	font-family:	$font-header;
-	text-transform:	uppercase;
-	letter-spacing:	$letterSpacing;
-	font-weight:	$fontWeight;
-}
+@mixin link-lines-tb($lineColor: $color-alpha){
+	position: relative;
+	padding-bottom: 0;
+	display:	inline-block;
 
-/*----------------------------------------------   
---H1
------------------------------------------------  */
-@mixin font-h1($margin-bottom:0.25em){
-	font-size: 2.15em;  
-	line-height: 1.4;
-	margin-top:	0;
- margin-bottom: $margin-bottom;
-
-	@media (min-width: $mq-xlarge) {
-	  font-size:	calc(2.15em + 40%);
-	}  
-}
-
-
-/*----------------------------------------------   
---H2
------------------------------------------------  */
-@mixin font-h2($margin-bottom:0.5em){
-	font-size: 1.75em;
-	line-height: 1.4;
-
-	margin-bottom: $margin-bottom;
-	
-	@media (min-width: $mq-xlarge) {
-	  font-size:	calc(1.75em + 40%);
-	}  
-}
-
-
-/*----------------------------------------------   
---H3
------------------------------------------------  */
-@mixin font-h3($margin-bottom:0.6em){
-	font-size: 1.5em;
-	line-height: 1.35;
-	margin-bottom: $margin-bottom;
-	
-	@media (min-width: $mq-xlarge) {
-		font-size:	calc(1.5em + 40%);
-	} 
-}
-
-/*----------------------------------------------   
---H4
------------------------------------------------  */
-@mixin font-h4($margin-bottom:0.4em){
-	font-size: 1.25em;
- line-height: 1.6;
- margin-bottom: $margin-bottom;
-	
-	@media (min-width: $mq-xlarge) {
-	  font-size:	calc(1.25em + 40%);
-	}  
-}
-
-/*----------------------------------------------   
---H5
------------------------------------------------  */
-@mixin font-h5($margin-bottom:0.4em){
-	font-size: 1em;
-	line-height: 1.7;
-	margin-bottom: $margin-bottom;
-	
-	@media (min-width: $mq-xlarge) {
-	  font-size:	calc(1em + 40%);
-	}  
-}
-
-
-/*----------------------------------------------   
---Font size: rwd
------------------------------------------------  */
-
-@mixin font-r-sizing($fontSmall, $fontMed, $font-Large){
-	font-size: $fontSmall;
-	
-	@media (min-width: $mq-med) {
-	  font-size: $fontMed;
-	} 
-	@media (min-width: $mq-large) {
-	  font-size: $fontLarge;
+	&:before, &:after{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: $lineColor;
+		content: '';
+		opacity: 1;
+		@include transition(all 0.4s ease);
 	}
-	@media (min-width: $mq-xlarge) {
-	  font-size: $fontLarge;
-	}  
+
+	&:after{
+		left: 0;
+		top: 100%;
+	}
+	
+	&:hover::before,
+	&:focus::before,
+	&:hover::after,
+	&:focus::after{
+		opacity: 1;
+		width: 100%;
+		@include transition(all .4s);
+	}
 }
 
 /*----------------------------------------------   
 --Lists:inline
 -----------------------------------------------  */
-
 @mixin list-inline{
 		margin:	0;
 		padding:	0;
@@ -339,21 +292,47 @@
 }
 
 /*----------------------------------------------   
---Layouts: Grid - Semantic Cols
+--Lists: Table Cell display
 -----------------------------------------------  */
-@mixin cols($num) {
-	width: ($col * $num);
-	min-height:1px;
-	padding:$col-padding;
-	position:relative;
-	 @media (min-width: $mq-small) {
-	 	float: left
-	 }
-	 
-	 &:last-child {
-	 	@media (min-width: $mq-small) {
-	 		float: right;
-	 	}
+@mixin list-tc{
+	display:	table;
+	width:	100%;
+	margin:	0;
+	padding:	0;
+	
+	li{
+		display: table-cell;
+		vertical-align: middle;
+		table-layout:	fixed;
+		vertical-align:	middle;
+	}
+	
+	.li-img{
+		width:	3em;
+		max-width:	3em;
+		
+		img{
+			border-radius:	50%;
+		}
+	}
+	
+	.li-content{
+		padding-left:	1em;
+		font-family:	$font-header;
+		
+		span{
+			font-size:	70%;
+			display:	block;
+			margin:	0;
+			letter-spacing:	0.075em;
+		}
+		
+		h5, .post-meta-author-name{
+			margin:	0;
+			text-transform:	uppercase;
+			letter-spacing:	0.075em;
+			font-size:	90%;
+		}
 	}
 }
 
@@ -376,6 +355,115 @@
 	table-layout:	fixed;
 }
 
+
+/*----------------------------------------------   
+--Layouts: Grid - Semantic Cols
+-----------------------------------------------  */
+@mixin cols($num) {
+	width: ($col * $num);
+	min-height:1px;
+	padding:$col-padding;
+	position:relative;
+	 @media (min-width: $mq-small) {
+	 	float: left
+	 }
+	 
+	 &:last-child {
+	 	@media (min-width: $mq-small) {
+	 		float: right;
+	 	}
+	}
+}
+
+/*----------------------------------------------   
+--Microclearfix
+-----------------------------------------------  */
+@mixin cf() {
+ & {
+   *zoom: 1;
+ }
+ &:before,
+ &:after {
+     content: "";
+     display: table;
+ }
+ &:after {
+     clear: both;
+ }
+}
+
+/*----------------------------------------------   
+--Positioning
+-----------------------------------------------  */
+@mixin centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float:	none;
+}
+
+@mixin center-all {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+  .cols{
+  	margin:	0 auto;
+  	float:	none;
+  	display:	block;
+  }
+}
+
+/*----------------------------------------------   
+--Positioning - vert center
+-----------------------------------------------  */
+@mixin v-center{
+  display: table;
+  width: 100%;
+
+  & > .vc-content{
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+  padding: 7% 0;
+  }
+  &.inner > *,
+  &.inner > * {
+    display: block;
+    vertical-align: baseline;
+  }
+}
+
+/*----------------------------------------------   
+--Vert Center: Single Element
+-----------------------------------------------  */
+@mixin trans-vcenter{
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+/*----------------------------------------------   
+--Absolute Center
+-----------------------------------------------  */
+@mixin abs-center{
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+/* Simple Vert Center: abs */
+@mixin abs-vcenter{
+	position: absolute !important;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+
 /*----------------------------------------------   
 --Truncate
 -----------------------------------------------  */
@@ -386,26 +474,7 @@
 	text-overflow: ellipsis;
 }
 
-/*----------------------------------------------   
---overlay
------------------------------------------------  */
-@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
-	&:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba($bgColor, $bgOpacity);
-	z-index: 0;
-	}
-	
-	.row, .content{
-		position:	relative;
-		z-index:	2;
-	}
-}
+
 
 /*----------------------------------------------   
 --Sect: Banners
@@ -450,10 +519,8 @@
   }
  }
 }
-
-
 /*----------------------------------------------   
---Banner Bgs
+--Banner Background-images: common background-image treatments
 -----------------------------------------------  */
 @mixin banner-bg{
 	background-size: cover;
@@ -463,7 +530,7 @@
 }
 
 /*----------------------------------------------   
---BG: abs for plax
+--Banner Background-images: abs positioned
 -----------------------------------------------  */
 @mixin bg-abs{
 	height: 100% !important;
@@ -478,7 +545,7 @@
 
 
 /*----------------------------------------------   
---Banner BG Abs url shortcut
+--Banner Background-images: shortcut urls
 -----------------------------------------------  */
 @mixin bgurl-abs ($imgUrl){
 	$url:"../images/#{$imgUrl}.jpg";
@@ -522,7 +589,57 @@
 	}
 }	
 
+/*----------------------------------------------   
+--Overlays: tint bgs via psedu element
+-----------------------------------------------  */
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
+	&:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba($bgColor, $bgOpacity);
+	z-index: 0;
+	}
+	
+	.row, .content{
+		position:	relative;
+		z-index:	2;
+	}
+}
 
+/*----------------------------------------------   
+--Overlay Gradient
+-----------------------------------------------  */
+@mixin overlay-gradient{
+		&:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+ @include linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.65) 60%);
+	z-index: 0;
+	@include transition(all 0.7s ease);
+	}
+	
+	.row, .content{
+		position:	relative;
+		z-index:	2;
+	}
+}
+
+/*----------------------------------------------   
+--3D Engine: Activate browser's 3d engine
+-----------------------------------------------  */
+@mixin engine3d{
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
 
 /*----------------------------------------------   
 -Visibilities: Show hide
@@ -543,14 +660,3 @@
  }
 }
 
-
-
-
-/*----------------------------------------------   
---3D Engine
------------------------------------------------  */
-@mixin engine3d{
-  -webkit-transform: translateZ(0);
-  visibility: visible;
-  -webkit-backface-visibility: hidden;
-}

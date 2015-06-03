@@ -1,0 +1,1 @@
+$(".icon-search, #js-close-search").click(function(e){$(".search-drawer").toggleClass("js-open-search"),$("#search-site").focus(),e.preventDefault()}),$(".search-drawer").on("keydown",function(e){27===e.keyCode&&$(".search-drawer").removeClass("js-open-search")});

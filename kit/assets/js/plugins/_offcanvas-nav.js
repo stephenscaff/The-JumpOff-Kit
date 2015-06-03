@@ -1,5 +1,5 @@
  /*----------------------------------------------   
- --Off Canvas Mobile Nav
+ --Stupid SImple Offcanvas Nav
  -----------------------------------------------  */ 
  $(".toggle-offcanvas, .siteoverlay").click(function (e) {
    $(".toggle-offcanvas, body").toggleClass("js-nav-open");

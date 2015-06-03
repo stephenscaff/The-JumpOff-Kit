@@ -1,5 +1,5 @@
 /*----------------------------------------------   
---Search Drawer
+--Offcanvas Search Drawer
 -----------------------------------------------  */ 
 $(".icon-search, #js-close-search").click(function (e) {
   $(".search-drawer").toggleClass("js-open-search");
