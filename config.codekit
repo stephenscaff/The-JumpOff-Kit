@@ -346,6 +346,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/kit\/assets\/js\/plugins\/_search-drawer.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_search-drawer.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_search-drawer-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/kit\/assets\/js\/plugins\/_slider.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -429,28 +440,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/_webfont.js",
 		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/_webfont-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/kit\/assets\/js\/plugins\/min\/search-drawer-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/search-drawer-min.js",
-		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/min\/search-drawer-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/kit\/assets\/js\/plugins\/search-drawer.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/search-drawer.js",
-		"outputAbbreviatedPath": "\/kit\/assets\/js\/plugins\/min\/search-drawer-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

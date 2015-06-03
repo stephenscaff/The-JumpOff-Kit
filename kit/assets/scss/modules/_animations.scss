@@ -26,8 +26,8 @@ a.fade-img img{
 -----------------------------------------------  */
 .js-fademe, .js-fademe-late{
   opacity: 1;
-  @include media($mq-med) {
-  opacity: 0
+  @media (min-width: $mq-med) {
+    opacity: 0
   }
 }
 .no-js .js-fademe, .no-js .fademe-late{
