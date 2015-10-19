@@ -22,19 +22,19 @@ var removeOverlay = $(".modal-overlay").remove();
 $(".js-modal-close").click(function(e) {
 e.preventDefault();
    $(modalBoxOverlay).fadeOut(500, function() {
-      removeOverlay;
+      removeOverlay();
   });
 });
 //click anywhere to close appended overlay
 $("body").on('click', '.modal-overlay', function(){
   $(modalBoxOverlay).fadeOut(500, function() {
-      removeOverlay;
+      removeOverlay();
   });
 });
 //Close on control c for copy to clipboard close
  $("input").bind('copy', function() {
    $(modalBoxOverlay).fadeOut(500, function() {
-       removeOverlay;
+       removeOverlay();
    });
  }); 
  
@@ -52,6 +52,3 @@ $(window).on("load resize scroll",function(){
 $(window).resize();
 
 });
-
-
-

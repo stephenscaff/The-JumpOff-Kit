@@ -1,8 +1,8 @@
  /*----------------------------------------------   
  --Stupid SImple Offcanvas Nav
  -----------------------------------------------  */ 
- $(".toggle-offcanvas, .siteoverlay").click(function (e) {
-   $(".toggle-offcanvas, body").toggleClass("js-nav-open");
+ $(".offcanvas-toggle, .siteoverlay").click(function (e) {
+   $(".offcanvas-toggle, body").toggleClass("js-nav-open");
    e.preventDefault();
   });
   

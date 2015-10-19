@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19033",
+"creatorBuild": "19051",
 "files": {
 	"\/assets\/css\/app.min.css": {
 		"fileType": 16,
@@ -42,12 +42,12 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/js\/jquery.js": {
+	"\/assets\/js\/jquery.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/jquery.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery-min.js",
+		"inputAbbreviatedPath": "\/assets\/js\/jquery.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -55,8 +55,8 @@
 		},
 	"\/assets\/js\/modernizr.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/assets\/js\/modernizr.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/modernizr-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -77,8 +77,8 @@
 		},
 	"\/assets\/js\/respond.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/assets\/js\/respond.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/respond-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -114,6 +114,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/kit\/assets\/js\/jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/jquery.js",
+		"outputAbbreviatedPath": "\/assets\/js\/jquery.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/kit\/assets\/js\/plugins.js": {
 		"fileType": 64,
@@ -824,22 +835,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/pages\/_blog.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/pages\/_blog.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_blog.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/kit\/assets\/scss\/pages\/_home.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -849,6 +844,54 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/scss\/pages\/_home.scss",
 		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_home.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/kit\/assets\/scss\/pages\/_posts-author.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/pages\/_posts-author.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_posts-author.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/kit\/assets\/scss\/pages\/_posts-index.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/pages\/_posts-index.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_posts-index.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/kit\/assets\/scss\/pages\/_posts-single.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/pages\/_posts-single.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_posts-single.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -961,6 +1004,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/scss\/partials\/_offcanvas-search.scss",
 		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_offcanvas-search.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/kit\/assets\/scss\/partials\/_sect-nextpost.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/partials\/_sect-nextpost.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_sect-nextpost.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1106,6 +1165,347 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
+		},
+	"\/resources\/images\/abbot-bed-lifestyle_1_1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 226325,
+		"inputAbbreviatedPath": "\/resources\/images\/abbot-bed-lifestyle_1_1.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/abbot-bed-lifestyle_1_1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/download.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.04657e+06,
+		"inputAbbreviatedPath": "\/resources\/images\/download.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/download.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/elsa-murphy-bed-in-white-in-concept-room---closed.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 331441,
+		"inputAbbreviatedPath": "\/resources\/images\/elsa-murphy-bed-in-white-in-concept-room---closed.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/elsa-murphy-bed-in-white-in-concept-room---closed.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/farmhouse-oak-honey-final_copy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 687322,
+		"inputAbbreviatedPath": "\/resources\/images\/farmhouse-oak-honey-final_copy.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/farmhouse-oak-honey-final_copy.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/Great Springs.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.76704e+06,
+		"inputAbbreviatedPath": "\/resources\/images\/Great Springs.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/Great Springs.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/horizontal-elsa-in-oakhoney.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 77799,
+		"inputAbbreviatedPath": "\/resources\/images\/horizontal-elsa-in-oakhoney.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/horizontal-elsa-in-oakhoney.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/hudson-murphy-bed-in-oakunfinished.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58260,
+		"inputAbbreviatedPath": "\/resources\/images\/hudson-murphy-bed-in-oakunfinished.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/hudson-murphy-bed-in-oakunfinished.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/hudson-murphy-bed-in-white-in-concept-room-closed.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 295453,
+		"inputAbbreviatedPath": "\/resources\/images\/hudson-murphy-bed-in-white-in-concept-room-closed.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/hudson-murphy-bed-in-white-in-concept-room-closed.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/mission-horizontal-in-mapleunfinished.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49251,
+		"inputAbbreviatedPath": "\/resources\/images\/mission-horizontal-in-mapleunfinished.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/mission-horizontal-in-mapleunfinished.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/mission-murphy-bed-in-maple-natural-concept-picture-closed.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 270119,
+		"inputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-maple-natural-concept-picture-closed.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-maple-natural-concept-picture-closed.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/mission-murphy-bed-in-oak-honey-open.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73285,
+		"inputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-open.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-open.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/mission-murphy-bed-in-oak-honey-opening1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87118,
+		"inputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-opening1.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-opening1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/mission-murphy-bed-in-oak-honey-opening2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71896,
+		"inputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-opening2.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/mission-murphy-bed-in-oak-honey-opening2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy-bed-bookcase-with-bottom-drawers-in-oak-honey-with-mission-styling.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59962,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy-bed-bookcase-with-bottom-drawers-in-oak-honey-with-mission-styling.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy-bed-bookcase-with-bottom-drawers-in-oak-honey-with-mission-styling.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy-bed-plush-mattress.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59908,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy-bed-plush-mattress.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy-bed-plush-mattress.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 223266,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy1.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 278285,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy2.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 362826,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy3.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 278952,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy4.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/murphy5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 197325,
+		"inputAbbreviatedPath": "\/resources\/images\/murphy5.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/murphy5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---closed.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 443288,
+		"inputAbbreviatedPath": "\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---closed.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---closed.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---open.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 425965,
+		"inputAbbreviatedPath": "\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---open.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/revera-horizontal-wall-bed-in-oak-walnut-in-concept-room---open.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/revera-murphy-wall-bed-bourbon-concept-picture-closed.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 274930,
+		"inputAbbreviatedPath": "\/resources\/images\/revera-murphy-wall-bed-bourbon-concept-picture-closed.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/revera-murphy-wall-bed-bourbon-concept-picture-closed.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/Screen Shot 2015-08-19 at 12.02.59 PM.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.13649e+06,
+		"inputAbbreviatedPath": "\/resources\/images\/Screen Shot 2015-08-19 at 12.02.59 PM.png",
+		"outputAbbreviatedPath": "\/resources\/images\/Screen Shot 2015-08-19 at 12.02.59 PM.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/shevlin-murphy-bed-in-coffeebean-open2_2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 283637,
+		"inputAbbreviatedPath": "\/resources\/images\/shevlin-murphy-bed-in-coffeebean-open2_2.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/shevlin-murphy-bed-in-coffeebean-open2_2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/Ss2c5MVASdGkVHOwG6n9_Imogene Pass.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/resources\/images\/Ss2c5MVASdGkVHOwG6n9_Imogene Pass.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/Ss2c5MVASdGkVHOwG6n9_Imogene Pass.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/unsplash_52d8277ccad75_1.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/resources\/images\/unsplash_52d8277ccad75_1.jpeg",
+		"outputAbbreviatedPath": "\/resources\/images\/unsplash_52d8277ccad75_1.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/wall-bed-bookcase-in-oak-honey.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56188,
+		"inputAbbreviatedPath": "\/resources\/images\/wall-bed-bookcase-in-oak-honey.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/wall-bed-bookcase-in-oak-honey.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/wall-bed-bookcase-with-bottom-doors-in-oak-honey-with-mission-styling.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59217,
+		"inputAbbreviatedPath": "\/resources\/images\/wall-bed-bookcase-with-bottom-doors-in-oak-honey-with-mission-styling.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/wall-bed-bookcase-with-bottom-doors-in-oak-honey-with-mission-styling.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/wall-bed-firm-mattress.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62570,
+		"inputAbbreviatedPath": "\/resources\/images\/wall-bed-firm-mattress.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/wall-bed-firm-mattress.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/resources\/images\/wall-bed-guest-mattress.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45850,
+		"inputAbbreviatedPath": "\/resources\/images\/wall-bed-guest-mattress.jpg",
+		"outputAbbreviatedPath": "\/resources\/images\/wall-bed-guest-mattress.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/single.html": {
 		"fileType": 8192,
@@ -1608,10 +2008,6 @@
 			}
 		},
 	"jsLintFlags2": {
-		"ass": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"bitwise": {
 			"active": 0,
 			"flagValue": -1
@@ -1620,15 +2016,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"closure": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"continue": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"debug": {
+		"couch": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1636,75 +2024,27 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"eqeq": {
+		"es6": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"evil": {
+		"eval": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"forin": {
+		"for": {
 			"active": 0,
 			"flagValue": -1
-			},
-		"indent": {
-			"active": 0,
-			"flagValue": 4
 			},
 		"maxlen": {
 			"active": 0,
 			"flagValue": 150
 			},
-		"newcap": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"node": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"nomen": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"plusplus": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"properties": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"regexp": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"rhino": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sloppy": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"stupid": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sub": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"todo": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unparam": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"vars": {
+		"this": {
 			"active": 0,
 			"flagValue": -1
 			},

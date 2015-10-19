@@ -1,7 +1,7 @@
 /*----------------------------------------------   
 --Header offcanvas-bg
 -----------------------------------------------  */
-	.offcanvas-bg{
+	.offcanvas-menu{
  	@include transition(transform 0.5s cubic-bezier(.34,.95,.27,.98));
  	background-color:	rgba($color-dark, 0.9); 
  	height:	100vh;
@@ -59,7 +59,7 @@
 	}
 	
 	/*--Footer-nav --*/
-	footer.footer-nav{
+	footer.offcanvas-menu--footer{
 		position:	absolute;
 		width:	100%;
 		bottom:	1em;
@@ -96,7 +96,7 @@
 -----------------------------------------------  */
 .js-nav-open{
 	/*--offcanvas-bg--*/
-	.offcanvas-bg{
+	.offcanvas-menu{
 		@include transform(translate3d(0, 0, 0));
 		@include transition(transform 0.5s cubic-bezier(.34,.95,.27,.98));
 		/*--offcanvas nav link animation--*/
@@ -154,7 +154,7 @@
 /*----------------------------------------------   
 --Mobile Nav Toggle
 -----------------------------------------------  */
-.toggle-offcanvas {
+.offcanvas-toggle {
  height: 3em;
  z-index: 9999;
  padding: 1em .6em 1em 1em;
@@ -164,7 +164,7 @@
  right: 1%;
  @include transition(padding-top .5s cubic-bezier(0.1, 0.01, 0.3, 1));
 
- 
+ /*-- Hide > Med --*/
  @media (min-width: $mq-med){
  display:	none;
  }
@@ -186,7 +186,7 @@
 }
 
 /*----------------------------------------------   
---Mobile Nav: Menu Bars
+--Offcanvas-menu: Menu Bars
 -----------------------------------------------  */
 .menubars {
  width: 1.7em;
@@ -212,6 +212,15 @@
    z-index: -1;
    @include transition (all 0.3s ease-in-out); 
 	 }
+
+  .scrolling-down &,
+  .communities &{
+    background: $color-darkgrey;
+
+   &:after, &:before {
+    background: $color-darkgrey;
+   }
+  }
 	} 
 
 /*----------------------------------------------   
@@ -226,7 +235,7 @@
 
 	.menubars:after {
   top: 0 !important;
-  background: #fff !important;
+  //background: #fff !important;
   @include transform(rotate(45deg));
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(45), M12=-sin(45), M21=sin(45), M22=cos(45));
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(45), M12=-sin(45), M21=sin(45), M22=cos(45))";
@@ -235,7 +244,7 @@
 	
 	.menubars:before {
   top: 0 !important;
-  background: #fff !important;
+  //background: #fff !important;
   @include transform(rotate(-45deg));
   filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-45), M12=-sin(-45), M21=sin(-45), M22=cos(-45));
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-45), M12=-sin(-45), M21=sin(-45), M22=cos(-45))";

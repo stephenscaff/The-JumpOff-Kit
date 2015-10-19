@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
@@ -11,19 +10,19 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>Page Title | Website Title</title>
-<meta name="description" content="Lorem ipsum description of this page.">
+<title>Home | Website Title</title>
+<meta name="description" content="A description of this page.">
 <meta name="keywords" content="keyword keyword keyword ">
 <meta name="author" content="Stephen Scaff">
-<meta property="og:title" content="Page Title" />
+<meta property="og:title" content="Home" />
 
 <!-- Facebook Open Graph Meta
 ================================================== -->
 <meta property="og:locale" content="en_US"/>
-<meta property="og:title" content="Page Title"/>
+<meta property="og:title" content="Home"/>
 <meta property="og:url" content="http://stephenscaff.com"/>
-<meta property="og:site_name" content="Page Title"/>
-<meta property="og:description" content="Lorem ipsum description of this page." />
+<meta property="og:site_name" content="Home"/>
+<meta property="og:description" content="A description of this page." />
 <meta property="og:image" content="assets/images/screen.jpg"/>
 <meta property="og:type" content="website" />
 
@@ -33,6 +32,16 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:site" content="@">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:url" content="<?php echo the_permalink() ?>">
+<meta name="twitter:site" content="@"/>
+<meta name="twitter:creator" content="@https://twitter.com/">
+<meta name="twitter:domain" content=""/>                         
+<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/assets/images/vrge-screen.jpg"/>
+
 
 <!-- Mobile Specific Meta
 ================================================== -->
@@ -62,61 +71,162 @@
 ================================================== -->
 <script src="assets/js/modernizr.js"></script>
 
-</head><body class="single">
+</head><body class="single fade-in-page">
 
 <!-- Mobile Nav
 ================================================== -->
 <!-- Nav Toggle -->
-<a class='toggle-offcanvas'>
-	<div class='menubars'></div>
+<a class='offcanvas-toggle'>
+ <div class='menubars'></div>
 </a>
 
-<section class="offcanvas-bg">
+<section class="offcanvas-menu">
 <!-- Footer-nav -->
-	<nav class='mobile-nav'>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/">Services</a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/blog">Blog</a></li>
-		</ul>
-	</nav>
+ <nav class='offcanvas-menu--nav'>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+ </nav>
 
-	<!-- Footer-nav -->
-	<footer class="footer-nav">
-		<ul>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Instagram</a></li>
-			<li><a href="#">Github</a></li>
-		</ul>
-	</footer> 
+ <!-- Footer-nav -->
+ <footer class="offcanvas-menu--footer">
+  <ul>
+   <li><a href="https://twitter.com/" title="twitter" target="_blank">Twitter</a></li>
+   <li><a href="https://www.facebook.com/" title="facebook" target="_blank">Facebook</a></li>
+   <li><a href="http://instagram.com/" title="instagram" target="_blank">Instagram</a></li>
+  </ul>
+ </footer> 
 </section>
 
 <!-- Header
 ================================================== -->
 <header class="header-main">
  <div class="row">
-		<!-- Logo -->
-  <a href="/"><h1 id="logo">TheJumpOff</h1></a>
+  <!-- Logo -->
+  <a href="/" class="header-main--logo">LOGO<!--<img src="assets/images/logo-worldhousing.png">--></a>
 
-		<!-- Main Nav-->
-  <nav role="navigation">
-  	<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/">Services</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/blog">Blog</a></li>
+  <!-- Main Nav-->
+  <nav role="navigation" class="header-main--nav">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a  class="btn-alpha">Sign Up</a></li>
    </ul>  
   </nav>
-	</div>
+ </div>
 </header>
-
 
 <!-- Main
 ================================================== -->
-<main role="main"></main>
+<main role="main" class="post-single">
+
+<!-- Article
+================================================== -->
+<article class="sect-post">
+
+<!-- Article Hero
+================================================== -->
+<header class="sect-mast has-border" style="background-image: url(https://unsplash.it/2200/900?image=296)">
+  
+  <div class="vcenter">
+   <div class="row g-full mast-content">
+     <!--
+     <ul class="post-meta-tags">
+     <li><a class="tag" href="#">Dopeness</a></li>
+     <li><a class="tag" href="#">Retardery</a></li>
+    </ul>
+    -->
+    <span class="meta-date"> on March 23, 2015</span>
+     <h1>There's A Passage That I Got Memorized, Seems Appropiate</h1>
+     <p class="post-subtitle">Ezekiel 25,17. The path of the righteous man is beset of all sides by the iniquities of the selfish and the tyranny of evil me.</p>
+  
+   </div>
+  </div>
+</header>
+
+
+
+<!-- Post COntent
+================================================== --> 
+<section class="post-content sect-content">
+  <div class="row">
+
+  <!--Author Byline -->
+  <ul class="post-meta-byline">
+   <li class="byline-avatar">
+     <img src="assets/images/tmp/team-1.jpg"/>
+     <span>by <a class="btn" href="#">Patrick Swayze</a></span>
+   </li>
+   <li><a href="#"><i class="icon icon-twitter3"></i></a></li>
+   <li><a href="#"><i class="icon icon-facebook3"></i></a></li>
+  </ul>
+
+
+   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+   <p>Bacon ipsum dolor amet porchetta strip steak leberkas frankfurter andouille. Short ribs tenderloin fatback tongue swine. Meatball salami beef ribs tri-tip boudin cupim swine. Tri-tip drumstick capicola kielbasa ball tip biltong sausage shank fatback brisket pork chop turducken. Beef ribs meatloaf sausage ball tip pancetta pork belly pork chop tenderloin hamburger. Turducken strip steak prosciutto kielbasa capicola pork belly t-bone tri-tip brisket drumstick ham swine hamburger filet mignon leberkas.</p>
+   
+   
+   <figure class="gridbreak-left"><img src="https://unsplash.it/900/700?image=534">
+    <figcaption>Here's a little gridbreak left image with caption son.</figcaption>
+   </figure>
+
+   <p>Swine turkey pork chop, kevin leberkas boudin tenderloin ball tip beef venison doner. Beef bacon pork loin, sirloin beef ribs chicken ham hock porchetta. Flank filet mignon short ribs t-bone capicola rump spare ribs pork belly ribeye ham hock tail. Corned beef jowl turkey bresaola pork belly tenderloin shoulder pork salami spare ribs beef ribs. Corned beef t-bone salami sausage. Alcatra meatball t-bone pork loin, sausage ham hock kielbasa flank corned beef brisket. Spare ribs short ribs sausage, drumstick pork ribeye swine shoulder beef pork belly meatball cupim kevin shank landjaeger. Ham hock porchetta. Flank filet mignon short ribs t-bone capicola rump rump son. Pork chop alcatra jerky short ribs spare ribs bacon. Tri-tip shankle spare ribs, porchetta picanha boudin chicken pig ball tip beef ribs brisket.</p>
+   
+   <h3>Real BBQ is Rub Based </h3>
+   <p>Beef ribs meatball leberkas boudin shank tongue alcatra tri-tip spare ribs short ribs hamburger salami corned beef. Biltong chuck jowl boudin, pork loin tri-tip frankfurter bresaola short loin ribeye. Porchetta andouille cupim kevin tenderloin corned beef spare ribs pork loin filet mignon pastrami beef cow. Cow chicken porchetta bacon t-bone pig frankfurter beef hamburger tri-tip turkey pork. Chuck corned beef pig prosciutto.</p>
+   
+   <figure class="gridbreak-small"><img src="https://unsplash.it/1250/600?image=324"></figure>
+
+   <p>Tri-tip hamburger jerky corned beef tail, frankfurter short ribs landjaeger kielbasa t-bone beef andouille chicken pork belly salami. Porchetta jerky shank salami. Chuck alcatra sausage pork belly pork meatball. Ground round meatloaf shoulder pancetta shank jowl rump. Filet mignon shoulder venison, landjaeger ball tip salami chicken biltong turkey spare ribs kielbasa. Pork chop alcatra jerky short ribs spare ribs bacon. Tri-tip shankle spare ribs, porchetta picanha boudin chicken pig ball tip beef ribs brisket.</p>
+
+   <blockquote>Chuck alcatra sausage pork belly pork meatball. Ground round meatloaf shoulder pancetta shank jowl rump and pig ear stew offul.</blockquote>
+
+   <p>Ground round shoulder jowl pig strip steak, rump ball tip beef short loin biltong shankle chicken. Tail prosciutto leberkas alcatra ham hock porchetta jowl ground round rump sirloin frankfurter corned beef beef ribs. Cupim pastrami kielbasa, strip steak sausage pig corned beef tri-tip sirloin tongue chuck frankfurter. Ball tip spare ribs bacon beef pig. Bresaola ham hock shank t-bone chicken landjaeger leberkas cow.</p>
+   
+   <h3>Spam Man Can Sam</h3>
+   <p>Frankfurter jowl pancetta capicola, meatloaf pork belly sausage landjaeger. Shankle short loin short ribs pork chop bresaola pork corned beef. Kielbasa boudin cupim capicola prosciutto cow. Turducken kielbasa swine t-bone bacon. Landjaeger biltong tri-tip bresaola pork chop pastrami shank pork loin beef ribs venison.</p>
+  </div>
+</section>
+
+<!-- Article Footer
+================================================== -->
+<footer class="post-footer">
+ <div class="row">
+  <ul class="post-footer-shares">
+   <li><h5>Share</h5></li>
+   <li><a href="#"><i class="icon icon-twitter"></i></a></li>
+   <li><a href="#"><i class="icon icon-fb"></i></a></li>
+   <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
+ </ul>
+
+
+ <ul class="post-footer-byline">
+ <li>
+  <img class="post-footer-avatar" src="assets/images/tmp/team-1.jpg">
+  </li>
+
+  <li class="post-footer-credit">
+   <h5><a href="http://urbaninfluence.com/author/stephen-scaff/" title="Posts by Stephen Scaff" rel="author">Patrick Swayze</a></h5>
+   <p>Crafter of panty droppin web stuffs. Kicker of rocks, hater of d-baggy bios. Often in need of a hair cut.</p>
+   <a class="btn" href="#">View Posts</a> 
+  </li>
+  </ul>
+ </div>
+</footer>
+
+</article>
+
+
+
+
+
+</main>
 
 
 <!-- Footer
@@ -130,7 +240,7 @@
 
 <!-- Le javascript
 ================================================== -->	
-<script type='text/javascript' src='assets/js/jquery.js'></script>
+<script type='text/javascript' src='assets/js/jquery.min.js'></script>
 <script type='text/javascript' src='assets/js/plugins.min.js'></script>
 <script type='text/javascript' src='assets/js/scripts.min.js'></script>
 

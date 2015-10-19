@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
@@ -34,6 +33,16 @@
 <meta name="twitter:creator" content="@">
 <meta name="twitter:site" content="@">
 
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:url" content="<?php echo the_permalink() ?>">
+<meta name="twitter:site" content="@"/>
+<meta name="twitter:creator" content="@https://twitter.com/">
+<meta name="twitter:domain" content=""/>                         
+<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/assets/images/vrge-screen.jpg"/>
+
+
 <!-- Mobile Specific Meta
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
@@ -62,55 +71,54 @@
 ================================================== -->
 <script src="assets/js/modernizr.js"></script>
 
-</head><body class="blog">
+</head><body class="blog fade-in-page">
 
 <!-- Mobile Nav
 ================================================== -->
 <!-- Nav Toggle -->
-<a class='toggle-offcanvas'>
-	<div class='menubars'></div>
+<a class='offcanvas-toggle'>
+ <div class='menubars'></div>
 </a>
 
-<section class="offcanvas-bg">
+<section class="offcanvas-menu">
 <!-- Footer-nav -->
-	<nav class='mobile-nav'>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/">Services</a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/blog">Blog</a></li>
-		</ul>
-	</nav>
+ <nav class='offcanvas-menu--nav'>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+ </nav>
 
-	<!-- Footer-nav -->
-	<footer class="footer-nav">
-		<ul>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Instagram</a></li>
-			<li><a href="#">Github</a></li>
-		</ul>
-	</footer> 
+ <!-- Footer-nav -->
+ <footer class="offcanvas-menu--footer">
+  <ul>
+   <li><a href="https://twitter.com/" title="twitter" target="_blank">Twitter</a></li>
+   <li><a href="https://www.facebook.com/" title="facebook" target="_blank">Facebook</a></li>
+   <li><a href="http://instagram.com/" title="instagram" target="_blank">Instagram</a></li>
+  </ul>
+ </footer> 
 </section>
 
 <!-- Header
 ================================================== -->
 <header class="header-main">
  <div class="row">
-		<!-- Logo -->
-  <a href="/"><h1 id="logo">TheJumpOff</h1></a>
+  <!-- Logo -->
+  <a href="/" class="header-main--logo">LOGO<!--<img src="assets/images/logo-worldhousing.png">--></a>
 
-		<!-- Main Nav-->
-  <nav role="navigation">
-  	<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/">Services</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/blog">Blog</a></li>
+  <!-- Main Nav-->
+  <nav role="navigation" class="header-main--nav">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a  class="btn-alpha">Sign Up</a></li>
    </ul>  
   </nav>
-	</div>
+ </div>
 </header>
 
 
@@ -131,7 +139,7 @@
 
 <!-- Le javascript
 ================================================== -->	
-<script type='text/javascript' src='assets/js/jquery.js'></script>
+<script type='text/javascript' src='assets/js/jquery.min.js'></script>
 <script type='text/javascript' src='assets/js/plugins.min.js'></script>
 <script type='text/javascript' src='assets/js/scripts.min.js'></script>
 
