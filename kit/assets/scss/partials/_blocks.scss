@@ -18,7 +18,7 @@ Sect Blocks
 			padding-bottom: 0;
 		}	
 	}
-	.row.xl{
+	[class*="row"]{
 		@media (max-width: $mq-med){
 			width: 100%;
 			max-width: 100%;
@@ -97,7 +97,7 @@ Sect Blocks
 	
 	h4{
 		color:	#fff;	
-		@include font-h3;
+		@extend %font-h3;
 		@include transform(translateY(0));
 		@include transition(transform 0.4s ease);
 	}

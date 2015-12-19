@@ -38,6 +38,88 @@ font-size: 100%;
 }
 
 /*----------------------------------------------   
+--H1 Theme
+-----------------------------------------------  */
+%font-h1{
+  $fontSize: 3.5em;
+  font-size: $fontSize - 1em; 
+  line-height: 1;
+  margin-bottom: 0.25em;
+
+ @media (min-width: $mq-med) {
+   font-size: $fontSize;  
+ }
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+
+
+/*----------------------------------------------   
+--H2 Theme
+-----------------------------------------------  */
+%font-h2{
+ $fontSize: 1.75em; 
+ font-size: $fontSize;  
+ line-height: 1.2;
+ margin-bottom: 0.25em;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+
+/*----------------------------------------------   
+--H3 Theme
+-----------------------------------------------  */
+%font-h3{
+  $fontSize:1.5em;
+ font-size: $fontSize;  
+ line-height: 1.2;
+ margin-bottom: 0.6em;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+/*----------------------------------------------   
+--H4 Theme
+-----------------------------------------------  */
+%font-h4{
+ $fontSize:1.2em; 
+ font-size: $fontSize;  
+ line-height: 1.4;
+ margin-bottom: 0.5em;
+ font-weight: 400;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+
+/*----------------------------------------------   
+--H5 Theme
+-----------------------------------------------  */
+%font-h5{
+  $fontSize:1em;
+ font-size: $fontSize;  
+ line-height: 1.4;
+ margin-bottom: 0.4em;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+/*----------------------------------------------   
+--Font- Header Theme
+-----------------------------------------------  */
+%font-header-theme{
+  font-family: $font-header;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+/*----------------------------------------------   
 --Headers
 -----------------------------------------------  */
 h1,h2,h3,h4,h5,h6{
@@ -50,35 +132,44 @@ h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{
   font-size:$font-small;
   line-height:0
 }
-
+/*----------------------------------------------   
+--Headers
+-----------------------------------------------  */
 h1, .font-h1 {
- @include font-h1;
+ @extend %font-h1;
+ @extend %font-header-theme;
 }
 
 h2, .font-h2 {
- @include font-h2;
+ @extend %font-h2;
 }
 
 h3, .font-h3 {
- @include font-h3;
+ @extend %font-h3;
 }
 
 h4, .font-h4 {
- @include font-h4;
+ @extend %font-h4;
 }
 
 h5, .font-h5 {
- @include font-h5;
+ @extend %font-h5;
 }
 
 /*----------------------------------------------   
---Font Sizes: Helpers
+--Font Lead Paragraph
 -----------------------------------------------  */
-p.lead{
-		font-size:	1.6em;
-		font-family: $font-header;
-		line-height:	1.6;
-		margin:	0;
+%font-lead, .font-lead{
+ font-size: 120%;
+ -webkit-hyphens: none;
+ -moz-hyphens: none;
+ -ms-hyphens: none;
+ hyphens: none;
+ margin-bottom: 0.8em;
+ line-height: 1.6;
+ @media (min-width: $mq-med) {
+   font-size: 130%;
+ }
 }
 
 /*----------------------------------------------   
@@ -94,25 +185,30 @@ p, small, em, ul, li{
   font-family: $font-paragraph;
 }
 
-
 ul, ol{
-	margin:	0;
-	padding:	0;
-	
-	li{
-		margin-left:	1em;
-	}
+  margin: 0;
+  padding:  0;
+  
+  li{
+    margin-left:  1em;
+  }
+}
+
+small{
+  display:block;
+  font-size: 80%;
+  margin-bottom: 1em
 }
 /*----------------------------------------------   
 --Misc
 -----------------------------------------------  */
 .bordered {
-	@media (min-width: $mq-med) {
-		border: 1px solid #fff;
-		display: inline-block;
-		padding: .2em .8em .325em;
-		margin: 0;
-	}
+  @media (min-width: $mq-med) {
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: .2em .8em .325em;
+    margin: 0;
+  }
 }
 
 .subheader{
@@ -135,13 +231,13 @@ ul, ol{
 
 em{
   font-style: italic; 
-  font-weight: 600; 
-  color: #999;
 }
 
-.caps{
+.font-caps{
   text-transform: uppercase;
-  font-weight: 600;
+}
+.font-capitalize{
+  text-transform: capitalize;
 }
 
 

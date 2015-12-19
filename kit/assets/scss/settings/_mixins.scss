@@ -10,86 +10,6 @@
 -----------------------------------------------  */
 
 /*----------------------------------------------   
---H1
------------------------------------------------  */
-@mixin font-h1($fontSize:2.15em){
- font-size: 1.9em;  
- //line-height: 1.4;
- margin-bottom: 0.25em;
- 
- @media (min-width: $mq-med) {
-   font-size: $fontSize;  
- }
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-
-
-/*----------------------------------------------   
---H2
------------------------------------------------  */
-@mixin font-h2($fontSize:1.75em){
- font-size: $fontSize;  
- line-height: 1.2;
- margin-bottom: 0.5em;
-
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-
-/*----------------------------------------------   
---H3
------------------------------------------------  */
-@mixin font-h3($fontSize:1.5em){
- font-size: $fontSize;  
- line-height: 1.2;
- margin-bottom: 0.6em;
-
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-/*----------------------------------------------   
---H4
------------------------------------------------  */
-@mixin font-h4($fontSize:1.2em){
- font-size: $fontSize;  
- line-height: 1.4;
- margin-bottom: 0.5em;
- font-weight: 400;
-
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-
-/*----------------------------------------------   
---H5
------------------------------------------------  */
-@mixin font-h5($fontSize:1.1em){
- font-size: $fontSize;  
- line-height: 1.4;
- margin-bottom: 0.4em;
-
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-
-/*----------------------------------------------   
---Font size: rwd
------------------------------------------------  */
-@mixin font-h1-thin($fontSize:3.15em){
- font-size: $fontSize;  
- font-weight: 100;
-
- @media (min-width: $mq-xlarge) {
-   font-size: calc(#{$fontSize} + 25%);
- }  
-}
-/*----------------------------------------------   
 --Font size: rwd
 -----------------------------------------------  */
 @mixin font-rwd($fontSmall, $fontMed, $fontLarge, $fontXLarge){
@@ -693,73 +613,6 @@
  text-overflow: ellipsis;
 }
 
-
-/*----------------------------------------------   
--Sect: Banners
------------------------------------------------  */
-%banner-theme{
-  position: relative;
-  background-size: cover;
-  background-position: top 50%;
-  background-repeat: no-repeat;
-  background-color: $color-dark;
-  color: white;
-  overflow: hidden;
-  @include v-center;
-}
-
-
-@mixin sect-banner {
- @extend %banner-theme;
- min-height: 30em;
- height: 35em;
- padding: 5em 0;
-
-
-
-  /*----------------------------------------------   
-  --Banners: Typography
-  -----------------------------------------------  */
-  h1, h2, h3, h4, p{
-   color: #fff;
-  }
-
-  p{
-    font-size: 120%;
-  }
-
-  &.is-attached{
-    @media(min-width: $mq-med){
-      background-attachment: fixed;
-    }
-  }
-/*----------------------------------------------   
---Banner Positiong
------------------------------------------------  */
- &.content-right{
-  .cols{
-    float: right;
-  }
- }
- 
- /*-- Postitioning --*/
- .vcenter, .vbottom{
-  padding-top: 2%;
- }
-
- .vbottom{
-   margin-top: 7%;
- }
-
- br{
-  display: none;
-  
-  @media (min-width: $mq-small) {
-   display: block;
-  }
- }
-}
-
 /*----------------------------------------------   
 --Banner Background-images: common background-image treatments
 -----------------------------------------------  */
@@ -804,7 +657,7 @@
 /*----------------------------------------------   
 --Sect: Title Modifier
 -----------------------------------------------  */
-@mixin content-title($padding: 3em 0){
+@mixin content--title($padding: 3em 0){
  padding: $padding;
  margin: 0 auto;
  display:block;
@@ -818,11 +671,6 @@
   font-size: 115%;
   line-height: 1.7;
  }
- 
- figure img{
-  max-width: 10em;
- }
- 
  br{
   @media (max-width: $mq-med) {
    display: none;
@@ -845,7 +693,7 @@
  z-index: 0;
  }
  
- .row, .banner__content, .mast__content{
+ .row, &--content, &-content{
   position: relative;
   z-index: 2;
  }
@@ -867,7 +715,7 @@
  @include transition(all 0.7s ease);
  }
  
- .row, .banner__content, .mast__content{
+ .row, &--content{
   position: relative;
   z-index: 2;
  }
@@ -889,22 +737,4 @@
   -webkit-backface-visibility: hidden;
 }
 
-/*----------------------------------------------   
--Visibilities: Show hide
------------------------------------------------  */
-@mixin show-small{
- display: block;
- 
- @media (min-width: $mq-small) {
-   display: none !important;
- }
-}
-
-@mixin hide-small{
- display: none;
- 
- @media (min-width: $mq-small) {
-   display: block !important;
- }
-}
 

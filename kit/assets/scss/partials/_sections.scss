@@ -5,33 +5,9 @@ section{
 }
 
 /*----------------------------------------------   
---Banners - sections with full width background images
------------------------------------------------  */
-.sect-mast, .sect-banner {
-  @include sect-banner;
-  @include overlay-gradient();
-}
-
-/*----------------------------------------------   
---Mastheads, maybe add height as extend theme?
---Or, as seperate height class?
------------------------------------------------  */
-.sect-mast{
-  height: 40em;
-
-  .vcenter{
-    padding: 10% 0 5%;
-  }
-}
-
-.sect-banner{
-  height: 25em;
-}
-
-/*----------------------------------------------   
 --Sect: content (basic repeatable content regions)
 -----------------------------------------------  */
-.sect-content {
+.section-content, .section--padding {
   padding: 4em 0;
 
   &.no-top{
@@ -45,7 +21,7 @@ section{
 /*----------------------------------------------   
 --Sect: Intro (intro sections)
 -----------------------------------------------  */
-.sect-intro{
+.section-intro{
   padding: 4em 0;
   .cols{
     //@include centered;
@@ -58,12 +34,6 @@ section{
 .has-btn{
   @include center-all;
   padding: 3em 0 1em;
-}
-/*----------------------------------------------   
---Modifier - content titles
------------------------------------------------  */
-.content-title{
-  @include content-title;
 }
 
 /*----------------------------------------------   
