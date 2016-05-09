@@ -1,0 +1,28 @@
+/*----------------------------------------------
+-Halfs - 50 / 50 layouts
+-----------------------------------------------*/
+.halfs{
+  display:flex;
+  flex-direction: column;
+  @media(min-width: $mq-med){
+    flex-direction: row;
+  }  
+  &__col{
+    display:flex;
+    align-items:center;
+    padding: 10% 5%;
+    min-height: 25em;
+    @media(min-width: $mq-med){
+      width: 50%;
+    }
+  }
+  &__col--bgimg{
+    @include bg-img;
+    min-height:31em;
+  }
+  &__content{
+    @media(min-width: $mq-med){
+      max-width:75%;
+    }  
+  }
+}

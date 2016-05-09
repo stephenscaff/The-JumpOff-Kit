@@ -1,0 +1,93 @@
+/*----------------------------------------------
+--Helper/Utilites classes - Most common use cases
+-----------------------------------------------*/
+
+/*----------------------------------------------
+--Positioning/Floating
+-----------------------------------------------*/
+.u-clearfix, .cf {
+  @include cf;
+}
+
+/*----------------------------------------------
+--Text alignment
+-----------------------------------------------*/
+.u-text-center {
+  text-align: center !important;
+}
+.u-text-right {
+  text-align: right !important;
+}
+.u-text-left {
+  text-align: left !important;
+}
+/*----------------------------------------------
+-Positioning
+-----------------------------------------------*/
+.u-float-right {
+  float: right !important;
+}
+.u-float-left {
+  float: left !important;
+}
+.u-centered{
+    float: none;
+    margin: 0 auto;
+    display: block;
+}
+.u-center-all{
+  float: none;
+  display: block;
+  margin: 0 auto;
+  text-align:center;
+}
+
+/*----------------------------------------------
+--Hiding
+-----------------------------------------------*/
+.u-display-none {
+  display: none !important;
+}
+.u-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.u-off-screen {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+.u-uninteractable {
+  pointer-events: none !important;
+}
+.u-hide-small{
+  @media (max-width: $mq-med){
+    display: none;
+  }
+}
+/*----------------------------------------------
+--Misc
+-----------------------------------------------*/
+.u-vertical-center {
+  display: table;
+
+  & > * {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+%u-greyscale,
+.u-greyscale{
+  filter: grayscale(100%);
+}
+
+%u-darken,
+.u-darken{
+  opacity: 0.3;
+  background-color: #000;
+}

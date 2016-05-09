@@ -9,25 +9,138 @@
 
 
 <!-- Main
-================================================== -->	
+================================================== -->
 <main role="main">
 
 
 <!-- Sect: Mast
-================================================== --> 
-<section class="section-mast center-all">
- <div class="vcenter">
-  <div class="mast-content row">
-    <div class="g-8 cols centered">
-    <h1>A Masthead Example</h1>
-    <p>With a little masthead text one time for your mind</p>
-    <a class="btn-alpha" href="">Learn More</a>
-  </div>
-  </div>
- </div>
+================================================== -->
+<section class="mast mast--home">
+  <figure class="mast__bg" style="background-image:url(https://unsplash.it/2000/1100?image=1008)"></figure>
+  <header class="mast__header row g-full">
+    <span class="mast__subtitle">A Mast Subtitle</span>
+    <h1 class="mast__title">Hello, I'm A Title.</h1>
+    <hr class="sep-center sep--alpha">
+    <p class="mast__text">
+      This is some mast text not just any mast text but some stupid simple copy made up as I type, whoof.</p>
+  </header>
 </section>
 
 
+
+<!-- Title
+================================================== -->
+<section class="title">
+  <div class="row-xxl">
+    <h3>I'm An Intro</h3>
+    <hr class="sep-center sep--dark">
+  </div>
+</section>
+
+
+<!-- Auto Block Grid
+================================================== -->  
+<section class="auto-grid">
+  <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=821">
+  <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=628">
+</section>
+
+
+
+
+<!-- CTA
+================================================== -->
+<section class="cta cta--alpha">
+  <a class="cta__link" href="#">
+    <div class="row-xl">
+      <p class="cta__text">
+        Here's a CTA Link
+      </p>
+    </div>
+  </a>
+</section>
+
+
+<section class="section--padded u-center-all">
+  <div class="row-xl g-full">
+    <a class="" data-popup="cats-popup"  href="#">Pop It</a> 
+    <br/><br/>
+    <a data-popup="modal-popup" data-modal-id="modal-popup" href="#">Pop It</a>
+  </a>
+</section>
+
+<!-- cat popup
+================================================== -->
+<article id="cats-popup" class="popup">  
+  <a class='popup__close js-close-popup'>
+    <div class='popup__x'></div>
+  </a> 
+  
+  <nav class="cats-list">
+    <ul>
+      <li>DNA</li>
+      <li>Work</li>
+      <li>Life</li>
+      <li>Learn</li>
+      <li>Studio</li>
+      <li>Industry</li>
+    </ul>
+  </nav>
+</article>
+
+<section class="row-xxl u-align-center" style="padding: 2em 0;">
+  <h2>Here are some flex grid tests. Schnazzy.</h2>
+
+  <div class="flex">
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+    <div class="flex-item--1-2" style="background-color: #eee;"> 1/2 </div>
+
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+
+    <div class="flex-item--1-1" style="background-color: #eee;"> 1/1 </div>
+
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item" style="background-color: #eee;"> auto </div>
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+  </div>
+
+  <div class="flex flex--no-wrap">
+    <div style="background-color: #eee; margin: 2%;"> static width </div>
+    <div class="flex-item" style="background-color: #eee;"> auto </div>
+  </div>
+
+  <h2>Here's some vertical alignment. Ho-hum.</h2>
+
+  <div class="flex flex--middle">
+    <div class="flex-item--1-3" style="background-color: #eee;">
+      I'm a short sentence.
+    </div>
+    <div class="flex-item--1-3" style="background-color: #eee;">
+      I'm a pretty long paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis, eros et auctor laoreet, mauris lorem luctus mauris, a imperdiet nisi quam sit amet sapien. Fusce ac nunc neque. Curabitur a posuere magna. Suspendisse at tristique ante. Sed sollicitudin turpis ac tortor imperdiet porta. Quisque luctus gravida lorem, eu facilisis lectus porttitor sed.
+    </div>
+    <div class="flex-item--1-3 flex-item--bottom" style="background-color: #eee;">
+      I'm individually stuck to the bottom!
+    </div>
+  </div>
+
+  <h2>Here's some forms. Hooray</h2>
+
+  <form class="u-centered-block g-6">
+    <div class="input-group flex flex--no-wrap">
+      <input type="text" class="flex-item flex-item--no-gutter" placeholder="Type type type">
+      <input type="submit" class="btn btn--alpha" value="Submit!">
+    </div>
+  </form>
+</section>
 
 </main>
 

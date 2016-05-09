@@ -1,17 +1,25 @@
-# The Jumpoff
-A Codekit project starter and front-end framework
+# The Jumpoff Kit
+A Codekit project starter and front-end framework of sorts.
+
+It contains all them common ui elements, a proportional grid & typographic system, some js stuff I use a good bit, SCSS configs and mixins, and so on. More than that, The Jumpoff contains a project structure of scss, js, and shared include files that I've found works well in CodeKit and beyond.
 
 
-## What's That Now?
-Oh, just a little project starter I use for basic front-end work. It contains all them common ui elements, a proportional grid & typographic system, some js stuff I use a good bit, SCSS configs and mixins (with Bourbon), and so on. More than that, The Jumpoff contains a project structure of scss, js, and shared include files that I've found works well in CodeKit and beyond.
-
-
-## You Gonna Document It Proper Like?
-Maybe one of these days. This is more for me.
+## Dependencies
+- CodeKit: for minification, linting, and js + html includes (more on that below).
+- Autoprefixer: For CSS prefixes
+- Jquery: for js
 
 ## Project Structre
-Code kit allows you to rock includes for shared elements, like a header and footer. It also enables importing of js files, which is great for organization. So, I structre my projects with a working and build folders. The working folders make use of .kit files for html, and scss & js folders that compress and output to a similarly named build assets folder. Looks like this:
+Codekit allows you to rock html includes for shared elements (header, footer, etc). It also enables importing of js files, which is great for organization. The JumpOff takes advantage of this, using a 'working' and 'build' setup. 
 
+## Kit Folder
+All authorship occurs in the 'kit' folder, which compiles/builds out to root folders of corresponding names. For example files in 'kit/assets' will compile/build to the root 'assets' folder.
+
+## HTML Files
+All working page files (index, about, etc) inside 'kit/pages' use the '.kit' extensions. these files to .html files in the root. For example, kit/pages/index.kit will build out to index.html. But as '.kit' files, we can use CodeKit's ability to rock html includes for common project partials like headers and footers. Store global includes at 'kit/pages/includes'
+
+
+## Codekit and SCSS/JS Structre
 ```
 |-- assets/                   # The Build folder
 |   |-- css/      
@@ -19,42 +27,47 @@ Code kit allows you to rock includes for shared elements, like a header and foot
 |       |-- fonts.min.scss    # minified base64 font-face
 |
 |   |-- js 
-|       |-- plugins.min.js    # all minified plugins
-|       |-- scripts.min.js    # minified init and one off scripts
+|       |-- app.min.js        # all minified scripts
 |       |-- jquery.min.js  
-|       |-- modernizr.js   
 |
 |-- kit/                      # Working files
 |   |-- assets/               # scss and js
 |       |-- scss/             # scss files
 |           |-- app.scss      # main scss imports
 |           |-- fonts.scss    # font base64 imports
-|
-|           |-- fonts/
-|               |--- _iconfont.scss
-|               |--- _base64starter.scss
-|           |--modules/  
-|               |-- _animations.scss  
+|      
+|           |--tools/
+|               |--- _config.scss # master config and sass vars 
+|               |--- _mixins.scss # global mixins
+|               |--- _extends.scss # global extends and themes
+|           |-- base/
+|               |--  _typography.scss    
+|               |--- _media.scss # global mixins
+|               |--- _colors.scss
+|               |--  _decor.scss  
+|               |--  _forms.scss      
+|               |--  _grid.scss    
+|               |--  _helpers.scss
+|           |--components/  
 |               |-- _buttons.scss      
-|               |-- _code.scss  
-|               |-- _colors.scss 
-|               |-- _forms.scss  
-|               |-- _grid.scss 
-|               |-- _typography.scss      
+|               |-- _feeds.scss    
+|               |-- _ctas.scss    
+|               |-- _folio.scss    
+|               |-- _intros.scss  
+|               |-- _jobs.scss    
 |               |-- etc...  
-|           |--partials/
+|           |--regions/
 |               |-- _header.scss
+|               |-- _header-menu.scss
 |               |-- _footer.scss       
-|               |-- _sections.scss     
-|           |--pages/
-|               |-- _home.scss      
-|               |-- _about.scss  
-|               |-- _etc...  
-|           |--settings/     
-|               |-- _config.scss   
-|               |-- _mixins.scss 
+|               |-- _filterbar.scss
+|               |-- _nav-single.scss     
+|           |--helpers/
+|               |-- _grid.scss      
+|               |-- _helpers.scss  
+|               |-- _animations.scss   
 |           |-- vendor/ 
-|               |-- _normalize.scss 
+|               |-- _normalizer.scss 
 |
 |       |-- js/             # js files
 |           |-- scripts.js  # working scripts
@@ -64,11 +77,4 @@ Code kit allows you to rock includes for shared elements, like a header and foot
 |               |-- _tabs.js
 |               |-- _etc...   
 |
-|   |-- pages/              # working .kit pages
-|       |-- includes/       # shared include files
-|           |-- _header.kit   
-|           |-- _footer.kit   
-|       |-- home.kit        # .kit files that compile to html
-|       |-- about.kit
-|       |-- etc...
 ```

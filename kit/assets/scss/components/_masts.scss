@@ -1,0 +1,99 @@
+/*----------------------------------------------
+-Masts
+@description: for top of page mastheads.
+@see: scss/tools/mixins.scss for the 'mast' mixin
+-----------------------------------------------*/
+.mast {
+  @include mast(center, 100vh);
+
+  &__bg{
+    z-index: 0;
+    animation: fade-in 5s ease;
+  }
+  br {
+    display: none;
+
+    @media (min-width: $mq-small) {
+      display: block;
+    }
+  }
+
+  .mast__header{
+    position: relative;
+    z-index: 4;
+    margin: 0 auto;
+  }
+
+  &__subtitle{
+    @extend %font-subtitle;
+  }
+
+  &__text{
+    max-width: 30em;
+    margin: 0 auto;
+    @extend %font-lead;
+    animation: fade-in 1.2s 0.5s ease both;
+  }
+
+  &__text + &__text{
+    margin-top: 1em;
+  }
+
+  .sep{
+    margin: 1.4em auto;
+    animation: sep-width 1.2s ease both;
+  }
+
+  .btn{
+    margin: 1.5em auto;
+  }
+}
+
+/*----------------------------------------------
+-Masts--Light Modifier
+-----------------------------------------------*/
+.mast--light{
+  background-color: $color-lightgrey;
+  color: $color-dark;
+
+  .sep{
+    background-color: $color-dark;
+  }
+}
+
+/*----------------------------------------------
+-Mast--Left Modifier
+-----------------------------------------------*/
+.mast--left{
+  height: 70vh;
+  text-align: left;
+  background-color: $color-dark;
+  
+  header{
+    margin-top: -7em;
+  }
+  .mast__title{
+    margin: 0.4em 0 0.5em;    
+  }
+  .mast__text{
+    margin-left:0;
+    max-width: 40em;
+    max-width: 30em;
+  }
+  .sep{
+    margin: 1em 0;
+  }
+}
+
+/*----------------------------------------------
+-Mast--Dark modifier
+-----------------------------------------------*/
+.mast--dark{
+  color: #fff;
+
+   *{
+    color: #fff;
+  }
+}
+
+

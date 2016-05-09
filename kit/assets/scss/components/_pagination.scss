@@ -1,0 +1,17 @@
+/*----------------------------------------------   
+-Pagination
+@description: pagination styles for posts
+-----------------------------------------------  */
+.pagination{
+  background: #fff;
+  padding: 4em 0 6em;
+
+  li{
+    display: inline-block;
+    padding-right: 1em;
+  }
+
+  .current{
+    color: $color-midgrey;
+  }
+}

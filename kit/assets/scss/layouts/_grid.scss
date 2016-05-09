@@ -1,0 +1,115 @@
+/*----------------------------------------------
+-Grid 
+-----------------------------------------------*/
+.grid {
+  display: block;
+  width: $grid-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:   $grid__col-pad;
+  padding-right:  $grid__col-pad;
+  @include cf;
+}
+/*----------------------------------------------
+-FLex Grid
+-----------------------------------------------*/
+.grid--flex{
+  @media (min-width: $mq-med){
+    display: flex;
+  }
+}
+
+/*----------------------------------------------
+-GRID : Add col padding if no cols
+-----------------------------------------------*/
+.grid--pad{
+  @media (min-width: $mq-med) {
+    padding-left:   $grid__col-pad;
+    padding-right:  $grid__col-pad;
+  }
+}
+
+/*----------------------------------------------
+-GRID : Full Width
+-----------------------------------------------*/
+.grid--full {
+  @extend .grid;
+  width: 100%;
+  max-width: 100%;
+}
+
+/*----------------------------------------------
+-GRID : Full width Small
+-----------------------------------------------*/
+.grid--full-small{
+  @media(max-width:$mq-med){
+    width: 100%;
+  }
+}
+
+/*----------------------------------------------
+-Grid : Nested
+-----------------------------------------------*/
+.grid .grid {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin-left: -$grid__col-pad;
+  margin-right: -$grid__col-pad;
+}
+
+/*----------------------------------------------
+-Columns
+-----------------------------------------------*/
+.grid__col { 
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  @media(min-width: $mq-med){
+    padding-left: $grid__col-pad;
+    padding-right: $grid__col-pad;
+  }
+}
+
+/*----------------------------------------------   
+-Grid System: old school
+-----------------------------------------------*/
+@for $i from 1 through $grid__cols {
+ //Columns "xsm-*"  
+ .g-xsm-#{$i} {
+  width: ((100 / $grid__cols) * $i) * 1%;
+ }
+}
+/*----------------------------------------------
+-Grid Cols Main: after med
+-----------------------------------------------*/
+@media (min-width: $mq-med) {
+  @for $i from 1 through $grid__cols {
+    //Columns "g-*"  
+    .g-#{$i} {
+      width: ((100 / $grid__cols) * $i) * 1%;
+      flex-basis: ((100 / $grid__cols) * $i) * 1%;
+    }
+    // Offsets "os-*"
+    .g-offset-#{$i}{
+      margin-left: ((100 / $grid__cols) * $i) * 1%;
+    }
+  }
+}
+
+/*----------------------------------------------
+-Source Reverse: after med for half/half
+-----------------------------------------------*/
+.source-reverse {
+  .grid__col:first-child {
+    @media (min-width: $mq-med) {
+      right: -50%;
+    }
+  }
+  .grid__cols:last-child {
+    @media (min-width: $mq-med) {
+      left: -50%;
+    }
+  }
+}

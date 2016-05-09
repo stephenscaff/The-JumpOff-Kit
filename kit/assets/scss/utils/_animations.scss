@@ -1,0 +1,114 @@
+/*----------------------------------------------
+--Fade Ins, including a sexy ass page fade
+-----------------------------------------------*/
+.ani-fade-in {
+  animation: fade-in ease-in-out 1s both;
+}
+.ani-fade-in-page {
+  animation: fade-in ease-in-out 1.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.ani-fade-out {
+  animation: fade-in ease-in-out 1s both;
+}
+@keyframes fade-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*----------------------------------------------
+--Fade Up
+-----------------------------------------------*/
+.ani-fade-up {
+  animation: fade-up ease-in-out 1s .4s both;
+}
+
+@keyframes fade-up {
+  0%   { transform: translateY(50px); }
+  100% { transform: translateY(0px); }
+}
+
+/*----------------------------------------------
+--Fade Down
+-----------------------------------------------*/
+.ani-fade-down {
+  animation: fade-down ease-in-out 1s .4s both;
+}
+
+@keyframes fade-down {
+  0%   { transform: translateY(-150px); }
+  100% { transform: translateY(0px); }
+}
+
+/*----------------------------------------------
+--Fade In Left
+-----------------------------------------------*/
+.ani-fade-left {
+  animation: fade-left ease-in-out 1s .1s both;
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*----------------------------------------------
+--Fade In Right
+-----------------------------------------------*/
+.ani-fade-right {
+  animation: fade-right ease-in-out 1s .1s both;
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*----------------------------------------------
+--Zoom
+-----------------------------------------------*/
+.ani-zoom-in {
+  @include engine3d;
+  animation: zoom-in ease-in-out 5s 0s;
+}
+
+@keyframes zoom-in {
+  0%   { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.4) rotate(3.2deg); }
+}
+
+/*----------------------------------------------
+-js letters animation
+-----------------------------------------------*/
+.js-letters span{
+  //animation: letter-glow 3s 0s cubic-bezier(.25,.1,.25,1) both;
+  animation: letter-glow 0.7s 0s ease both;
+  @include nth-ani-delay(30, 0.05s)
+}
+
+/*----------------------------------------------
+-Letter Glow
+-----------------------------------------------*/
+@keyframes letter-glow{
+  0%   { opacity: 0; text-shadow: 0px 0px 1px rgba(255,255,255,0.1)}
+  66%  { opacity: 0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.9) }
+  77%   { opacity: 1;  }
+  100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
+}

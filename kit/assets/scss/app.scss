@@ -1,37 +1,82 @@
- /* --Bourbon from CodeKit
-=======================================*/
-@import 'bourbon';
+//----------------------------------------------   
+//  Main app.css build
+//  --
+//  Tools:        configs, mixins, extends
+//  Base:         Styles for base level elements           
+//  Vendor:       Vendor specific styles
+//  Layouts:      Main Layouts and Regions
+//  Components:   Modular components. Most styles will go here
+//  Utils:        Helpers, Utilities & Overrides
+//---------------------------------------------- 
 
-/* --settings: configs
-=======================================*/
-@import 'settings/_config';
-@import 'settings/_mixins';
+//----------------------------------------------   
+// Tools: Main config & GLobal variables
+//---------------------------------------------- 
+@import 'tools/_config';
 
-/* --Vendor
-========================================*/
-@import 'vendor/_normalizer';
+//----------------------------------------------   
+// Tools: Mixins
+//---------------------------------------------- 
+@import 'tools/_mixins-type';
+@import 'tools/_mixins-grids';
+@import 'tools/_mixins-modules';
+@import 'tools/_mixins-animations';
 
-/* --Modules: Reuseable UI elements
-=======================================*/
-@import 'modules/_media';
-@import 'modules/_decor';
-@import 'modules/_forms';
-@import 'modules/_buttons';
-@import 'modules/_colors';
-@import 'modules/_grid';
-@import 'modules/_layouts';
-@import 'modules/_typography';
-@import 'modules/_animations';
-@import 'modules/_lists';
+//----------------------------------------------   
+// Tools: Extends
+//---------------------------------------------- 
+@import 'tools/_extends-type';
+@import 'tools/_extends-sections';
 
-/* --Partial: page components
-=======================================*/
-@import 'partials/_offcanvas-nav';
-@import 'partials/_header';
-@import 'partials/_footer';
-@import 'partials/_sections';
-@import 'partials/_sections-banners';
+/*----------------------------------------------   
+Normalizer
+-----------------------------------------------  */ 
+@import 'base/_normalizer';
 
-/* --Pages
-=======================================*/
-@import 'pages/_home';
+/*----------------------------------------------   
+-Base
+-----------------------------------------------  */
+@import 'base/_links';
+@import 'base/_typography';
+@import 'base/_lists';
+@import 'base/_media';
+@import 'base/_forms';
+@import 'base/_code';
+@import 'base/_tables';
+@import 'base/_decor';
+
+/*----------------------------------------------   
+Vendor
+-----------------------------------------------  */ 
+
+
+/*----------------------------------------------   
+-Layouts & Regions
+-----------------------------------------------  */
+@import 'layouts/_grid';
+@import 'layouts/_site-menu-sm';
+@import 'layouts/_header';
+@import 'layouts/_footer';
+
+/*----------------------------------------------   
+-Components: Modular components
+-----------------------------------------------  */
+@import 'components/_buttons';
+@import 'components/_sections';
+@import 'components/_masts';
+@import 'components/_titles';
+@import 'components/_ctas';
+@import 'components/_auto-grid';
+//@import 'components/_popups';
+
+//@import 'components/_posts';
+//@import 'components/_post';
+//@import 'components/_post-content';
+//@import 'components/_bylines';
+
+/*----------------------------------------------   
+Utils
+-----------------------------------------------  */ 
+@import 'utils/_animations';
+@import 'utils/_helpers-colors';
+@import 'utils/_helpers';

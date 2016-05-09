@@ -1,159 +1,273 @@
 
 <!DOCTYPE html>
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<!--
+                   #PigeonWisdom
+t                                                t
+C00i                                          i00C
+ iG08G,                                    :G80Gi
+ fG:1008f                                f8001:0f
+ i@G0t:L000i                          i000L:t0G@i
+   ;C0G0i;CG8G,         :CGi       ,G8GC;i0G0C;
+  .00;i0GGGCGCG@1      :0GtGC    1@GCGCGG00i;00.
+   1000L:f0CCCCC8t     L0GC..;  t8CCCCC0t:L000i
+    1i100GCGCCCC0L    ;8CGG,    L0CCCCGCG001i1
+    f88f:L0CCCCCG0:   G0ff0C   :0GCCCCC0L:f88f
+     18GGGLGCCCCCCG8f:CG00GC;f8GCCCCCCGLGGG81
+       .L8GCCCCCCCGG;CGCCCCGG;GGCCCCCCCG8L.
+          ,L0800080:f0CCCCCC0L;0800080L,
+                   f8CCCCCCCC0L
+                  .CGCCCCCCCCGG.
+                   L0CCCCCCCC0C
+                   .G0CCCCGC00.
+                     ,G8008G,
+                    f@G1ii1G@f
+                  i8G0CCCCCC0G81
+                i8GGC,C0ff0C:CGG8i
+                 .t00;G8ii8G;00f,
+-->
+<html class="no-js">
 <head>
 
 <!-- Title and Meta
 ================================================== -->
+<title>Home | Website Title</title>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>Home | Website Title</title>
 <meta name="description" content="A description of this page.">
 <meta name="keywords" content="keyword keyword keyword ">
 <meta name="author" content="Stephen Scaff">
-<meta property="og:title" content="Home" />
 
 <!-- Facebook Open Graph Meta
 ================================================== -->
-<meta property="og:locale" content="en_US"/>
-<meta property="og:title" content="Home"/>
-<meta property="og:url" content="http://stephenscaff.com"/>
-<meta property="og:site_name" content="Home"/>
-<meta property="og:description" content="A description of this page." />
-<meta property="og:image" content="assets/images/screen.jpg"/>
-<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Home">
+<meta property="og:url" content="http://website.com">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="A description of this page.">
+<meta property="og:image" content="http://website.com/assets/images/opengraph.jpg">
+<meta property="og:type" content="website">
 
 <!-- Twitter Meta
 ================================================== -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:url" content="<?php echo the_permalink() ?>">
 <meta name="twitter:site" content="@"/>
-<meta name="twitter:creator" content="@https://twitter.com/">
-<meta name="twitter:domain" content=""/>                         
-<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/assets/images/vrge-screen.jpg"/>
+<meta name="twitter:creator" content="@">
 
 <!-- Mobile Specific Meta
 ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <!-- Fav and icons
 ================================================== -->	
-<link rel="shortcut icon" href="assets/images/favicon.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144x144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114x114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-precomposed.png">
-
-<!-- Link Rels
-================================================== -->
-<link rel="alternate" type="application/rss+xml" href="#" title="Feed" />
-<link rel="canonical" href="#" />	
-<link rel="author" href="#" title="Author" />
-<link rel="search" href="#" title="Search" />
+<link rel="icon" type="image/png" href="/assets/images/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/assets/images/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/favicon-96.png" sizes="96x96">
+<link rel="apple-touch-icon-precomposed" href="/assets/images/favicon-152.png" sizes="152x152">
 
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="assets/css/app.min.css">
-<link rel="stylesheet" href="assets/css/fonts.min.css">
 
-<!-- HTML 5 Stuffs
-================================================== -->
-<script src="assets/js/modernizr.js"></script>
 
-</head><body class="home fade-in-page">
+
+</head><body class="home ani-fade-in-page">
 
 <!-- Mobile Nav
 ================================================== -->
-<!-- Nav Toggle -->
-<a class='offcanvas-toggle'>
- <div class='menubars'></div>
-</a>
 
-<section class="offcanvas-menu">
-<!-- Footer-nav -->
- <nav class='offcanvas-menu--nav'>
-  <ul>
-  <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html">Blog</a></li>
-  </ul>
- </nav>
 
- <!-- Footer-nav -->
- <footer class="offcanvas-menu--footer">
-  <ul>
-   <li><a href="https://twitter.com/" title="twitter" target="_blank">Twitter</a></li>
-   <li><a href="https://www.facebook.com/" title="facebook" target="_blank">Facebook</a></li>
-   <li><a href="http://instagram.com/" title="instagram" target="_blank">Instagram</a></li>
-  </ul>
- </footer> 
+<section class="site-menu-sm">
+  <!-- Footer-nav -->
+  <nav class='site-menu-sm__nav'>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
 </section>
 
 <!-- Header
 ================================================== -->
-<header class="header-main">
- <div class="row">
-  <!-- Logo -->
-  <a href="/" class="header-main--logo">LOGO<!--<img src="assets/images/logo-worldhousing.png">--></a>
+<header class="site-header">
+  <div class="row">
+    <!-- Logo -->
+    <a href="/" class="site-header__logo">
+    <span class="">The JumpOff</span>
+    </a>
 
-  <!-- Main Nav-->
-  <nav role="navigation" class="header-main--nav">
-   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a  class="btn-alpha">Sign Up</a></li>
-   </ul>  
-  </nav>
- </div>
+    <a class='site-header__menu-toggle js-menu-toggle'>
+      <div class='site-header__menu-bars'></div>
+    </a> 
+    <!-- Main Nav-->
+    <nav role="navigation" class="site-header__nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>  
+    </nav>
+  </div>
 </header>
 
 
 
 <!-- Main
-================================================== -->	
+================================================== -->
 <main role="main">
 
 
 <!-- Sect: Mast
-================================================== --> 
-<section class="section-mast center-all">
- <div class="vcenter">
-  <div class="mast-content row">
-    <div class="g-8 cols centered">
-    <h1>A Masthead Example</h1>
-    <p>With a little masthead text one time for your mind</p>
-    <a class="btn-alpha" href="">Learn More</a>
-  </div>
-  </div>
- </div>
+================================================== -->
+<section class="mast mast--home">
+  <figure class="mast__bg" style="background-image:url(https://unsplash.it/2000/1100?image=1008)"></figure>
+  <header class="mast__header row g-full">
+    <span class="mast__subtitle">A Mast Subtitle</span>
+    <h1 class="mast__title">Hello, I'm A Title.</h1>
+    <hr class="sep-center sep--alpha">
+    <p class="mast__text">
+      This is some mast text not just any mast text but some stupid simple copy made up as I type, whoof.</p>
+  </header>
 </section>
 
 
+
+<!-- Title
+================================================== -->
+<section class="title">
+  <div class="row-xxl">
+    <h3>I'm An Intro</h3>
+    <hr class="sep-center sep--dark">
+  </div>
+</section>
+
+
+<!-- Auto Block Grid
+================================================== -->  
+<section class="auto-grid">
+  <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=821">
+  <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=628">
+</section>
+
+
+
+
+<!-- CTA
+================================================== -->
+<section class="cta cta--alpha">
+  <a class="cta__link" href="#">
+    <div class="row-xl">
+      <p class="cta__text">
+        Here's a CTA Link
+      </p>
+    </div>
+  </a>
+</section>
+
+
+<section class="section--padded u-center-all">
+  <div class="row-xl g-full">
+    <a class="" data-popup="cats-popup"  href="#">Pop It</a> 
+    <br/><br/>
+    <a data-popup="modal-popup" data-modal-id="modal-popup" href="#">Pop It</a>
+  </a>
+</section>
+
+<!-- cat popup
+================================================== -->
+<article id="cats-popup" class="popup">  
+  <a class='popup__close js-close-popup'>
+    <div class='popup__x'></div>
+  </a> 
+  
+  <nav class="cats-list">
+    <ul>
+      <li>DNA</li>
+      <li>Work</li>
+      <li>Life</li>
+      <li>Learn</li>
+      <li>Studio</li>
+      <li>Industry</li>
+    </ul>
+  </nav>
+</article>
+
+<section class="row-xxl u-align-center" style="padding: 2em 0;">
+  <h2>Here are some flex grid tests. Schnazzy.</h2>
+
+  <div class="flex">
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+    <div class="flex-item--1-2" style="background-color: #eee;"> 1/2 </div>
+
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+
+    <div class="flex-item--1-1" style="background-color: #eee;"> 1/1 </div>
+
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
+
+    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
+    <div class="flex-item" style="background-color: #eee;"> auto </div>
+    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+  </div>
+
+  <div class="flex flex--no-wrap">
+    <div style="background-color: #eee; margin: 2%;"> static width </div>
+    <div class="flex-item" style="background-color: #eee;"> auto </div>
+  </div>
+
+  <h2>Here's some vertical alignment. Ho-hum.</h2>
+
+  <div class="flex flex--middle">
+    <div class="flex-item--1-3" style="background-color: #eee;">
+      I'm a short sentence.
+    </div>
+    <div class="flex-item--1-3" style="background-color: #eee;">
+      I'm a pretty long paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis, eros et auctor laoreet, mauris lorem luctus mauris, a imperdiet nisi quam sit amet sapien. Fusce ac nunc neque. Curabitur a posuere magna. Suspendisse at tristique ante. Sed sollicitudin turpis ac tortor imperdiet porta. Quisque luctus gravida lorem, eu facilisis lectus porttitor sed.
+    </div>
+    <div class="flex-item--1-3 flex-item--bottom" style="background-color: #eee;">
+      I'm individually stuck to the bottom!
+    </div>
+  </div>
+
+  <h2>Here's some forms. Hooray</h2>
+
+  <form class="u-centered-block g-6">
+    <div class="input-group flex flex--no-wrap">
+      <input type="text" class="flex-item flex-item--no-gutter" placeholder="Type type type">
+      <input type="submit" class="btn btn--alpha" value="Submit!">
+    </div>
+  </form>
+</section>
 
 </main>
 
 
 <!-- Footer
 ================================================== -->	
-<footer class="footer-main">
-  <div class="row g-full center-all">
-    	<p class="">Made with brains by Stephen Scaff <br/>
-    	<a class=""href="#" id="credit" title="C-right foreva eva, foreva eva">Copyright Foreva Eva</a></p>
-    </div>
+<footer class="site-footer">
+  <div class="row u-align-center">
+  	<p>
+      Made with brains by Stephen Scaff
+  	  <br/><a href="#">&copy; Foreva Eva</a>
+    </p>
+  </div>
 </footer>
 
 <!-- Le javascript
 ================================================== -->	
 <script type='text/javascript' src='assets/js/jquery.min.js'></script>
-<script type='text/javascript' src='assets/js/plugins.min.js'></script>
-<script type='text/javascript' src='assets/js/scripts.min.js'></script>
+<script type='text/javascript' src='assets/js/app.min.js'></script>
 
 </body>
 </html>

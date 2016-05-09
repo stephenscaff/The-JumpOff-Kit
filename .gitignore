@@ -1,12 +1,18 @@
 # Misc
-/tmp
+tmp/
 .DS_Store
+*.DS_Store
 
 # Logging
 *.log
 
 # CodeKit
 .sass-cache
-.sass-cache/*
+*/.sass-cache
+*.sass-cache
 .scssc
+.codekit-cache
+.codekit-cache/
 
+# just ignore
+ignore

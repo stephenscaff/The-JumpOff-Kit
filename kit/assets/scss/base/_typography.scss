@@ -1,0 +1,231 @@
+/*----------------------------------------------
+--Typography
+-----------------------------------------------*/
+body {
+  font-family: $font-paragraph;
+  line-height: $base-lineheight;
+  color: $color-grey;
+  background-color: #fff;
+}
+
+/*----------------------------------------------
+--Fluid body sizing
+-----------------------------------------------*/
+body {
+  font-size: 100%;
+  
+  @media (min-width: $mq-small) {
+    font-size: 105%;
+  }
+  @media (min-width: $mq-med) {
+    font-size: 107%;
+  }
+  @media (min-width: $mq-large) {
+    font-size: 110%;
+  }
+  @media (min-width: 75em) {
+    font-size: 117%;
+  }
+  @media (min-width: $mq-xlarge) {
+    font-size: 125%;
+  }
+  @media (min-width: $mq-xxlarge) {
+    font-size: 135%;
+  }
+  @media (min-width: $mq-xxxlarge) {
+    font-size: 150%;
+  }
+}
+
+/*----------------------------------------------   
+--H1 Theme
+-----------------------------------------------  */
+%font-h1 {
+  margin-bottom: .25em;
+  $fontSize: 3.2em;
+  font-size: $fontSize - 1em; 
+  line-height: 1.25;
+
+  @media (min-width: $mq-med) {
+    font-size: $fontSize;  
+  }
+  @media (min-width: $mq-xlarge) {
+    font-size: $fontSize + .25em;
+  }
+}
+
+/*----------------------------------------------
+--H2 Theme
+-----------------------------------------------*/
+%font-h2 {
+  margin-bottom: .25em;
+  $fontSize: 1.8em; 
+  font-size: $fontSize;  
+  line-height: 1.2;
+
+  @media (min-width: $mq-xlarge) {
+    font-size: $fontSize + .25em;
+  }
+}
+
+/*----------------------------------------------
+--H3 Theme
+-----------------------------------------------*/
+%font-h3 {
+  margin-bottom: .6em;
+  $fontSize: 1.3em;
+  font-size: $fontSize;  
+  line-height: 1.2;
+
+  @media (min-width: $mq-xlarge) {
+    font-size: $fontSize + .25em;
+  }
+}
+/*----------------------------------------------
+--H4 Theme
+-----------------------------------------------*/
+%font-h4 {
+  margin-bottom: .5em;
+  $fontSize: 1.25em; 
+  font-size: $fontSize;  
+  font-weight: 400;
+  line-height: 1.4;
+
+  @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + .25em;
+  }
+}
+
+/*----------------------------------------------   
+--H5 Theme
+-----------------------------------------------  */
+%font-h5 {
+  margin-bottom: .4em;
+  $fontSize: 1em;
+  font-size: $fontSize;  
+  line-height: 1.4;
+}
+
+/*----------------------------------------------   
+--Headings
+-----------------------------------------------  */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header;
+  font-weight: 600;
+
+}
+
+h1, .font-h1 {
+  @extend %font-h1;
+}
+
+h2, .font-h2 {
+  @extend %font-h2;
+}
+
+h3, .font-h3 {
+  @extend %font-h3;
+}
+
+h4, .font-h4 {
+  @extend %font-h4;
+}
+
+h5, .font-h5 {
+  @extend %font-h5;
+}
+
+/*----------------------------------------------   
+-Global Font Styles
+Use extends for type styles to maintain consistentency
+-----------------------------------------------  */  
+%font-title{
+  @extend %font-h2;
+  //font-family: $font-title;
+  font-family: $font-header;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+}
+
+%font-subtitle{
+  //font-family: $font-subtitle;
+  font-family: $font-header;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: $font-small;
+  line-height: 1.2;
+}
+
+%font-uppercase{
+  font-family: $font-header;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+/*----------------------------------------------   
+-section Title Styles
+-----------------------------------------------  */
+.font-lead, %font-lead{
+  font-size: 120%;
+ -webkit-hyphens: none;
+ -moz-hyphens: none;
+ -ms-hyphens: none;
+ hyphens: none;
+ margin-bottom: 0.8em;
+ line-height: 1.6;
+ @media (min-width: $mq-med) {
+   font-size: 135%;
+ }
+}
+
+
+/*----------------------------------------------   
+--Paragraph
+-----------------------------------------------  */
+
+p {
+  margin-top: 0;
+  margin-bottom: .75em;
+}
+
+small {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 80%;
+}
+
+/*--------------------------------------------------- 
+Quotes
+---------------------------------------------------  */
+q, blockquote {
+  margin: 1em auto;
+  padding: .5em;
+  font-family: $font-paragraph;
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: inherit;
+  line-height: 1.5;
+  text-align: center;
+  color: $color-grey;
+
+}
+cite {
+  display: block;
+  font-family:$font-header;
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-style:normal;
+  text-transform:uppercase;
+  letter-spacing: 0.2em;
+  color: $color-grey;
+
+  @media(min-width:$mq-med){
+    font-size: 1rem;
+  }
+
+  &:before {
+    //content: "\2014 \0020";
+  }
+}

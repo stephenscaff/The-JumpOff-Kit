@@ -1,0 +1,28 @@
+/*----------------------------------------------   
+-Sections
+@description: define styles global sections
+-----------------------------------------------  */
+section {
+  position:relative;
+}
+
+.section--padded {
+  padding: $section-padded;
+}
+
+.section--padded-sm{
+  padding: $section-padded--small;
+}
+
+
+.section-text{
+  padding: $section-padded;
+  text-align: center;
+  margin: 0 auto;
+  background-color: $color-lightgrey;
+  
+  p{
+    margin: 0 auto;
+    max-width: 40em;
+  }
+}

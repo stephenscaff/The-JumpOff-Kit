@@ -1,0 +1,45 @@
+/*----------------------------------------------   
+--GMaps
+-----------------------------------------------  */
+.map{
+  height: 100vh;
+}
+
+.js-map { 
+  height: 100%; 
+  min-height: 30em;
+  margin: 0; 
+  padding: 0;
+
+/*-------------------------------------------   
+--Overlay for mobile scrolling
+---------------------------------------------*/
+  &::after{
+  @media (max-width: $mq-med) {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: transparent;
+   }
+  }
+/*-------------------------------------------   
+--Info Window / Popup
+---------------------------------------------*/
+ .gm-style-iw > div{
+    font-size: 1.2em;
+    overflow: hidden;
+    height: auto;
+    line-height: 1.6;
+  }
+
+/*-------------------------------------------   
+--Hide some of the Google inserted stuff
+---------------------------------------------*/
+  .gmnoscreen,   
+  .gm-style-cc {
+    display: none !important;
+  }
+} 

@@ -1,0 +1,35 @@
+/*----------------------------------------------
+-Seperators (hr)
+-----------------------------------------------*/
+.sep, %sep{
+  position: relative;
+  border: 0;
+  height: 1px;
+  width: 30%;
+  margin: 1em 0;
+  background-color: $color-dark;
+}
+%sep-center,
+.sep-center{
+  //@extend %sep;
+  margin: 1em auto;
+}
+
+%sep-center,
+.sep--full{
+  width: 100%;
+}
+
+
+/*----------------------------------------------
+-Seperator Colod Modifiers
+-----------------------------------------------*/
+.sep--dark{
+ background-color: $color-dark;
+}
+.sep--grey{
+  background-color: $color-grey;
+}
+.sep--white{
+  background-color: $color-light;
+}
