@@ -33,6 +33,22 @@
   letter-spacing: 0.1em;
 }
 
+/*----------------------------------------------   
+-section Title Styles
+-----------------------------------------------  */
+%font-lead,
+.font-lead{
+  font-size: 120%;
+ -webkit-hyphens: none;
+ -moz-hyphens: none;
+ -ms-hyphens: none;
+ hyphens: none;
+ margin-bottom: 0.8em;
+ line-height: 1.6;
+ @media (min-width: $mq-med) {
+   font-size: 135%;
+ }
+}
 //----------------------------------------------
 //  Example: Styles for BEM elements
 //----------------------------------------------

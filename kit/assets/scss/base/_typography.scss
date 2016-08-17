@@ -112,6 +112,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-header;
   font-weight: 600;
+  color: $color-darkgrey;
 
 }
 
@@ -135,49 +136,6 @@ h5, .font-h5 {
   @extend %font-h5;
 }
 
-/*----------------------------------------------   
--Global Font Styles
-Use extends for type styles to maintain consistentency
------------------------------------------------  */  
-%font-title{
-  @extend %font-h2;
-  //font-family: $font-title;
-  font-family: $font-header;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.09em;
-}
-
-%font-subtitle{
-  //font-family: $font-subtitle;
-  font-family: $font-header;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: $font-small;
-  line-height: 1.2;
-}
-
-%font-uppercase{
-  font-family: $font-header;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-}
-/*----------------------------------------------   
--section Title Styles
------------------------------------------------  */
-.font-lead, %font-lead{
-  font-size: 120%;
- -webkit-hyphens: none;
- -moz-hyphens: none;
- -ms-hyphens: none;
- hyphens: none;
- margin-bottom: 0.8em;
- line-height: 1.6;
- @media (min-width: $mq-med) {
-   font-size: 135%;
- }
-}
 
 
 /*----------------------------------------------   
@@ -228,4 +186,14 @@ cite {
   &:before {
     //content: "\2014 \0020";
   }
+}
+
+
+/*----------------------------------------------   
+--Selection
+-----------------------------------------------  */
+::selection {
+  color: white;
+  background: $color-alpha;
+  text-shadow: none;
 }

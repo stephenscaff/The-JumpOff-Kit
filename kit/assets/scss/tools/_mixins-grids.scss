@@ -19,20 +19,24 @@
   & > * {
     padding:$pad;
     flex-basis: 100%/$sm;
+    max-width: 100%/$sm;
     
     @media(min-width: $mq-med){
       flex-basis: 100%/$med;
+      max-width: 100%/$med;
     }
 
     @if $lg {
       @media(min-width: $mq-large){
         flex-basis: 100%/$lg;
+        max-width: 100%/$lg;
       }
     }
 
     @if $xl {
       @media(min-width: $mq-xlarge){
         flex-basis: 100%/$xl;
+        max-width: 100%/$xl;
       }
     }
   }

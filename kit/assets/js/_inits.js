@@ -11,23 +11,39 @@
 INit Mixitup
 ----------------------------------------------*/
 var site = {
-    init: function(){
+      
+  /*---------------------------------------------
+  Feature JS
+  ----------------------------------------------*/
+  featureJS: function(){
+    //no-js 
+    $("html").removeClass("no-js");
+    //no-svg 
+    if (!feature.svg) {
+      $("html").addClass("no-svg");
+    }
+    //no-flexbox 
+    if (!feature.cssFlexbox) {
+      $("html").addClass("no-flexbox");
+    }
+  },
 
-      //Features 
-      $("html").removeClass("no-js");
-
-      if (!feature.svg) {
-        $("html").addClass("no-svg");
-      }
-      if (!feature.cssFlexbox) {
-        $("html").addClass("no-flexbox");
-      }
-
-
-      $('.js-parallax').parallax(6, 'false');
-    },
+  /*---------------------------------------------
+  Parallax
+  ----------------------------------------------*/
+  plax: function(){
+    $('.js-parallax').parallax(6, 'false');
+  },
 };
 
+/*---------------------------------------------
+INITS (doc ready)
+----------------------------------------------*/
 $(function(){
-    site.init(); // On doc ready, initalize script
+  // Feature JS
+  site.featureJS();
+  // Plax
+  if($('.js-parallax').length){
+    site.plax();
+  }
 });

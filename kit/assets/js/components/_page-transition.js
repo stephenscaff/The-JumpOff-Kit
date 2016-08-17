@@ -1,34 +1,44 @@
 /*-----------------------------------------
 Page Transitions
-@todo: this can be better
+@todo: refactor all of this
 ------------------------------------------*/
 (function($) {
+
   var pageTrans = {
-    
+
     init: function(){
+      // Target internal links
       var siteURL = "http://" + top.location.host.toString();
       var transLinks = $("a[href^='"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../']");
       var noTransLinks = transLinks.not('.no-trans');
 
+      //Remove animation class to prevent webkit bugs
       setTimeout(function(){
-        $("body").removeClass("ani-fade-in-page");
-      },1500);
+        $("body").removeClass("fade-in-page");
+      },5100);
 
-      noTransLinks.click(function(e){
+      transLinks.click(function(e){
+        // Allow cmd click new tab
+        if (e.metaKey || e.ctrlKey) return;
+        if (e.metaKey || e.shiftKey) return;
+        
         e.preventDefault();
         var linkLocation = this.href;
-
          function redirectPage() {
           window.location = linkLocation;
         }
-        // Animations before Fade Out
-        $(".offcanvas-menu, body").animate({
+        // Is Exiting
+        $("body").addClass('is-exiting');
+        //Out animation 
+        $(".site-menu, main").animate({
           //right: '-=2500'
           opacity: '0'}, {
           duration: 600,
-          complete: function() { $("body").fadeOut(500, redirectPage); }
-        }); 
+          complete: function() { $("body").fadeOut(600, redirectPage); }
+        });   
       });
+
+      // Fix back button
       $(window).unload(function() {
         $(window).unbind('unload');
       });

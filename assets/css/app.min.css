@@ -6,30 +6,29 @@
 --Colors
 -----------------------------------------------*/
 /*----------------------------------------------
---Forms
------------------------------------------------*/
-/*----------------------------------------------
--Z-Indexs
------------------------------------------------*/
-/*----------------------------------------------
---easing
------------------------------------------------*/
-/*----------------------------------------------
 -Seperator Width animation
 -----------------------------------------------*/
-.mast__title {
-  text-transform: uppercase;
-  font-family: "gibson", Georgia, serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.175em; }
-
-.mast__subtitle, .title__subtitle {
+.mast__pretitle, .mast__subtitle {
   font-family: "noto-serif", Georgia, serif;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 0.7em; }
+  font-size: 0.8em; }
+
+/*----------------------------------------------   
+-section Title Styles
+-----------------------------------------------  */
+.font-lead {
+  font-size: 120%;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  margin-bottom: 0.8em;
+  line-height: 1.6; }
+  @media (min-width: 54em) {
+    .font-lead {
+      font-size: 135%; } }
 
 /*----------------------------------------------   
 Normalizer
@@ -494,12 +493,12 @@ h1, .font-h1 {
 /*----------------------------------------------
 --H2 Theme
 -----------------------------------------------*/
-h2, .font-h2, .mast__title {
+h2, .font-h2 {
   margin-bottom: .25em;
   font-size: 1.8em;
   line-height: 1.2; }
   @media (min-width: 91em) {
-    h2, .font-h2, .mast__title {
+    h2, .font-h2 {
       font-size: 2.05em; } }
 
 /*----------------------------------------------
@@ -538,40 +537,8 @@ h5, .font-h5 {
 -----------------------------------------------  */
 h1, h2, h3, h4, h5, h6 {
   font-family: "gibson", Georgia, serif;
-  font-weight: 600; }
-
-/*----------------------------------------------   
--Global Font Styles
-Use extends for type styles to maintain consistentency
------------------------------------------------  */
-.mast__title {
-  font-family: "gibson", Georgia, serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.09em; }
-
-.mast__subtitle, .title__subtitle {
-  font-family: "gibson", Georgia, serif;
-  text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: 0.8em;
-  line-height: 1.2; }
-
-/*----------------------------------------------   
--section Title Styles
------------------------------------------------  */
-.font-lead, .mast__text {
-  font-size: 120%;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  margin-bottom: 0.8em;
-  line-height: 1.6; }
-  @media (min-width: 54em) {
-    .font-lead, .mast__text {
-      font-size: 135%; } }
+  color: #242121; }
 
 /*----------------------------------------------   
 --Paragraph
@@ -612,6 +579,14 @@ cite {
   @media (min-width: 54em) {
     cite {
       font-size: 1rem; } }
+
+/*----------------------------------------------   
+--Selection
+-----------------------------------------------  */
+::selection {
+  color: white;
+  background: #C43A31;
+  text-shadow: none; }
 
 /*--------------------------------------------------- 
 Lists
@@ -663,36 +638,18 @@ img, svg, figure, picture, object, embed, iframe, video {
 /*----------------------------------------------
 --Flexible Video: wrap video inside flex-vid div
 -----------------------------------------------*/
-.u-flex-vid, .flex-vid {
+.flex-vid {
   position: relative;
   height: 0;
   margin-bottom: 1em;
   padding-bottom: 56.5%;
   overflow: hidden; }
-  .u-flex-vid iframe, .u-flex-vid object, .u-flex-vid embed, .u-flex-vid video, .flex-vid iframe, .flex-vid object, .flex-vid embed, .flex-vid video {
+  .flex-vid iframe, .flex-vid object, .flex-vid embed, .flex-vid video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
-
-/*----------------------------------------------
---Maps
------------------------------------------------*/
-.js-map-canvas {
-  height: 100%;
-  min-height: 30em; }
-  @media (max-width: 54em) {
-    .js-map-canvas::after {
-      z-index: 99;
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent; } }
-  .js-map-canvas img {
-    max-width: none !important; }
 
 /*----------------------------------------------
 -Forms
@@ -735,14 +692,12 @@ label {
 --Helper class for input groups
 -----------------------------------------------*/
 .input-group {
-  margin: 1em auto; }
+  margin: 1em auto;
+  display: flex; }
   .input-group input:first-child {
     border-right: 0; }
-  .input-group input[type="submit"] {
-    min-width: 26%;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em; }
+  .input-group__btn {
+    flex-basis: 15%; }
 
 /*----------------------------------------------
 --Placeholders
@@ -1074,244 +1029,12 @@ table {
   background-color: #fbfbfb;
   transition: background-color .6s ease-in; }
 
-/*----------------------------------------------
--Seperators (hr)
------------------------------------------------*/
-.sep {
-  position: relative;
-  border: 0;
-  height: 1px;
-  width: 30%;
-  margin: 1em 0;
-  background-color: rgba(0, 0, 0, 0.8); }
-
-.sep-center {
-  margin: 1em auto; }
-
-.sep--full {
-  width: 100%; }
-
-/*----------------------------------------------
--Seperator Colod Modifiers
------------------------------------------------*/
-.sep--dark {
-  background-color: rgba(0, 0, 0, 0.8); }
-
-.sep--grey {
-  background-color: #d7d7d7; }
-
-.sep--white {
-  background-color: rgba(255, 255, 255, 0.8); }
-
 /*----------------------------------------------   
 Vendor
 -----------------------------------------------  */
 /*----------------------------------------------   
 -Layouts & Regions
 -----------------------------------------------  */
-/*----------------------------------------------
--Grid 
------------------------------------------------*/
-.grid, .grid--full {
-  display: block;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2%;
-  padding-right: 2%; }
-  .grid:after, .grid--full:after {
-    content: '';
-    display: table;
-    clear: both; }
-
-/*----------------------------------------------
--FLex Grid
------------------------------------------------*/
-@media (min-width: 54em) {
-  .grid--flex {
-    display: flex; } }
-
-/*----------------------------------------------
--GRID : Add col padding if no cols
------------------------------------------------*/
-@media (min-width: 54em) {
-  .grid--pad {
-    padding-left: 2%;
-    padding-right: 2%; } }
-
-/*----------------------------------------------
--GRID : Full Width
------------------------------------------------*/
-.grid--full {
-  width: 100%;
-  max-width: 100%; }
-
-/*----------------------------------------------
--GRID : Full width Small
------------------------------------------------*/
-@media (max-width: 54em) {
-  .grid--full-small {
-    width: 100%; } }
-
-/*----------------------------------------------
--Grid : Nested
------------------------------------------------*/
-.grid .grid, .grid--full .grid, .grid .grid--full, .grid--full .grid--full {
-  width: auto;
-  max-width: none;
-  min-width: 0;
-  margin-left: -2%;
-  margin-right: -2%; }
-
-/*----------------------------------------------
--Columns
------------------------------------------------*/
-.grid__col {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px; }
-  @media (min-width: 54em) {
-    .grid__col {
-      padding-left: 2%;
-      padding-right: 2%; } }
-
-/*----------------------------------------------   
--Grid System: old school
------------------------------------------------*/
-.g-xsm-1 {
-  width: 8.33333%; }
-
-.g-xsm-2 {
-  width: 16.66667%; }
-
-.g-xsm-3 {
-  width: 25%; }
-
-.g-xsm-4 {
-  width: 33.33333%; }
-
-.g-xsm-5 {
-  width: 41.66667%; }
-
-.g-xsm-6 {
-  width: 50%; }
-
-.g-xsm-7 {
-  width: 58.33333%; }
-
-.g-xsm-8 {
-  width: 66.66667%; }
-
-.g-xsm-9 {
-  width: 75%; }
-
-.g-xsm-10 {
-  width: 83.33333%; }
-
-.g-xsm-11 {
-  width: 91.66667%; }
-
-.g-xsm-12 {
-  width: 100%; }
-
-/*----------------------------------------------
--Grid Cols Main: after med
------------------------------------------------*/
-@media (min-width: 54em) {
-  .g-1 {
-    width: 8.33333%;
-    flex-basis: 8.33333%; }
-
-  .g-offset-1 {
-    margin-left: 8.33333%; }
-
-  .g-2 {
-    width: 16.66667%;
-    flex-basis: 16.66667%; }
-
-  .g-offset-2 {
-    margin-left: 16.66667%; }
-
-  .g-3 {
-    width: 25%;
-    flex-basis: 25%; }
-
-  .g-offset-3 {
-    margin-left: 25%; }
-
-  .g-4 {
-    width: 33.33333%;
-    flex-basis: 33.33333%; }
-
-  .g-offset-4 {
-    margin-left: 33.33333%; }
-
-  .g-5 {
-    width: 41.66667%;
-    flex-basis: 41.66667%; }
-
-  .g-offset-5 {
-    margin-left: 41.66667%; }
-
-  .g-6 {
-    width: 50%;
-    flex-basis: 50%; }
-
-  .g-offset-6 {
-    margin-left: 50%; }
-
-  .g-7 {
-    width: 58.33333%;
-    flex-basis: 58.33333%; }
-
-  .g-offset-7 {
-    margin-left: 58.33333%; }
-
-  .g-8 {
-    width: 66.66667%;
-    flex-basis: 66.66667%; }
-
-  .g-offset-8 {
-    margin-left: 66.66667%; }
-
-  .g-9 {
-    width: 75%;
-    flex-basis: 75%; }
-
-  .g-offset-9 {
-    margin-left: 75%; }
-
-  .g-10 {
-    width: 83.33333%;
-    flex-basis: 83.33333%; }
-
-  .g-offset-10 {
-    margin-left: 83.33333%; }
-
-  .g-11 {
-    width: 91.66667%;
-    flex-basis: 91.66667%; }
-
-  .g-offset-11 {
-    margin-left: 91.66667%; }
-
-  .g-12 {
-    width: 100%;
-    flex-basis: 100%; }
-
-  .g-offset-12 {
-    margin-left: 100%; } }
-/*----------------------------------------------
--Source Reverse: after med for half/half
------------------------------------------------*/
-@media (min-width: 54em) {
-  .source-reverse .grid__col:first-child {
-    right: -50%; } }
-@media (min-width: 54em) {
-  .source-reverse .grid__cols:last-child {
-    left: -50%; } }
-
 /*----------------------------------------------
 --Header offcanvas-bg
 -----------------------------------------------*/
@@ -1611,15 +1334,15 @@ main {
   .btn--beta:active {
     background-color: #002630; }
 
-.btn--white, .section--dark .btn {
+.btn--white {
   color: #003a49;
   background-color: #fff; }
-  .btn--white:hover, .section--dark .btn:hover {
+  .btn--white:hover {
     cursor: pointer;
     color: #003a49;
     background-color: #003a49;
     color: #fff; }
-  .btn--white:active, .section--dark .btn:active {
+  .btn--white:active {
     background-color: #f2f2f2; }
 
 /*----------------------------------------------   
@@ -1629,20 +1352,11 @@ main {
 section {
   position: relative; }
 
-.section--padded {
-  padding: 6em 0; }
-
-.section--padded-sm {
-  padding: 2em 0; }
-
-.section-text {
-  padding: 6em 0;
-  text-align: center;
-  margin: 0 auto;
-  background-color: #fbfbfb; }
-  .section-text p {
-    margin: 0 auto;
-    max-width: 40em; }
+/*----------------------------------------------   
+-basic section class
+-----------------------------------------------  */
+.section {
+  padding: 4em 0; }
 
 /*----------------------------------------------
 -Masts
@@ -1654,15 +1368,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 35em;
+  width: 100%;
   margin: 0 auto;
   padding-top: 6em;
-  padding-bottom: 6em;
-  overflow: hidden;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: rgba(0, 0, 0, 0.8); }
+  padding-bottom: 4em;
+  text-align: center;
+  overflow: hidden; }
+  @media (min-width: 54em) {
+    .mast {
+      min-height: 65vh; } }
   .mast__bg {
     z-index: 0;
     position: absolute;
@@ -1673,108 +1388,53 @@ section {
     overflow: hidden;
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    z-index: 0;
+    animation: fade-in 5s ease; }
   .mast [class*='grid'] {
     position: relative;
     align-self: center; }
-  .mast .mast__content {
+  .mast__content, .mast__header {
     position: relative;
     z-index: 4;
-    margin: 0 auto; }
-  .mast__text {
-    max-width: 30em;
     margin: 0 auto;
-    animation: fade-in 1.2s 0.5s ease both; }
-  .mast__text + .mast__text {
-    margin-top: 1em; }
+    padding: 0 1em; }
+  .mast__pretitle {
+    margin-bottom: 1em; }
+  .mast__text {
+    font-weight: 400;
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto; }
   .mast__subtitle {
-    line-height: 1.8; }
-  .mast .sep {
-    margin: 1.4em 0; }
+    font-size: 0.9em; }
+  .mast__icon {
+    display: block;
+    color: #fff;
+    font-size: 2.75em; }
   .mast .btn {
     margin: 1.5em auto; }
-  @media (min-width: 54em) {
-    .mast {
-      height: 100vh; } }
-  .mast__bg {
-    z-index: 0;
-    animation: fade-in 5s ease; }
   .mast br {
     display: none; }
     @media (min-width: 32em) {
       .mast br {
         display: block; } }
-  .mast .mast__header {
-    position: relative;
-    z-index: 4;
-    margin: 0 auto; }
-  .mast__text {
-    max-width: 30em;
-    margin: 0 auto;
-    animation: fade-in 1.2s 0.5s ease both; }
-  .mast__text + .mast__text {
-    margin-top: 1em; }
-  .mast .sep {
-    margin: 1.4em auto;
-    animation: sep-width 1.2s ease both; }
-  .mast .btn {
-    margin: 1.5em auto; }
+  .mast video {
+    object-fit: cover; }
 
 /*----------------------------------------------
--Masts--Light Modifier
+-Masts Modifier: full height
 -----------------------------------------------*/
-.mast--light {
-  background-color: #fbfbfb;
-  color: rgba(0, 0, 0, 0.8); }
-  .mast--light .sep {
-    background-color: rgba(0, 0, 0, 0.8); }
+@media (min-width: 32em) {
+  .mast--vh {
+    min-height: 100vh; } }
 
 /*----------------------------------------------
--Mast--Left Modifier
+-Mast Pages
 -----------------------------------------------*/
-.mast--left {
-  height: 70vh;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.8); }
-  .mast--left header {
-    margin-top: -7em; }
-  .mast--left .mast__title {
-    margin: 0.4em 0 0.5em; }
-  .mast--left .mast__text {
-    margin-left: 0;
-    max-width: 40em;
-    max-width: 30em; }
-  .mast--left .sep {
-    margin: 1em 0; }
-
-/*----------------------------------------------
--Mast--Dark modifier
------------------------------------------------*/
-.mast--dark {
-  color: #fff; }
-  .mast--dark * {
-    color: #fff; }
-
-/*----------------------------------------------   
--Title sections
------------------------------------------------  */
-.title {
-  padding: 3em 0;
-  margin: 0 auto;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.8); }
-  .title h2, .title h3 {
-    margin: 0 auto; }
-  .title--dark {
-    color: #fff; }
-  .title--left {
-    text-align: left; }
-    .title--left h1, .title--left h2, .title--left h3 {
-      margin: 0.5em auto; }
-  .title--light {
-    color: rgba(0, 0, 0, 0.8); }
-  .title.bg--lightgrey h2, .title.bg--lightgrey h3 {
-    color: rgba(0, 0, 0, 0.8); }
+.mast--page {
+  min-height: auto;
+  padding: 8em 0 4em; }
 
 /*----------------------------------------------
 -CTA
@@ -1832,27 +1492,574 @@ section {
   .auto-grid__item:first-child:nth-last-child(3), .auto-grid__item:first-child:nth-last-child(3) ~ .auto-grid__item {
     width: 33.3333%; } }
 
+/*----------------------------------------------
+-Pop Overs
+-----------------------------------------------*/
+.popup {
+  z-index: -2;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease; }
+  .popup li {
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-1.5em); }
+  .popup.popup--is-open {
+    z-index: 99 !important;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.6s ease; }
+    .popup.popup--is-open li {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.3s ease; }
+      .popup.popup--is-open li:nth-child(1) {
+        transition-delay: 0.1s; }
+      .popup.popup--is-open li:nth-child(2) {
+        transition-delay: 0.2s; }
+      .popup.popup--is-open li:nth-child(3) {
+        transition-delay: 0.3s; }
+      .popup.popup--is-open li:nth-child(4) {
+        transition-delay: 0.4s; }
+      .popup.popup--is-open li:nth-child(5) {
+        transition-delay: 0.5s; }
+      .popup.popup--is-open li:nth-child(6) {
+        transition-delay: 0.6s; }
+      .popup.popup--is-open li:nth-child(7) {
+        transition-delay: 0.7s; }
+      .popup.popup--is-open li:nth-child(8) {
+        transition-delay: 0.8s; }
+
+.popup--is-open .site-header {
+  z-index: 0; }
+
+/*----------------------------------------------
+-Pop Overs - CLose
+-----------------------------------------------*/
+.popup__close {
+  z-index: 99;
+  position: fixed;
+  height: 3rem;
+  width: 2rem;
+  top: 1em;
+  right: 1em; }
+  .popup__close:active {
+    border: none; }
+
+.popup__x {
+  display: block;
+  position: absolute;
+  top: 1em; }
+  .popup__x:hover {
+    cursor: pointer; }
+  .popup__x:after, .popup__x:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0 !important;
+    width: 1.855555rem;
+    height: 1px;
+    display: block;
+    background: #fff !important;
+    zoom: 1;
+    transition: all 0.4s ease-in-out; }
+  .popup__x:after {
+    transform: rotate(45deg); }
+  .popup__x:before {
+    transform: rotate(-45deg); }
+
 /*----------------------------------------------   
 Utils
 -----------------------------------------------  */
 /*----------------------------------------------
---Fade Ins, including a sexy ass page fade
+-Grid 
 -----------------------------------------------*/
-.ani-fade-in {
-  animation: fade-in ease-in-out 1s both; }
+.grid, .grid-sm, .grid-lg,
+.grid--lg, .grid-xl,
+.grid--xl, .grid-full, .grid--full {
+  width: 92%;
+  max-width: 58em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .grid:after, .grid-sm:after, .grid-lg:after,
+  .grid--lg:after, .grid-xl:after,
+  .grid--xl:after, .grid-full:after, .grid--full:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media (min-width: 54em) {
+    .grid, .grid-sm, .grid-lg,
+    .grid--lg, .grid-xl,
+    .grid--xl, .grid-full, .grid--full {
+      width: 100%; } }
 
-.ani-fade-in-page {
-  animation: fade-in ease-in-out 1.3s;
-  animation-fill-mode: forwards; }
+/*----------------------------------------------
+-FLex Grid
+@description: apply if you want to use a flexbox grid instead
+-----------------------------------------------*/
+@media (min-width: 54em) {
+  .grid--flex {
+    display: flex; } }
 
+/*----------------------------------------------
+-GRID : Add col padding if no cols
+@deprecitated 
+-----------------------------------------------*/
+.grid--pad, .section.grid-lg {
+  padding-left: 1em;
+  padding-right: 1em; }
+
+/*----------------------------------------------
+-GRID Sm
+-----------------------------------------------*/
+@media (min-width: 54em) {
+  .grid-sm {
+    max-width: 42em; } }
+
+/*----------------------------------------------
+-GRID Large
+-----------------------------------------------*/
+@media (min-width: 54em) {
+  .grid-lg,
+  .grid--lg {
+    max-width: 95%; } }
+@media (min-width: 115em) {
+  .grid-lg,
+  .grid--lg {
+    max-width: 85%; } }
+
+/*----------------------------------------------
+-GRID XL
+-----------------------------------------------*/
+@media (min-width: 54em) {
+  .grid-xl,
+  .grid--xl {
+    max-width: 95%; } }
+
+/*----------------------------------------------
+-GRID : Full Width
+-----------------------------------------------*/
+.grid-full, .grid--full {
+  width: 100%;
+  max-width: 100%; }
+
+/*----------------------------------------------
+-GRID : Full width Small
+-----------------------------------------------*/
+@media (max-width: 54em) {
+  .grid--full-small {
+    width: 100%; } }
+
+/*----------------------------------------------
+-Grid-Wrap - parent wrapper to apply on large up.
+-----------------------------------------------*/
+@media (min-width: 91em) {
+  .grid-wrap {
+    margin: 0 auto;
+    max-width: 95%; } }
+@media (min-width: 130em) {
+  .grid-wrap {
+    margin: 0 auto;
+    max-width: 90%; } }
+
+/*----------------------------------------------
+-Grid: Columns
+-----------------------------------------------*/
+.grid__col {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 1em; }
+  .grid__col:last-of-type {
+    padding-right: 0; }
+
+/*----------------------------------------------
+-Grid : Nested
+-----------------------------------------------*/
+.grid .grid__col + .grid, .grid-sm .grid__col + .grid, .grid-lg .grid__col + .grid,
+.grid--lg .grid__col + .grid, .grid-xl .grid__col + .grid,
+.grid--xl .grid__col + .grid, .grid-full .grid__col + .grid, .grid--full .grid__col + .grid, .grid .grid__col + .grid-sm, .grid-sm .grid__col + .grid-sm, .grid-lg .grid__col + .grid-sm,
+.grid--lg .grid__col + .grid-sm, .grid-xl .grid__col + .grid-sm,
+.grid--xl .grid__col + .grid-sm, .grid-full .grid__col + .grid-sm, .grid--full .grid__col + .grid-sm, .grid .grid__col + .grid-lg, .grid-sm .grid__col + .grid-lg, .grid-lg .grid__col + .grid-lg,
+.grid--lg .grid__col + .grid-lg, .grid-xl .grid__col + .grid-lg,
+.grid--xl .grid__col + .grid-lg, .grid-full .grid__col + .grid-lg, .grid--full .grid__col + .grid-lg,
+.grid .grid__col + .grid--lg,
+.grid-sm .grid__col + .grid--lg,
+.grid-lg .grid__col + .grid--lg,
+.grid--lg .grid__col + .grid--lg,
+.grid-xl .grid__col + .grid--lg,
+.grid--xl .grid__col + .grid--lg,
+.grid-full .grid__col + .grid--lg,
+.grid--full .grid__col + .grid--lg, .grid .grid__col + .grid-xl, .grid-sm .grid__col + .grid-xl, .grid-lg .grid__col + .grid-xl,
+.grid--lg .grid__col + .grid-xl, .grid-xl .grid__col + .grid-xl,
+.grid--xl .grid__col + .grid-xl, .grid-full .grid__col + .grid-xl, .grid--full .grid__col + .grid-xl,
+.grid .grid__col + .grid--xl,
+.grid-sm .grid__col + .grid--xl,
+.grid-lg .grid__col + .grid--xl,
+.grid--lg .grid__col + .grid--xl,
+.grid-xl .grid__col + .grid--xl,
+.grid--xl .grid__col + .grid--xl,
+.grid-full .grid__col + .grid--xl,
+.grid--full .grid__col + .grid--xl, .grid .grid__col + .grid-full, .grid-sm .grid__col + .grid-full, .grid-lg .grid__col + .grid-full,
+.grid--lg .grid__col + .grid-full, .grid-xl .grid__col + .grid-full,
+.grid--xl .grid__col + .grid-full, .grid-full .grid__col + .grid-full, .grid--full .grid__col + .grid-full, .grid .grid__col + .grid--full, .grid-sm .grid__col + .grid--full, .grid-lg .grid__col + .grid--full,
+.grid--lg .grid__col + .grid--full, .grid-xl .grid__col + .grid--full,
+.grid--xl .grid__col + .grid--full, .grid-full .grid__col + .grid--full, .grid--full .grid__col + .grid--full {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin-left: -1em;
+  margin-right: -1em; }
+
+/*----------------------------------------------   
+-Grid Cols: XSmall (mobile)
+-----------------------------------------------*/
+.g-xsm-1 {
+  max-width: 8.33333%;
+  flex-basis: 8.33333%; }
+
+.g-xsm-2 {
+  max-width: 16.66667%;
+  flex-basis: 16.66667%; }
+
+.g-xsm-3 {
+  max-width: 25%;
+  flex-basis: 25%; }
+
+.g-xsm-4 {
+  max-width: 33.33333%;
+  flex-basis: 33.33333%; }
+
+.g-xsm-5 {
+  max-width: 41.66667%;
+  flex-basis: 41.66667%; }
+
+.g-xsm-6 {
+  max-width: 50%;
+  flex-basis: 50%; }
+
+.g-xsm-7 {
+  max-width: 58.33333%;
+  flex-basis: 58.33333%; }
+
+.g-xsm-8 {
+  max-width: 66.66667%;
+  flex-basis: 66.66667%; }
+
+.g-xsm-9 {
+  max-width: 75%;
+  flex-basis: 75%; }
+
+.g-xsm-10 {
+  max-width: 83.33333%;
+  flex-basis: 83.33333%; }
+
+.g-xsm-11 {
+  max-width: 91.66667%;
+  flex-basis: 91.66667%; }
+
+.g-xsm-12 {
+  max-width: 100%;
+  flex-basis: 100%; }
+
+/*----------------------------------------------
+-Grid Cols: Med
+-----------------------------------------------*/
+@media (min-width: 54em) {
+  .g-1 {
+    max-width: 8.33333%;
+    flex-basis: 8.33333%; }
+
+  .g-offset-1 {
+    margin-left: 8.33333%; }
+
+  .g-2 {
+    max-width: 16.66667%;
+    flex-basis: 16.66667%; }
+
+  .g-offset-2 {
+    margin-left: 16.66667%; }
+
+  .g-3 {
+    max-width: 25%;
+    flex-basis: 25%; }
+
+  .g-offset-3 {
+    margin-left: 25%; }
+
+  .g-4 {
+    max-width: 33.33333%;
+    flex-basis: 33.33333%; }
+
+  .g-offset-4 {
+    margin-left: 33.33333%; }
+
+  .g-5 {
+    max-width: 41.66667%;
+    flex-basis: 41.66667%; }
+
+  .g-offset-5 {
+    margin-left: 41.66667%; }
+
+  .g-6 {
+    max-width: 50%;
+    flex-basis: 50%; }
+
+  .g-offset-6 {
+    margin-left: 50%; }
+
+  .g-7 {
+    max-width: 58.33333%;
+    flex-basis: 58.33333%; }
+
+  .g-offset-7 {
+    margin-left: 58.33333%; }
+
+  .g-8 {
+    max-width: 66.66667%;
+    flex-basis: 66.66667%; }
+
+  .g-offset-8 {
+    margin-left: 66.66667%; }
+
+  .g-9 {
+    max-width: 75%;
+    flex-basis: 75%; }
+
+  .g-offset-9 {
+    margin-left: 75%; }
+
+  .g-10 {
+    max-width: 83.33333%;
+    flex-basis: 83.33333%; }
+
+  .g-offset-10 {
+    margin-left: 83.33333%; }
+
+  .g-11 {
+    max-width: 91.66667%;
+    flex-basis: 91.66667%; }
+
+  .g-offset-11 {
+    margin-left: 91.66667%; }
+
+  .g-12 {
+    max-width: 100%;
+    flex-basis: 100%; }
+
+  .g-offset-12 {
+    margin-left: 100%; } }
+/*----------------------------------------------
+-helpers-colors
+@description: color helpers and color themes
+-----------------------------------------------*/
+/*----------------------------------------------   
+-bg color modifiers
+-----------------------------------------------  */
+.bg-white {
+  background-color: #fff; }
+
+.bg-black {
+  background-color: #111; }
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.bg-lightgrey {
+  background-color: #fbfbfb; }
+
+.bg-alpha {
+  background-color: #C43A31; }
+
+.bg-beta {
+  background-color: #003a49; }
+
+.bg-alert {
+  background-color: #c43a31; }
+
+.bg-success {
+  background-color: #1ABC9C; }
+
+/*----------------------------------------------
+--Helper/Utilites classes - Most common use cases
+-----------------------------------------------*/
+/*----------------------------------------------
+--Clear Fix
+-----------------------------------------------*/
+.cf:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+/*----------------------------------------------
+-Background Image Styles
+-----------------------------------------------*/
+.bg-img {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/*----------------------------------------------
+-Paddings
+-----------------------------------------------*/
+.pad {
+  padding: 4em 0; }
+
+.pad-sm {
+  padding: 2em 0; }
+
+.pad-lg {
+  padding: 6em 0; }
+
+/*----------------------------------------------
+-Margins
+-----------------------------------------------*/
+.mb-1 {
+  margin-bottom: 1em; }
+
+.mt-1 {
+  margin-top: 1em; }
+
+/*----------------------------------------------
+-Floats
+-----------------------------------------------*/
+.float-right {
+  float: right !important; }
+
+.float-left {
+  float: left !important; }
+
+.float-none {
+  float: none !important; }
+
+/*----------------------------------------------
+-Text alignment
+-----------------------------------------------*/
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-left {
+  text-align: left !important; }
+
+/*----------------------------------------------
+- Centering
+-----------------------------------------------*/
+.centered,
+.centered.grid__col {
+  float: none;
+  margin: 0 auto;
+  display: block; }
+
+.center-all {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%; }
+  .center-all .grid__col {
+    margin: 0 auto;
+    float: none;
+    display: block;
+    text-align: center; }
+
+/*----------------------------------------------
+- Displays
+-----------------------------------------------*/
+.display-none {
+  display: none !important; }
+
+.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important; }
+
+.visualy-hidden {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+.no-interaction {
+  pointer-events: none !important; }
+
+/*----------------------------------------------
+-No Breaks
+-----------------------------------------------*/
+.no-breaks br {
+  display: none; }
+
+/*----------------------------------------------
+- Filters
+-----------------------------------------------*/
+.greyscale {
+  filter: grayscale(100%); }
+
+.darken {
+  opacity: 0.3;
+  background-color: #000; }
+
+/*----------------------------------------------
+-Seperators (hr)
+-----------------------------------------------*/
+.sep-center,
+.sep {
+  position: relative;
+  border: 0;
+  height: 1px;
+  width: 3em;
+  margin: 1em 0;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.sep-center {
+  margin: 1em auto; }
+
+/*----------------------------------------------
+-Seperator Colod Modifiers
+-----------------------------------------------*/
+.sep--dark {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.sep--grey {
+  background-color: #d7d7d7; }
+
+.sep--white {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+/*----------------------------------------------
+--Fade In
+-----------------------------------------------*/
 @keyframes fade-in {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-.ani-fade-out {
-  animation: fade-in ease-in-out 1s both; }
-
+/*----------------------------------------------
+--Fade In partially 60%
+-----------------------------------------------*/
+@keyframes fade-in-60 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.6; } }
+/*----------------------------------------------
+--Fade Out
+-----------------------------------------------*/
 @keyframes fade-out {
   0% {
     opacity: 1; }
@@ -1861,9 +2068,6 @@ Utils
 /*----------------------------------------------
 --Fade Up
 -----------------------------------------------*/
-.ani-fade-up {
-  animation: fade-up ease-in-out 1s .4s both; }
-
 @keyframes fade-up {
   0% {
     transform: translateY(50px); }
@@ -1872,9 +2076,6 @@ Utils
 /*----------------------------------------------
 --Fade Down
 -----------------------------------------------*/
-.ani-fade-down {
-  animation: fade-down ease-in-out 1s .4s both; }
-
 @keyframes fade-down {
   0% {
     transform: translateY(-150px); }
@@ -1883,9 +2084,6 @@ Utils
 /*----------------------------------------------
 --Fade In Left
 -----------------------------------------------*/
-.ani-fade-left {
-  animation: fade-left ease-in-out 1s .1s both; }
-
 @keyframes fade-left {
   0% {
     opacity: 0;
@@ -1896,9 +2094,6 @@ Utils
 /*----------------------------------------------
 --Fade In Right
 -----------------------------------------------*/
-.ani-fade-right {
-  animation: fade-right ease-in-out 1s .1s both; }
-
 @keyframes fade-right {
   0% {
     opacity: 0;
@@ -1907,268 +2102,186 @@ Utils
     opacity: 1;
     transform: translateX(0px); } }
 /*----------------------------------------------
+--Slide Up
+-----------------------------------------------*/
+@keyframes slide-up {
+  from {
+    transform: translate3d(0, 100%, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
+/*----------------------------------------------
+--Slide In Left
+-----------------------------------------------*/
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+/*----------------------------------------------
+--Slide In right
+-----------------------------------------------*/
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+/*----------------------------------------------
+-Spin
+-----------------------------------------------*/
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
+/*----------------------------------------------
+--Scale
+-----------------------------------------------*/
+@keyframes scale-in {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+/*----------------------------------------------
 --Zoom
 -----------------------------------------------*/
-.ani-zoom-in {
-  transform: translateZ(0);
-  visibility: visible;
-  -webkit-backface-visibility: hidden;
-  animation: zoom-in ease-in-out 5s 0s; }
-
 @keyframes zoom-in {
   0% {
     transform: scale(1) rotate(0deg); }
   100% {
     transform: scale(1.4) rotate(3.2deg); } }
 /*----------------------------------------------
--js letters animation
+--Fade in BG Color
 -----------------------------------------------*/
-.js-letters span {
-  animation: letter-glow 0.7s 0s ease both; }
-  .js-letters span:nth-child(1) {
-    animation-delay: 0.05s; }
-  .js-letters span:nth-child(2) {
-    animation-delay: 0.1s; }
-  .js-letters span:nth-child(3) {
-    animation-delay: 0.15s; }
-  .js-letters span:nth-child(4) {
-    animation-delay: 0.2s; }
-  .js-letters span:nth-child(5) {
-    animation-delay: 0.25s; }
-  .js-letters span:nth-child(6) {
-    animation-delay: 0.3s; }
-  .js-letters span:nth-child(7) {
-    animation-delay: 0.35s; }
-  .js-letters span:nth-child(8) {
-    animation-delay: 0.4s; }
-  .js-letters span:nth-child(9) {
-    animation-delay: 0.45s; }
-  .js-letters span:nth-child(10) {
-    animation-delay: 0.5s; }
-  .js-letters span:nth-child(11) {
-    animation-delay: 0.55s; }
-  .js-letters span:nth-child(12) {
-    animation-delay: 0.6s; }
-  .js-letters span:nth-child(13) {
-    animation-delay: 0.65s; }
-  .js-letters span:nth-child(14) {
-    animation-delay: 0.7s; }
-  .js-letters span:nth-child(15) {
-    animation-delay: 0.75s; }
-  .js-letters span:nth-child(16) {
-    animation-delay: 0.8s; }
-  .js-letters span:nth-child(17) {
-    animation-delay: 0.85s; }
-  .js-letters span:nth-child(18) {
-    animation-delay: 0.9s; }
-  .js-letters span:nth-child(19) {
-    animation-delay: 0.95s; }
-  .js-letters span:nth-child(20) {
-    animation-delay: 1s; }
-  .js-letters span:nth-child(21) {
-    animation-delay: 1.05s; }
-  .js-letters span:nth-child(22) {
-    animation-delay: 1.1s; }
-  .js-letters span:nth-child(23) {
-    animation-delay: 1.15s; }
-  .js-letters span:nth-child(24) {
-    animation-delay: 1.2s; }
-  .js-letters span:nth-child(25) {
-    animation-delay: 1.25s; }
-  .js-letters span:nth-child(26) {
-    animation-delay: 1.3s; }
-  .js-letters span:nth-child(27) {
-    animation-delay: 1.35s; }
-  .js-letters span:nth-child(28) {
-    animation-delay: 1.4s; }
-  .js-letters span:nth-child(29) {
-    animation-delay: 1.45s; }
-  .js-letters span:nth-child(30) {
-    animation-delay: 1.5s; }
-
-/*----------------------------------------------
--Letter Glow
------------------------------------------------*/
-@keyframes letter-glow {
+@keyframes bg-in {
   0% {
-    opacity: 0;
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1); }
-  66% {
-    opacity: 0.7;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9); }
-  77% {
-    opacity: 1; }
+    background-color: transparent; }
   100% {
-    opacity: 0.7;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0); } }
-/*----------------------------------------------
--helpers-colors
-@description: color helpers and color themes
------------------------------------------------*/
+    background-color: rgba(0, 0, 0, 0.8); } }
 /*----------------------------------------------   
---Selection
+--Animate Width
 -----------------------------------------------  */
-::selection {
-  color: white;
-  background: #C43A31;
-  text-shadow: none; }
-
+@keyframes animate-width {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 /*----------------------------------------------   
--bg color modifiers
+--Animate Height
 -----------------------------------------------  */
-.bg--dark {
-  background-color: rgba(0, 0, 0, 0.8); }
-  .bg--dark * {
-    color: #fff; }
-
-.bg--alpha {
-  background-color: #C43A31; }
-  .bg--alpha * {
-    color: #fff; }
-  .bg--alpha a {
-    color: #fff;
-    text-decoration: none;
-    line-height: inherit;
-    transition: color 0.4s ease-in-out; }
-    .bg--alpha a:hover, .bg--alpha a:focus {
-      color: rgba(255, 255, 255, 0.5);
-      transition: color 0.4s ease-in-out; }
-    .bg--alpha a:active {
-      color: rgba(191, 191, 191, 0.5); }
-
+@keyframes animate-height {
+  from {
+    height: 0; }
+  to {
+    height: 100%; } }
+/*----------------------------------------------
+-preloader bounce
+-----------------------------------------------*/
+@keyframes preloader-bounce {
+  0%, 100% {
+    transform: scale(1.4) rotate(3.2deg); }
+  50% {
+    transform: scale(0.5); } }
 /*----------------------------------------------   
--Color
+--Animation Helpers
 -----------------------------------------------  */
-.color-alpha {
-  color: #C43A31; }
+.fade-in {
+  animation: fade-in ease-in-out 1s both; }
 
-.color-beta {
-  color: #003a49; }
+.fade-in-page {
+  animation: fade-in ease-in-out 1.3s forwards; }
 
-.color-white {
-  color: #fff; }
+.fade-right {
+  animation: fade-right ease-in-out 1s .1s both; }
 
-/*----------------------------------------------   
--bg color modifiers
------------------------------------------------  */
-.bg--white {
-  background-color: #fff; }
+.fade-left {
+  animation: fade-left ease-in-out 1s .1s both; }
 
-.bg--lightgrey {
-  background-color: #fbfbfb; }
+.fade-down {
+  animation: fade-down ease-in-out 1s .4s both; }
 
-/*----------------------------------------------   
--Dark Theme
------------------------------------------------  */
-.section--dark {
-  background-color: rgba(0, 0, 0, 0.8); }
-  .section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4, .section--dark h5, .section--dark p, .section--dark span, .section--dark > i {
-    color: #fff; }
-  .section--dark .sep {
-    background-color: rgba(255, 255, 255, 0.8); }
-  .section--dark .btn {
-    color: rgba(0, 0, 0, 0.8); }
-    .section--dark .btn span {
-      color: rgba(0, 0, 0, 0.8); }
-  .section--dark a {
-    color: #fff;
-    text-decoration: none;
-    line-height: inherit;
-    transition: color 0.4s ease-in-out; }
-    .section--dark a:hover, .section--dark a:focus {
-      color: rgba(255, 255, 255, 0.5);
-      transition: color 0.4s ease-in-out; }
-    .section--dark a:active {
-      color: rgba(191, 191, 191, 0.5); }
-
-/*----------------------------------------------   
--Light Theme
------------------------------------------------  */
-.section--light {
-  background-color: #fbfbfb; }
-  .section--light h1, .section--light h2, .section--light h3, .section--light h4, .section--light h5, .section--light p {
-    color: rgba(0, 0, 0, 0.8); }
-/*----------------------------------------------
---Helper/Utilites classes - Most common use cases
------------------------------------------------*/
-/*----------------------------------------------
---Positioning/Floating
------------------------------------------------*/
-.u-clearfix:after, .cf:after {
-  content: '';
-  display: table;
-  clear: both; }
+.fade-up {
+  animation: fade-up ease-in-out 1s .4s both; }
 
 /*----------------------------------------------
---Text alignment
+-Scroll Animations
+@description: animations triggered when in viewport, using data attributes
+@see: js/vendor/waypoints.js
+@see: js/component/scroll-animations.js
 -----------------------------------------------*/
-.u-text-center {
-  text-align: center !important; }
-
-.u-text-right {
-  text-align: right !important; }
-
-.u-text-left {
-  text-align: left !important; }
+/*----------------------------------------------
+-Data-Scroll: Fade-In
+-----------------------------------------------*/
+[data-scroll="fade-in"] {
+  will-change: opacity; }
+  @media (min-width: 54em) {
+    [data-scroll="fade-in"] {
+      opacity: 0; } }
+  [data-scroll="fade-in"].animated {
+    opacity: 1;
+    transition: opacity 0.5s ease; }
 
 /*----------------------------------------------
--Positioning
+-Data-Scroll: fade-up
+@description: Simple fade up and in on entrance
 -----------------------------------------------*/
-.u-float-right {
-  float: right !important; }
-
-.u-float-left {
-  float: left !important; }
-
-.u-centered {
-  float: none;
-  margin: 0 auto;
-  display: block; }
-
-.u-center-all {
-  float: none;
-  display: block;
-  margin: 0 auto;
-  text-align: center; }
+[data-scroll="fade-up"] {
+  will-change: opacity; }
+  @media (min-width: 54em) {
+    [data-scroll="fade-up"] {
+      opacity: 0; } }
+  [data-scroll="fade-up"].animated {
+    animation: slide-up 0.5 cubic-bezier(0.19, 1, 0.22, 1) both;
+    opacity: 1;
+    transition: opacity 0.7s ease; }
 
 /*----------------------------------------------
---Hiding
+-Data-Scroll: fade-up-stagger
+@description: A staggered fade up and in on entrance
 -----------------------------------------------*/
-.u-display-none {
-  display: none !important; }
-
-.u-hidden {
-  opacity: 0 !important;
-  visibility: hidden !important; }
-
-.u-off-screen {
-  position: absolute !important;
-  left: -9999px !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0); }
-
-.u-uninteractable {
-  pointer-events: none !important; }
-
-@media (max-width: 54em) {
-  .u-hide-small {
-    display: none; } }
+[data-scroll="fade-up-stagger"] {
+  will-change: opacity, transform; }
+  @media (min-width: 54em) {
+    [data-scroll="fade-up-stagger"] > * {
+      position: relative;
+      opacity: 0;
+      transform: translateY(50%); } }
+  [data-scroll="fade-up-stagger"].animated > * {
+    opacity: 1;
+    transform: translateY(0em);
+    transition: opacity 2s ease, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(1) {
+      transition-delay: 0.15s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(2) {
+      transition-delay: 0.3s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(3) {
+      transition-delay: 0.45s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(4) {
+      transition-delay: 0.6s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(5) {
+      transition-delay: 0.75s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(6) {
+      transition-delay: 0.9s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(7) {
+      transition-delay: 1.05s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(8) {
+      transition-delay: 1.2s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(9) {
+      transition-delay: 1.35s; }
+    [data-scroll="fade-up-stagger"].animated > *:nth-child(10) {
+      transition-delay: 1.5s; }
 
 /*----------------------------------------------
---Misc
+-No Javascript fallback
 -----------------------------------------------*/
-.u-vertical-center {
-  display: table; }
-  .u-vertical-center > * {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%; }
+.no-js [data-scroll] {
+  opacity: 1; }
+.no-js li {
+  opacity: 1; }
 
-.u-greyscale {
-  filter: grayscale(100%); }
-
-.u-darken {
-  opacity: 0.3;
-  background-color: #000; }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

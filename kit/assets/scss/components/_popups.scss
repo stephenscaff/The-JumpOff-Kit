@@ -1,22 +1,21 @@
 /*----------------------------------------------
 -Pop Overs
 -----------------------------------------------*/
-
 .popup{
+  z-index: -2;
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
   overflow-y: auto;
-  z-index: -2;
   opacity: 0;
   color: #fff;
-  transition: all 0.6s ease;
+  background: rgba(0,0,0,0.8);
+  transition: all 0.5s ease;
 
   //List Items animation setup
   li{
@@ -27,9 +26,10 @@
 
   //Open
   &.popup--is-open{
-    z-index: 9999;
+    z-index: $z-overlays !important;
+    height: 100%;
     opacity: 1;
-    transition: all 0.6s ease;
+    transition: opacity 0.6s ease;
 
     //List items animate in
     li{
@@ -41,24 +41,32 @@
   }
 }
 
-
+.popup--is-open{
+  .site-header{
+    z-index: 0;
+  }
+}
 /*----------------------------------------------
 -Pop Overs - CLose
 -----------------------------------------------*/
 .popup__close {
+  z-index: $z-overlays;
   position:fixed;
-  z-index:999;
   height: 3rem;
-  width: 3rem;
+  width: 2rem;
   top: 1em;
   right: 1em;
+
+  &:active{
+    border: none;
+  }
 }
 
 .popup__x{
-    display: block;
-    position: absolute;
-    top: 1em;
-
+  display: block;
+  position: absolute;
+  top: 1em;
+ 
   &:hover{
     cursor: pointer;
   }
@@ -67,8 +75,8 @@
     z-index: -1;
     position: absolute;
     top: 0 !important;
-    width: 3rem;
-    height: 2px;
+    width: 1.855555rem;
+    height: 1px;
     display: block;
     background: #fff !important;
     zoom: 1;

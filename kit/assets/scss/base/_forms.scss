@@ -47,16 +47,16 @@ label {
 -----------------------------------------------*/
 .input-group {
   margin: 1em auto;
+  display: flex;
 
   input:first-child{
     border-right: 0;
-  }
 
+  }
+  &__btn{
+    flex-basis: 15%;
+  }
   input[type="submit"]{
-        min-width: 26%;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
   }
 }
 

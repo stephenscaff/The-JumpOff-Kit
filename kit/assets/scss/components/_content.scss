@@ -4,15 +4,19 @@
 @see scss/base/_lists.scss for post-content lists
 @see scss/base/_typography.scss for global type stuff
 -----------------------------------------------  */
-.post-content{
+.content{
   padding: $section-padded--small;
   font-family: $font-paragraph;
 
   @media (min-width: $mq-med){
-    padding: $section-padded;
+    padding: 4em 0;
   }
   a{
     @include link-styles($color-alpha, $color-darkgrey);
+  }
+
+  h2{
+    @extend %font-h3;
   }
   // Lead Paragraph
   p:first-of-type{

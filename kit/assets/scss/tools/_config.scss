@@ -26,26 +26,33 @@ $base-lineheight: 1.8;
 // ----------------------------------------------
 // Font Size vars
 //-----------------------------------------------
-$font-xxsmall: .8rem;
-$font-small: .8em;
-$font-xsmall: 0.7em;
+$font-small: 0.9em;
+$font-xsmall: 0.8em;
+$font-xxsmall: 0.7em;
+$font-xxxsmall: 0.5em;
 
 // -----------------------------`-----------------
 // Paddings
 //-----------------------------------------------
-$section-padded: 6em 0;
-$section-padded--small: 2em 0;
+$pad-lg:6em;
+$pad: 4em;
+$pad-sm: 2em;
 
 // ----------------------------------------------
 // Grid
 //-----------------------------------------------
 //$grid-max-width: 67em;
-$grid__cols: 12;
-$grid__col: 100% / $grid__cols;
-$grid__col-pad: 2%;
+$grid-cols: 12;
+// Grid col sizes
+$grid-col: 100% / $grid-cols;
+// Grid col pad
+$grid-col-pad: 1em;
 $grid-gutter: 2%;
-$grid-max: 90%;
-$grid-pad: (100% - $grid-max ) / 2 + $grid__col-pad;
+$grid-max-width-sm: 42em;
+$grid-max-width: 58em; 
+$grid-max-width-lg: 85%;
+$grid-max-width-xl: 95%;
+$grid-width: 95%;
 
 /*----------------------------------------------
 --Media Queries (min-widths)
@@ -79,33 +86,42 @@ $color-lightgrey: #fbfbfb;
 $color-grey:      #d7d7d7;
 $color-midgrey:   #a7a6a6;
 $color-darkgrey:  #242121;
+$color-black:      #111;
 
 $color-alert:     #c43a31;
-$color-ok:        #1ABC9C;
+$color-success:   #1ABC9C;
 
 
-/*----------------------------------------------
---Forms
------------------------------------------------*/
+//----------------------------------------------
+// Base UI
+//----------------------------------------------
 $base-borderradius: 0px;
+$base-border-width: 1px;
+
+//----------------------------------------------
+// Forms
+//----------------------------------------------
 $form-borderwidth: 1px;
 $form-placeholdercolor: $color-darkgrey;
 $form-bordercolor: $color-grey;
 
-
-/*----------------------------------------------
--Z-Indexs
------------------------------------------------*/
-$z-highest: 99;
-$z-higher: 88;
-$z-high: 77;
+//----------------------------------------------
+// Z-Indexs
+//----------------------------------------------
+$z-overlays: 99;
+$z-site-header: 92;
+$z-site-menu: 91;
+$z-higher: 8;
+$z-high: 7;
 $z-mid: 5;
 $z-low: 2;
 $z-lower: 1;
 $z-base: 0;
 $z-lowest: -1;
 
-/*----------------------------------------------
---easing
------------------------------------------------*/
-$ease-cb: cubic-bezier(.77,0,.175,1);
+//----------------------------------------------
+// easing
+//----------------------------------------------
+$ease-cb: cubic-bezier(.4,0,.2,1);
+$ease-cb-2: cubic-bezier(.19,1,.22,1);
+$ease-cb-3: cubic-bezier(.77,0,.175,1);

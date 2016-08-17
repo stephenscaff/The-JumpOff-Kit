@@ -1,23 +1,19 @@
 /*----------------------------------------------
 -Seperators (hr)
 -----------------------------------------------*/
-.sep, %sep{
+%sep,
+.sep{
   position: relative;
   border: 0;
   height: 1px;
-  width: 30%;
+  width: 3em;
   margin: 1em 0;
   background-color: $color-dark;
 }
 %sep-center,
 .sep-center{
-  //@extend %sep;
+  @extend %sep;
   margin: 1em auto;
-}
-
-%sep-center,
-.sep--full{
-  width: 100%;
 }
 
 

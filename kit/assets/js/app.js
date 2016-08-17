@@ -15,6 +15,7 @@ Components
 // @codekit-append "components/_page-transitions.js"
 // @codekit-append "components/_scrolling-nav.js"
 // @codekit-append "components/_menu-nav.js"
+// @codekit-append "components/_popups.js"
 
 /*---------------------------------------------
 inits

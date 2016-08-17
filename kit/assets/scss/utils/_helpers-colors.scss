@@ -3,101 +3,39 @@
 @description: color helpers and color themes
 -----------------------------------------------*/
 
-/*----------------------------------------------   
---Selection
------------------------------------------------  */
-::selection {
-  color: white;
-  background: $color-alpha;
-  text-shadow: none;
-}
 
 /*----------------------------------------------   
 -bg color modifiers
 -----------------------------------------------  */
-.bg--dark{
-  background-color: $color-dark;
 
-  *{
-    color: #fff;
-  }
+.bg-white{
+ background-color: #fff;
 }
 
-.bg--alpha{
+.bg-black{
+ background-color: $color-black;
+}
+
+.bg-dark{
+ background-color: $color-dark;
+}
+
+.bg-lightgrey{
+ background-color: $color-lightgrey;
+}
+
+.bg-alpha{
   background-color: $color-alpha;
-  
-  *{
-    color: #fff;
-  }
-  a{
-    @include link-styles(#fff, rgba(255,255,255,0.5));
-  }
 }
 
-/*----------------------------------------------   
--Color
------------------------------------------------  */
-.color-alpha{
-  color: $color-alpha;
-}
-.color-beta{
-  color: $color-beta;
-}
-.color-white{
-  color: #fff;
+.bg-beta{
+  background-color: $color-beta;
 }
 
-/*----------------------------------------------   
--bg color modifiers
------------------------------------------------  */
-.bg--white{
-  background-color: #fff;
-}
-.bg--lightgrey{
-  background-color: $color-lightgrey;
+.bg-alert{
+  background-color: $color-alert;
 }
 
-
-/*----------------------------------------------   
--Dark Theme
------------------------------------------------  */
-.section--dark{
-  background-color: $color-dark;
-
-   h1,h2,h3,h4,h5,p,span, > i{
-    color: #fff;
-  }
-  .sep{
-    background-color: $color-light;
-  }
-  .btn{
-    @extend .btn--white;
-    color: $color-dark;
-    span{
-      color: $color-dark;
-    }
-  }
-  a{
-    @include link-styles(#fff, rgba(255,255,255,0.5));
-  }
-}
-
-/*----------------------------------------------   
--Light Theme
------------------------------------------------  */
-.section--light{
-  background-color: $color-lightgrey;
-
-   h1,h2,h3,h4,h5,p{
-    color: $color-dark;
-  }
-  %sep{
-    background-color: $color-dark;
-  }
-  .btn{
-    //@extend .btn--dark;
-    span{
-      //color: #fff;
-    }
-  }
+.bg-success{
+  background-color: $color-success;
 }

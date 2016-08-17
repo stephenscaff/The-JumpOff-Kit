@@ -3,24 +3,32 @@
 
 @useage:
 
-<section class="signup">
-    <h3 class="signup__title">Stay up to date with DNA</h3>
-    <!-- Signup Form -->
-    <form class="signup__form" id="mc-signup" name="mc-embedded-subscribe-form"  action="https://LISTUSERNAME.us10.list-manage.com/subscribe/post-json?u=LISTIDS&amp;c=?" method="POST" target="_blank" novalidate>
+$title = get_sub_field('title');
+$text = get_sub_field('text');
+$message = get_sub_field('message');
+<section class="signup" data-scroll="fade-in">
+  <div class="grid grid--pad center-all">
+    <header class="signup__header">
+      <?php if ($title): ?><h3 class="signup__title"><?php echo $title; ?></h3><?php endif; ?>
+      <?php if ($text): ?><p><?php echo $text; ?></p><?php endif; ?>
+    </header>
+    <form class="signup__form form--light" id="mc-signup" name="mc-embedded-subscribe-form" action="https://thesparknotebook.us9.list-manage.com/subscribe/post-json?u=781be0d8ba90ae22d15e349df&amp;id=eea5992c55&amp;c=?" method="POST" target="_blank" novalidate>
+      
       <div class="signup__inputs">
-        <input class="signup__input   email" id="mce-EMAIL" name="EMAIL"  value="" type="email" aria-label="Email Address" aria-required="true" required="" placeholder="your@youremail.com">
-        <div style="position: absolute; left: -5000px;"><input type="text" name="LISTIDS" value=""></div>
-        <button class="signup__submit  signup__btn btn-signup" value="Subscribe" name="subscribe" id="mc-submit"  aria-label="Submit" title="Submit"><span>Get News <i class="icon-right"></i></span></button>
+        <input class="signup__input email" id="mce-EMAIL" name="EMAIL"  value="" type="email" aria-label="Email Address" aria-required="true" placeholder="Enter you email address">
+        <div style="position: absolute; left: -5000px;"><input type="text" name="u=781be0d8ba90ae22d15e349df_eea5992c55" value=""></div>
+        <input type="submit" class="signup__submit btn btn--dark" value="Subscribe" name="subscribe" id="mc-submit"  aria-label="Submit" title="Submit">
       </div>
     </form>
-
     <!-- Signup Message -->
     <div class="signup__message">
-      <p>Thanks for signing up for updates</p>
-    </div> 
+      <?php if ($message): ?><p><?php echo $message; ?></p><?php endif; ?>
+    </div>  
+  </div>
 </section>
------------------------------------------*/
 
+<section class="signup-notice"></section>
+-----------------------------------------*/
 function register($form) {
   $.ajax({
     type: $form.attr('method'),
@@ -41,12 +49,12 @@ function register($form) {
       else {
         message = data.msg;
         $('body').addClass("submit-success");
-        $('.signup').addClass("fade-out").fadeOut(500);
+        $('.signup__form').addClass("fade-out").fadeOut(500);
         $('.signup-notice').removeClass("error").addClass("success").html('<span class="success">'+message+'</span>');
         
-        
+      
         setTimeout(function(){
-          $('.signup-notice.success').fadeOut(600); 
+          $('.signup-notice.success').slideUp(600); 
          }, 3000); 
       }
     }
@@ -54,10 +62,9 @@ function register($form) {
 }
 
 $(function () {
-var $form = $('#mc-signup');
-
+  var $form = $('#mc-signup');
   $('#mc-submit').on('click', function(event) {
-  if(event) event.preventDefault();
-  register($form);
+    if(event) event.preventDefault();
+    register($form);
   });
 });

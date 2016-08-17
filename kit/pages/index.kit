@@ -4,20 +4,53 @@
 <!-- $bodyClass = home -->
 
 <!-- @import "includes/_head" -->
+
+<!-- HEADER -->
 <!-- @import "includes/_header" -->
 
+<!-- Mobile Nav  -->
+<section class="site-menu-sm">
+  <!-- Footer-nav -->
+  <nav class='site-menu-sm__nav'>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+</section>
 
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="grid-xxl">
+    <!-- Logo -->
+    <a href="/" class="site-header__logo">
+    <span class="">The JumpOff</span>
+    </a>
 
-<!-- Main
-================================================== -->
+    <a class='site-header__menu-toggle js-menu-toggle'>
+      <div class='site-header__menu-bars'></div>
+    </a> 
+    <!-- Main Nav-->
+    <nav role="navigation" class="site-header__nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>  
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
 <main role="main">
 
-
-<!-- Sect: Mast
-================================================== -->
+<!-- MAST-->
 <section class="mast mast--home">
   <figure class="mast__bg" style="background-image:url(https://unsplash.it/2000/1100?image=1008)"></figure>
-  <header class="mast__header row g-full">
+  <header class="mast__header grid">
     <span class="mast__subtitle">A Mast Subtitle</span>
     <h1 class="mast__title">Hello, I'm A Title.</h1>
     <hr class="sep-center sep--alpha">
@@ -26,33 +59,72 @@
   </header>
 </section>
 
-
-
-<!-- Title
-================================================== -->
-<section class="title">
-  <div class="row-xxl">
+<!-- INTRO -->
+<section class="intro">
+  <div class="grid grid--pad">
     <h3>I'm An Intro</h3>
     <hr class="sep-center sep--dark">
   </div>
 </section>
 
-
-<!-- Auto Block Grid
-================================================== -->  
+<!-- AUTO BLOCK GRID -->  
 <section class="auto-grid">
   <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=821">
   <img class="auto-grid__item" src="https://unsplash.it/1250/700?image=628">
 </section>
 
+<style type="text/css">
+  
+  .block{
+    width: 100%;
+    height: 9em;
+    background-color: #333;
+    margin-bottom: 1em;
+  }
+</style>
+<section class="pad">
+  <div class="grid-lg">
+    <div class="grid__col g-6">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-6">
+      <div class="block"></div>
+    </div>
+  </div>
+
+  <div class="grid-lg">
+    <div class="grid__col g-4">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-4">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-4">
+      <div class="block"></div>
+    </div>
+  </div>
+
+   <div class="grid-lg">
+    <div class="grid__col g-3">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-3">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-3">
+      <div class="block"></div>
+    </div>
+    <div class="grid__col g-3">
+      <div class="block"></div>
+    </div>
+  </div>
+</section>
 
 
-
-<!-- CTA
-================================================== -->
+<!-- CTA LINK  -->
 <section class="cta cta--alpha">
   <a class="cta__link" href="#">
-    <div class="row-xl">
+    <div class="grid grid--pad">
       <p class="cta__text">
         Here's a CTA Link
       </p>
@@ -61,16 +133,13 @@
 </section>
 
 
-<section class="section--padded u-center-all">
-  <div class="row-xl g-full">
+<section class="section center-all pad">
+  <div class="grid grid--pad">
     <a class="" data-popup="cats-popup"  href="#">Pop It</a> 
-    <br/><br/>
-    <a data-popup="modal-popup" data-modal-id="modal-popup" href="#">Pop It</a>
   </a>
 </section>
 
-<!-- cat popup
-================================================== -->
+<!-- CAT POPUP -->
 <article id="cats-popup" class="popup">  
   <a class='popup__close js-close-popup'>
     <div class='popup__x'></div>
@@ -88,61 +157,27 @@
   </nav>
 </article>
 
-<section class="row-xxl u-align-center" style="padding: 2em 0;">
-  <h2>Here are some flex grid tests. Schnazzy.</h2>
-
-  <div class="flex">
-    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
-    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
-    <div class="flex-item--1-2" style="background-color: #eee;"> 1/2 </div>
-
-    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
-    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
-    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
-
-    <div class="flex-item--1-1" style="background-color: #eee;"> 1/1 </div>
-
-    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
-    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
-    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
-    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
-    <div class="flex-item--1-5" style="background-color: #eee;"> 1/5 </div>
-
-    <div class="flex-item--1-3" style="background-color: #eee;"> 1/3 </div>
-    <div class="flex-item" style="background-color: #eee;"> auto </div>
-    <div class="flex-item--1-4" style="background-color: #eee;"> 1/4 </div>
+<!-- INTRO -->  
+<section class="intro center-all">
+  <div class="grid grid--pad">
+    <h3>I'm An Intro</h3>
+    <hr class="sep-center sep--dark">
   </div>
+</section>
 
-  <div class="flex flex--no-wrap">
-    <div style="background-color: #eee; margin: 2%;"> static width </div>
-    <div class="flex-item" style="background-color: #eee;"> auto </div>
-  </div>
-
-  <h2>Here's some vertical alignment. Ho-hum.</h2>
-
-  <div class="flex flex--middle">
-    <div class="flex-item--1-3" style="background-color: #eee;">
-      I'm a short sentence.
-    </div>
-    <div class="flex-item--1-3" style="background-color: #eee;">
-      I'm a pretty long paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis, eros et auctor laoreet, mauris lorem luctus mauris, a imperdiet nisi quam sit amet sapien. Fusce ac nunc neque. Curabitur a posuere magna. Suspendisse at tristique ante. Sed sollicitudin turpis ac tortor imperdiet porta. Quisque luctus gravida lorem, eu facilisis lectus porttitor sed.
-    </div>
-    <div class="flex-item--1-3 flex-item--bottom" style="background-color: #eee;">
-      I'm individually stuck to the bottom!
-    </div>
-  </div>
-
-  <h2>Here's some forms. Hooray</h2>
-
-  <form class="u-centered-block g-6">
-    <div class="input-group flex flex--no-wrap">
-      <input type="text" class="flex-item flex-item--no-gutter" placeholder="Type type type">
-      <input type="submit" class="btn btn--alpha" value="Submit!">
+<!-- FORM SIGNUP EXAMPLE -->  
+<section class="section">
+  <div class="grid grid--pad">
+  <form class="">
+    <div class="input-group ">
+      <input type="text" class="input-group__text" placeholder="Type type type">
+      <input type="submit" class="input-group__btn btn btn--alpha" value="Submit!">
     </div>
   </form>
+  </div>
 </section>
 
 </main>
 
-
+<!-- FOOTER -->  
 <!-- @include includes/_footer -->

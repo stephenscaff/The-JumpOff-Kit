@@ -13,7 +13,7 @@ It contains all them common ui elements, a proportional grid & typographic syste
 Codekit allows you to rock html includes for shared elements (header, footer, etc). It also enables importing of js files, which is great for organization. The JumpOff takes advantage of this, using a 'working' and 'build' setup. 
 
 ## Kit Folder
-All authorship occurs in the 'kit' folder, which compiles/builds out to root folders of corresponding names. For example files in 'kit/assets' will compile/build to the root 'assets' folder.
+All authorship occurs in the 'kit' folder, like an 'src' directory, which compiles/builds out to root folders of corresponding names. For example files in 'kit/assets' will compile/build to the root 'assets' folder.
 
 ## HTML Files
 All working page files (index, about, etc) inside 'kit/pages' use the '.kit' extensions. these files to .html files in the root. For example, kit/pages/index.kit will build out to index.html. But as '.kit' files, we can use CodeKit's ability to rock html includes for common project partials like headers and footers. Store global includes at 'kit/pages/includes'
@@ -40,14 +40,13 @@ All working page files (index, about, etc) inside 'kit/pages' use the '.kit' ext
 |               |--- _config.scss # master config and sass vars 
 |               |--- _mixins.scss # global mixins
 |               |--- _extends.scss # global extends and themes
+|           |-- fonts/
 |           |-- base/
 |               |--  _typography.scss    
 |               |--- _media.scss # global mixins
 |               |--- _colors.scss
 |               |--  _decor.scss  
-|               |--  _forms.scss      
-|               |--  _grid.scss    
-|               |--  _helpers.scss
+|               |--  _forms.scss       
 |           |--components/  
 |               |-- _buttons.scss      
 |               |-- _feeds.scss    
@@ -59,22 +58,20 @@ All working page files (index, about, etc) inside 'kit/pages' use the '.kit' ext
 |           |--regions/
 |               |-- _header.scss
 |               |-- _header-menu.scss
-|               |-- _footer.scss       
-|               |-- _filterbar.scss
-|               |-- _nav-single.scss     
-|           |--helpers/
+|               |-- _footer.scss            
+|           |--utils/
 |               |-- _grid.scss      
 |               |-- _helpers.scss  
 |               |-- _animations.scss   
+|               |-- etc... 
 |           |-- vendor/ 
 |               |-- _normalizer.scss 
 |
-|       |-- js/             # js files
-|           |-- scripts.js  # working scripts
-|           |-- plugins.js  # imported plugins
-|           |-- plugins/    # plugin import files
-|               |-- _easings.js   
-|               |-- _tabs.js
-|               |-- _etc...   
+|       |-- js/               # js files
+|           |-- jquery.js     # yep... still rocking jquery
+|           |-- app.js        # script appends/prepends/includes
+|           |-- _init.js      # inits
+|           |-- vendor/       # vendor libs
+|           |-- components/   # js components
 |
 ```

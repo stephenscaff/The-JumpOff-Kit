@@ -1,0 +1,201 @@
+/*----------------------------------------------
+--Fade In
+-----------------------------------------------*/
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*----------------------------------------------
+--Fade In partially 60%
+-----------------------------------------------*/
+@keyframes fade-in-60 {
+  0%   { opacity: 0; }
+  100% { opacity: 0.6; }
+}
+
+/*----------------------------------------------
+--Fade Out
+-----------------------------------------------*/
+@keyframes fade-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*----------------------------------------------
+--Fade Up
+-----------------------------------------------*/
+@keyframes fade-up {
+  0%   { transform: translateY(50px); }
+  100% { transform: translateY(0px); }
+}
+
+/*----------------------------------------------
+--Fade Down
+-----------------------------------------------*/
+@keyframes fade-down {
+  0%   { transform: translateY(-150px); }
+  100% { transform: translateY(0px); }
+}
+
+/*----------------------------------------------
+--Fade In Left
+-----------------------------------------------*/
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*----------------------------------------------
+--Fade In Right
+-----------------------------------------------*/
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*----------------------------------------------
+--Slide Up
+-----------------------------------------------*/
+@keyframes slide-up{
+  from {
+    transform: translate3d(0,100%,0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+  }
+}
+/*----------------------------------------------
+--Slide In Left
+-----------------------------------------------*/
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*----------------------------------------------
+--Slide In right
+-----------------------------------------------*/
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*----------------------------------------------
+-Spin
+-----------------------------------------------*/
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------------------------------------
+--Scale
+-----------------------------------------------*/
+@keyframes scale-in {
+  0%   { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/*----------------------------------------------
+--Zoom
+-----------------------------------------------*/
+@keyframes zoom-in {
+  0%   { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.4) rotate(3.2deg); }
+}
+
+/*----------------------------------------------
+--Fade in BG Color
+-----------------------------------------------*/
+@keyframes bg-in{
+  0%{
+    background-color: transparent;
+  }
+  100%{
+    background-color: $color-dark;
+  }
+}
+
+/*----------------------------------------------   
+--Animate Width
+-----------------------------------------------  */
+@keyframes animate-width {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+/*----------------------------------------------   
+--Animate Height
+-----------------------------------------------  */
+@keyframes animate-height {
+  from{
+    height: 0;
+  }
+  to{
+    height: 100%;
+  }
+}
+
+/*----------------------------------------------
+-preloader bounce
+-----------------------------------------------*/
+@keyframes preloader-bounce {
+  0%, 100% {
+    transform: scale(1.4) rotate(3.2deg);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+/*----------------------------------------------   
+--Animation Helpers
+-----------------------------------------------  */
+.fade-in {
+  animation: fade-in ease-in-out 1s both;
+}
+.fade-in-page {
+  animation: fade-in ease-in-out 1.3s forwards;
+}
+.fade-right {
+  animation: fade-right ease-in-out 1s .1s both;
+}
+.fade-left {
+  animation: fade-left ease-in-out 1s .1s both;
+}
+.fade-down {
+  animation: fade-down ease-in-out 1s .4s both;
+}
+.fade-up {
+  animation: fade-up ease-in-out 1s .4s both;
+}
+

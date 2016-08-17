@@ -3,13 +3,75 @@
 @description: for top of page mastheads.
 @see: scss/tools/mixins.scss for the 'mast' mixin
 -----------------------------------------------*/
-.mast {
-  @include mast(center, 100vh);
+.mast{
+  position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height: 35em;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 6em;
+  padding-bottom: 4em;
+  text-align:center;
+  overflow: hidden;
 
+  @media (min-width: $mq-med){
+    min-height: 65vh;
+  }
+
+  // Background-Image holder
   &__bg{
+    @include bg-img-abs();
     z-index: 0;
     animation: fade-in 5s ease;
   }
+
+  // Grid
+  [class*='grid']{
+    position: relative;
+    align-self:center;
+  }
+
+  // Mast Content Wrapper
+  &__content, &__header{
+    position: relative;
+    z-index: 4;
+    margin: 0 auto;
+    padding: 0 $grid-col-pad;
+  }
+
+  &__pretitle{
+    @extend %font-subtitle;
+    margin-bottom: 1em;
+  }
+
+  // Mast Title
+  &__title{
+
+  }
+  // Mast paragraph / text
+  &__text{
+    font-weight: 400;
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Mast Subtitle
+  &__subtitle{
+    @extend %font-subtitle;
+    font-size: $font-small;
+  }
+  &__icon{
+    display:block;
+    color: #fff;
+    font-size: 2.75em;
+  }
+  .btn{
+    margin: 1.5em auto;
+  }
+  // No brs on mobile
   br {
     display: none;
 
@@ -17,83 +79,25 @@
       display: block;
     }
   }
-
-  .mast__header{
-    position: relative;
-    z-index: 4;
-    margin: 0 auto;
-  }
-
-  &__subtitle{
-    @extend %font-subtitle;
-  }
-
-  &__text{
-    max-width: 30em;
-    margin: 0 auto;
-    @extend %font-lead;
-    animation: fade-in 1.2s 0.5s ease both;
-  }
-
-  &__text + &__text{
-    margin-top: 1em;
-  }
-
-  .sep{
-    margin: 1.4em auto;
-    animation: sep-width 1.2s ease both;
-  }
-
-  .btn{
-    margin: 1.5em auto;
+  video{
+    object-fit: cover;
   }
 }
 
 /*----------------------------------------------
--Masts--Light Modifier
+-Masts Modifier: full height
 -----------------------------------------------*/
-.mast--light{
-  background-color: $color-lightgrey;
-  color: $color-dark;
-
-  .sep{
-    background-color: $color-dark;
+%mast--vh,
+.mast--vh{
+  @media (min-width: $mq-small) {
+    min-height: 100vh;
   }
 }
-
 /*----------------------------------------------
--Mast--Left Modifier
+-Mast Pages
 -----------------------------------------------*/
-.mast--left{
-  height: 70vh;
-  text-align: left;
-  background-color: $color-dark;
-  
-  header{
-    margin-top: -7em;
-  }
-  .mast__title{
-    margin: 0.4em 0 0.5em;    
-  }
-  .mast__text{
-    margin-left:0;
-    max-width: 40em;
-    max-width: 30em;
-  }
-  .sep{
-    margin: 1em 0;
-  }
+.mast--page{
+  min-height: auto;
+  padding: 8em 0 4em;
 }
-
-/*----------------------------------------------
--Mast--Dark modifier
------------------------------------------------*/
-.mast--dark{
-  color: #fff;
-
-   *{
-    color: #fff;
-  }
-}
-
 

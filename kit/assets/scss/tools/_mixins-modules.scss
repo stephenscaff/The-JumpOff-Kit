@@ -57,7 +57,7 @@
 //  bg-img()
 //  @description: common bg image treatment
 //----------------------------------------------
-@mixin bg-img {
+@mixin bg-img-cover {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +75,7 @@
   top: 0;
   left: 0;
   overflow:hidden;
-  @include bg-img();
+  @include bg-img-cover();
 }
 
 //----------------------------------------------
@@ -101,85 +101,5 @@
   & > #{$top_layer}{
     z-index: 2;
     position: relative;
-  }
-}
-
-//----------------------------------------------
-//  mast()
-//  @description: masthead module for .mast elements
-//  @see: scss/components/_masts.scss
-//  @param: $align: [center] - align content via flex align-items
-//  @param: $height:[20em] - min-height
-//  @param: $bg: [$color-dark ] - set bg color, if dark, make color white
-//----------------------------------------------
-@mixin mast($flex_align: center, $height:100vh, $bg:null){
-  position: relative;
-  display:flex;
-  justify-content:center;
-  align-items:$flex_align;
-  min-height: $height;
-  margin: 0 auto;
-  padding-top: 6em;
-  padding-bottom: 6em;
-  //text-align:center;
-  //background-color: ;
-  overflow: hidden;
-  @include bg-img();
-
-  //If dark bg, color white.
-  @if ($bg == $color-dark) {
-    color: #fff;
-  } @else {
-    color: $color-dark;
-  }
-
-  // Background-Image holder
-  &__bg{
-    @include bg-img-abs();
-  }
-  // Grid
-  [class*='grid']{
-    position: relative;
-    align-self:center;
-  }
-  // Mast Content Wrapper
-  .mast__content{
-    position: relative;
-    z-index: 4;
-    margin: 0 auto;
-  }
-
-  // Mast paragraph / text
-  &__text{
-    max-width: 30em;
-    margin: 0 auto;
-    animation: fade-in 1.2s 0.5s ease both;
-  }
-
-  &__text + &__text{
-    margin-top: 1em;
-  }
-
-  // Mast Title
-  &__title{
-    @extend %font-title;
-  }
-
-  // Mast Subtitle
-  &__subtitle{
-    @extend %font-subtitle;
-    line-height: 1.8;
-  }
-  
-  .sep{
-    margin: 1.4em 0;
-  }
-
-  .btn{
-    margin: 1.5em auto;
-  }
-  // Mast Height after med. Usually a viewport (vh) sizing
-  @media (min-width: $mq-med){
-    height: $height;
   }
 }

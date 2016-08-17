@@ -127,4 +127,3 @@ $('.insta').everydayImInstagrammin({
   sequenceFadeIn: 'true',
   sequenceDuration: 300
 });
-

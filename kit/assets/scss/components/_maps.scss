@@ -1,30 +1,33 @@
-/*----------------------------------------------   
---GMaps
------------------------------------------------  */
+/*----------------------------------------------
+--Maps
+-----------------------------------------------*/
+.map-canvas {
+  height: 100%; 
+  min-height: 30em;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    @media (max-width: $mq-med) {
+      z-index: 99;
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+  }
+
+  img {
+    max-width: none !important;
+  }
+}
+
 .map{
   height: 100vh;
 }
 
-.js-map { 
-  height: 100%; 
-  min-height: 30em;
-  margin: 0; 
-  padding: 0;
-
-/*-------------------------------------------   
---Overlay for mobile scrolling
----------------------------------------------*/
-  &::after{
-  @media (max-width: $mq-med) {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background: transparent;
-   }
-  }
 /*-------------------------------------------   
 --Info Window / Popup
 ---------------------------------------------*/

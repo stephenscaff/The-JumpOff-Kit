@@ -4,9 +4,9 @@
 //  Tools:        configs, mixins, extends
 //  Base:         Styles for base level elements           
 //  Vendor:       Vendor specific styles
-//  Layouts:      Main Layouts and Regions
+//  Regions:      Main Layouts and Regions
 //  Components:   Modular components. Most styles will go here
-//  Utils:        Helpers, Utilities & Overrides
+//  Utils:        Helpers, Utilities, Animations
 //---------------------------------------------- 
 
 //----------------------------------------------   
@@ -43,7 +43,6 @@ Normalizer
 @import 'base/_forms';
 @import 'base/_code';
 @import 'base/_tables';
-@import 'base/_decor';
 
 /*----------------------------------------------   
 Vendor
@@ -53,10 +52,9 @@ Vendor
 /*----------------------------------------------   
 -Layouts & Regions
 -----------------------------------------------  */
-@import 'layouts/_grid';
-@import 'layouts/_site-menu-sm';
-@import 'layouts/_header';
-@import 'layouts/_footer';
+@import 'regions/_site-menu-sm';
+@import 'regions/_header';
+@import 'regions/_footer';
 
 /*----------------------------------------------   
 -Components: Modular components
@@ -64,10 +62,9 @@ Vendor
 @import 'components/_buttons';
 @import 'components/_sections';
 @import 'components/_masts';
-@import 'components/_titles';
 @import 'components/_ctas';
 @import 'components/_auto-grid';
-//@import 'components/_popups';
+@import 'components/_popups';
 
 //@import 'components/_posts';
 //@import 'components/_post';
@@ -76,7 +73,11 @@ Vendor
 
 /*----------------------------------------------   
 Utils
------------------------------------------------  */ 
-@import 'utils/_animations';
+-----------------------------------------------  */
+@import 'utils/_grid'; 
 @import 'utils/_helpers-colors';
 @import 'utils/_helpers';
+@import 'utils/_decor';
+@import 'utils/_animations-keyframes';
+@import 'utils/_animations-scrolling';
+
