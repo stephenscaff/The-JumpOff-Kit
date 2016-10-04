@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*----------------------------------------------
 --Media Queries (min-widths)
 -----------------------------------------------*/
@@ -671,7 +670,8 @@ input, textarea, select {
   box-shadow: none;
   outline: 0;
   transition: all .25s ease-in;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none; }
   input:focus, textarea:focus, select:focus {
     border-color: #C43A31; }
 
@@ -704,142 +704,6 @@ label {
 -----------------------------------------------*/
 ::placeholder {
   color: #242121; }
-
-/*----------------------------------------------
---Checkboxes
------------------------------------------------*/
-/* Base for label styling */
-[type="checkbox"] {
-  position: absolute;
-  left: -9999px; }
-
-[type="checkbox"] + label {
-  position: relative;
-  display: inline;
-  font-size: .85em;
-  font-weight: 400;
-  color: #999;
-  cursor: pointer;
-  transition: color .4s ease; }
-  [type="checkbox"] + label:hover {
-    color: #C43A31; }
-
-/* checkbox aspect */
-[type="checkbox"] + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 1.2em;
-  height: 1.2em;
-  border: 1px solid #ccc;
-  background: #ddd;
-  border-radius: 4px; }
-
-[type="checkbox"] + label:after {
-  content: '✔';
-  position: absolute;
-  top: 0;
-  left: .3em;
-  font-size: 1em;
-  color: #fff;
-  transition: all .2s; }
-
-/* Hover */
-[type="checkbox"] + label:hover:before,
-[type="checkbox"]:focus + label:before {
-  border: 1px solid #C43A31;
-  transition: border .4s ease; }
-
-/* Checked */
-[type="checkbox"]:checked + label:before {
-  background: #C43A31;
-  border: 1px solid #C43A31; }
-
-/* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0); }
-
-[type="checkbox"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1); }
-
-/* disabled checkbox */
-[type="checkbox"]:disabled + label {
-  color: #ccc;
-  cursor: not-allowed; }
-  [type="checkbox"]:disabled + label:before {
-    border-color: #e9e9e9;
-    background-color: #e9e9e9; }
-  [type="checkbox"]:disabled + label:after {
-    color: #eee;
-    background: #ccc; }
-
-/*----------------------------------------------
---Radios
------------------------------------------------*/
-/* Base for label styling */
-[type="radio"] {
-  position: absolute;
-  left: -9999px; }
-
-[type="radio"] + label {
-  position: relative;
-  display: inline;
-  padding-left: 30px;
-  font-size: .85em;
-  font-weight: 400;
-  color: #999;
-  cursor: pointer; }
-  [type="radio"] + label:hover {
-    color: #C43A31;
-    transition: color .4s ease; }
-
-/* radio dot */
-[type="radio"] + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 22px;
-  height: 22px;
-  border: 3px solid #ccc;
-  border-radius: 50%;
-  background: #ddd; }
-
-/* Hover */
-[type="radio"] + label:hover:before,
-[type="radio"]:focus + label:before {
-  border: 3px solid #C43A31;
-  transition: border .4s ease; }
-
-/* Checked */
-input[type="radio"]:checked + label:before {
-  background: #C43A31;
-  border: 3px solid #C43A31;
-  box-shadow: inset 0 0 0 3px #fff; }
-
-/* disabled radio */
-[type="radio"]:disabled + label {
-  color: #ccc;
-  cursor: not-allowed; }
-  [type="radio"]:disabled + label:before {
-    box-shadow: none;
-    border-color: #e9e9e9;
-    background-color: #e9e9e9; }
-  [type="radio"]:disabled + label:after {
-    color: #eee;
-    background: #ccc; }
-
-/*----------------------------------------------
---Misc
------------------------------------------------*/
-fieldset {
-  margin: 1em 0; }
-
-legend {
-  margin-left: -.75em; }
 
 /*----------------------------------------
 -CODE
@@ -1584,29 +1448,28 @@ Utils
 /*----------------------------------------------
 -Grid 
 -----------------------------------------------*/
-.grid, .grid-sm, .grid-lg,
-.grid--lg, .grid-xl,
-.grid--xl, .grid-full, .grid--full {
+.grid-sm,
+.grid-med,
+.grid,
+.grid-full,
+.grid--full {
+  position: relative;
   width: 92%;
-  max-width: 58em;
+  max-width: 60em;
   display: block;
   margin-left: auto;
   margin-right: auto; }
-  .grid:after, .grid-sm:after, .grid-lg:after,
-  .grid--lg:after, .grid-xl:after,
-  .grid--xl:after, .grid-full:after, .grid--full:after {
-    content: '';
-    display: table;
-    clear: both; }
   @media (min-width: 54em) {
-    .grid, .grid-sm, .grid-lg,
-    .grid--lg, .grid-xl,
-    .grid--xl, .grid-full, .grid--full {
-      width: 100%; } }
+    .grid-sm,
+    .grid-med,
+    .grid,
+    .grid-full,
+    .grid--full {
+      width: 90%; } }
 
 /*----------------------------------------------
 -FLex Grid
-@description: apply if you want to use a flexbox grid instead
+Apply if you want to use a flexbox grid instead
 -----------------------------------------------*/
 @media (min-width: 54em) {
   .grid--flex {
@@ -1630,22 +1493,51 @@ Utils
 /*----------------------------------------------
 -GRID Large
 -----------------------------------------------*/
-@media (min-width: 54em) {
-  .grid-lg,
-  .grid--lg {
-    max-width: 95%; } }
-@media (min-width: 115em) {
-  .grid-lg,
-  .grid--lg {
-    max-width: 85%; } }
+@media (min-width: 65em) {
+  .grid-med {
+    max-width: 70em; } }
+
+/*----------------------------------------------
+-GRID Large
+-----------------------------------------------*/
+.grid-lg {
+  position: relative;
+  width: 92%;
+  max-width: 60em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .grid-lg:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media (min-width: 54em) {
+    .grid-lg {
+      max-width: 95%; } }
+  @media (min-width: 115em) {
+    .grid-lg {
+      max-width: 85%; } }
 
 /*----------------------------------------------
 -GRID XL
 -----------------------------------------------*/
-@media (min-width: 54em) {
-  .grid-xl,
-  .grid--xl {
-    max-width: 95%; } }
+.grid-xl,
+.grid--xl {
+  position: relative;
+  width: 92%;
+  max-width: 60em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .grid-xl:after,
+  .grid--xl:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media (min-width: 54em) {
+    .grid-xl,
+    .grid--xl {
+      max-width: 95%; } }
 
 /*----------------------------------------------
 -GRID : Full Width
@@ -1688,35 +1580,7 @@ Utils
 /*----------------------------------------------
 -Grid : Nested
 -----------------------------------------------*/
-.grid .grid__col + .grid, .grid-sm .grid__col + .grid, .grid-lg .grid__col + .grid,
-.grid--lg .grid__col + .grid, .grid-xl .grid__col + .grid,
-.grid--xl .grid__col + .grid, .grid-full .grid__col + .grid, .grid--full .grid__col + .grid, .grid .grid__col + .grid-sm, .grid-sm .grid__col + .grid-sm, .grid-lg .grid__col + .grid-sm,
-.grid--lg .grid__col + .grid-sm, .grid-xl .grid__col + .grid-sm,
-.grid--xl .grid__col + .grid-sm, .grid-full .grid__col + .grid-sm, .grid--full .grid__col + .grid-sm, .grid .grid__col + .grid-lg, .grid-sm .grid__col + .grid-lg, .grid-lg .grid__col + .grid-lg,
-.grid--lg .grid__col + .grid-lg, .grid-xl .grid__col + .grid-lg,
-.grid--xl .grid__col + .grid-lg, .grid-full .grid__col + .grid-lg, .grid--full .grid__col + .grid-lg,
-.grid .grid__col + .grid--lg,
-.grid-sm .grid__col + .grid--lg,
-.grid-lg .grid__col + .grid--lg,
-.grid--lg .grid__col + .grid--lg,
-.grid-xl .grid__col + .grid--lg,
-.grid--xl .grid__col + .grid--lg,
-.grid-full .grid__col + .grid--lg,
-.grid--full .grid__col + .grid--lg, .grid .grid__col + .grid-xl, .grid-sm .grid__col + .grid-xl, .grid-lg .grid__col + .grid-xl,
-.grid--lg .grid__col + .grid-xl, .grid-xl .grid__col + .grid-xl,
-.grid--xl .grid__col + .grid-xl, .grid-full .grid__col + .grid-xl, .grid--full .grid__col + .grid-xl,
-.grid .grid__col + .grid--xl,
-.grid-sm .grid__col + .grid--xl,
-.grid-lg .grid__col + .grid--xl,
-.grid--lg .grid__col + .grid--xl,
-.grid-xl .grid__col + .grid--xl,
-.grid--xl .grid__col + .grid--xl,
-.grid-full .grid__col + .grid--xl,
-.grid--full .grid__col + .grid--xl, .grid .grid__col + .grid-full, .grid-sm .grid__col + .grid-full, .grid-lg .grid__col + .grid-full,
-.grid--lg .grid__col + .grid-full, .grid-xl .grid__col + .grid-full,
-.grid--xl .grid__col + .grid-full, .grid-full .grid__col + .grid-full, .grid--full .grid__col + .grid-full, .grid .grid__col + .grid--full, .grid-sm .grid__col + .grid--full, .grid-lg .grid__col + .grid--full,
-.grid--lg .grid__col + .grid--full, .grid-xl .grid__col + .grid--full,
-.grid--xl .grid__col + .grid--full, .grid-full .grid__col + .grid--full, .grid--full .grid__col + .grid--full {
+.grid .grid__col + .grid, .grid-full .grid__col + .grid, .grid--full .grid__col + .grid, .grid .grid__col + .grid-full, .grid-full .grid__col + .grid-full, .grid--full .grid__col + .grid-full, .grid .grid__col + .grid--full, .grid-full .grid__col + .grid--full, .grid--full .grid__col + .grid--full {
   width: auto;
   max-width: none;
   min-width: 0;
@@ -1922,97 +1786,6 @@ Utils
 
 .pad-lg {
   padding: 6em 0; }
-
-/*----------------------------------------------
--Margins
------------------------------------------------*/
-.mb-1 {
-  margin-bottom: 1em; }
-
-.mt-1 {
-  margin-top: 1em; }
-
-/*----------------------------------------------
--Floats
------------------------------------------------*/
-.float-right {
-  float: right !important; }
-
-.float-left {
-  float: left !important; }
-
-.float-none {
-  float: none !important; }
-
-/*----------------------------------------------
--Text alignment
------------------------------------------------*/
-.text-center {
-  text-align: center !important; }
-
-.text-right {
-  text-align: right !important; }
-
-.text-left {
-  text-align: left !important; }
-
-/*----------------------------------------------
-- Centering
------------------------------------------------*/
-.centered,
-.centered.grid__col {
-  float: none;
-  margin: 0 auto;
-  display: block; }
-
-.center-all {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 100%; }
-  .center-all .grid__col {
-    margin: 0 auto;
-    float: none;
-    display: block;
-    text-align: center; }
-
-/*----------------------------------------------
-- Displays
------------------------------------------------*/
-.display-none {
-  display: none !important; }
-
-.hidden {
-  opacity: 0 !important;
-  visibility: hidden !important; }
-
-.visualy-hidden {
-  position: absolute !important;
-  left: -9999px !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0); }
-
-.no-interaction {
-  pointer-events: none !important; }
-
-/*----------------------------------------------
--No Breaks
------------------------------------------------*/
-.no-breaks br {
-  display: none; }
-
-/*----------------------------------------------
-- Filters
------------------------------------------------*/
-.greyscale {
-  filter: grayscale(100%); }
-
-.darken {
-  opacity: 0.3;
-  background-color: #000; }
 
 /*----------------------------------------------
 -Seperators (hr)
