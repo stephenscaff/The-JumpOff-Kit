@@ -106,12 +106,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/kit\/assets\/js\/components\/_accrodian.js": {
+	"\/kit\/assets\/js\/components\/_accordion.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/js\/components\/_accrodian.js",
-		"outputAbbreviatedPath": "\/kit\/assets\/js\/components\/min\/_accrodian-min.js",
+		"inputAbbreviatedPath": "\/kit\/assets\/js\/components\/_accordion.js",
+		"outputAbbreviatedPath": "\/kit\/assets\/js\/components\/min\/_accordion-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -503,31 +503,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/components\/_alerts.scss": {
+	"\/kit\/assets\/scss\/components\/_auto-cols.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_alerts.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_alerts.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/kit\/assets\/scss\/components\/_auto-grid.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_auto-grid.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_auto-grid.css",
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_auto-cols.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_auto-cols.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -599,15 +583,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/components\/_ctas.scss": {
+	"\/kit\/assets\/scss\/components\/_feeds.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_ctas.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_ctas.css",
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_feeds.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_feeds.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -775,22 +759,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/components\/_posts.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/components\/_posts.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_posts.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/kit\/assets\/scss\/components\/_sections.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -946,15 +914,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/regions\/_footer.scss": {
+	"\/kit\/assets\/scss\/regions\/_site-footer.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/regions\/_footer.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_footer.css",
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/regions\/_site-footer.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_site-footer.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -962,15 +930,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/kit\/assets\/scss\/regions\/_header.scss": {
+	"\/kit\/assets\/scss\/regions\/_site-header.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/regions\/_header.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_header.css",
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/regions\/_site-header.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_site-header.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1170,6 +1138,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/kit\/assets\/scss\/utils\/_animations-transitions.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/assets\/scss\/utils\/_animations-transitions.scss",
+		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_animations-transitions.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/kit\/assets\/scss\/utils\/_decor.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1243,22 +1227,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/assets\/scss\/utils\/_preloader.scss",
 		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_preloader.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/kit\/assets\/scss\/utils\/_themes.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/assets\/scss\/utils\/_themes.scss",
-		"outputAbbreviatedPath": "\/kit\/assets\/scss\/css\/_themes.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

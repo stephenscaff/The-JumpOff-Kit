@@ -1,7 +1,10 @@
-/*----------------------------------------------   
-POST CONTENT
------------------------------------------------  */
-.post-content, .content{
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.content{
 
   p:first-child{
     @extend %font-lead;

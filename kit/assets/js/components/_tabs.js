@@ -1,13 +1,13 @@
-/*----------------------------------------------   
-Tabbies
-Stupid simple global, flexible, and resuable tab system that alows for multiple tabs on the 
-same page, with identical markup/classes. Uses css keyframes for the all sexy
-like fade ins.
-
-@author: Stephen Scaff
-@version: 2.1.0
-@see: assets/scss/_tabs.js
------------------------------------------------  */
+/**
+ * Tabbies
+ * Stupid simple global, flexible, and resuable tab system that alows for multiple tabs on the 
+ * same page, with identical markup/classes. Uses css keyframes for the all sexy
+ * like fade ins.
+ *
+ * @author: Stephen Scaff
+ * @version: 2.1.0
+ * @see: assets/scss/_tabs.scss
+ */
 (function($) {
   var s, Tabbies = {
     settings: {
@@ -43,4 +43,3 @@ like fade ins.
     Tabbies.init();
   }
 })(jQuery);
-

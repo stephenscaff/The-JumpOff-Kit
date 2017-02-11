@@ -1,34 +1,21 @@
-/*----------------------------------------
-Simple Drop Down
-@todo: Cleanup , make more object literal
-------------------------------------------*/
-
-//Setup
-function DropDown(el) {
-	this.dd = el;
-	this.initEvents();
-}
-DropDown.prototype = {
-	initEvents : function() {
-		var obj = this;
-		obj.dd.on('click', function(event){
-			$(this).toggleClass('active');
-			event.stopPropagation();
-		});	
-	}
-};
-//Init
-$(function() {
-	var dd = new DropDown( $('.js-dropdown') );
-	$(document).click(function() {
-		// all dropdowns
-		$('.dd-wrap').removeClass('active');
-	});
-});
-
-/*----------------------------------------
-Filter Bar Dropdown
-------------------------------------------*/
+/**
+ * Dropdown
+ * Dropdown with support for labels that swap ou
+ * on selection.
+ *
+ *  @todo	Clean up, make object literal
+ *	@example
+ 		<div class="dropdown js-dropdown">
+    	<span class="dropdown__caret"></span>
+     	<nav>
+	      <ul>
+	       <li class="dropdown__label"><span data-label="View by Category">Select Category</span></li>
+	       <li class="filter" data-filter="all">All</li>
+	       <?php echo  jumpoff_filter_items('resource-types'); ?>
+	      </ul>
+     	</nav>
+    </div>
+ */
 $('.js-dropdown').on('click',function(data){
 	var $drop = $(this);
 	var tagName = $('this, a');

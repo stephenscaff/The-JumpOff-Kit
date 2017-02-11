@@ -1,6 +1,10 @@
-/*----------------------------------------------
--Grid 
------------------------------------------------*/
+//----------------------------------------------
+//  Grid 
+//  Our global grid container, to be applies as a
+//  helper class, or placeholder extend.
+//
+//  @group Grid
+//----------------------------------------------
 %grid,
 .grid {
   position: relative;
@@ -15,27 +19,34 @@
   }
 }
 
-/*----------------------------------------------
--FLex Grid
-Apply if you want to use a flexbox grid instead
------------------------------------------------*/
+
+//----------------------------------------------
+//  FLex Grid
+//  Apply if you want to use a flexbox grid instead
+//
+//  @group Grid
+//----------------------------------------------
 .grid--flex{
 @media (min-width: $mq-med){
     display: flex;
   }
 }
-/*----------------------------------------------
--GRID : Add col padding if no cols
-@deprecitated 
------------------------------------------------*/
-.grid--pad, .section.grid-lg{
-  padding-left:   $grid-col-pad;
-  padding-right:  $grid-col-pad;
+//----------------------------------------------
+//  Grid Padding
+//
+//  @group Grid
+//  @depreciated
+//----------------------------------------------
+.grid--pad{
+  padding-left:  $grid-col-pad;
+  padding-right: $grid-col-pad;
 }
 
-/*----------------------------------------------
--GRID Sm
------------------------------------------------*/
+//----------------------------------------------
+//  Grid Small
+//
+//  @group Grid
+//----------------------------------------------
 %grid-sm,
 .grid-sm{
   @extend %grid;
@@ -44,9 +55,11 @@ Apply if you want to use a flexbox grid instead
   }
 }
 
-/*----------------------------------------------
--GRID Large
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Med
+//
+//  @group Grid
+//----------------------------------------------
 %grid-med,
 .grid-med {
   @extend %grid;
@@ -55,10 +68,11 @@ Apply if you want to use a flexbox grid instead
   }
 }
 
-
-/*----------------------------------------------
--GRID Large
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Large
+//
+//  @group Grid
+//----------------------------------------------
 %grid-lg,
 .grid-lg {
   position: relative;
@@ -76,9 +90,11 @@ Apply if you want to use a flexbox grid instead
   }  
 }
 
-/*----------------------------------------------
--GRID XL
------------------------------------------------*/
+//----------------------------------------------
+//  GRID XL
+//
+//  @group Grid
+//----------------------------------------------
 .grid-xl,
 .grid--xl {
   position: relative;
@@ -93,26 +109,34 @@ Apply if you want to use a flexbox grid instead
   }
 }
 
-/*----------------------------------------------
--GRID : Full Width
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Full Width
+//
+//  @group Grid
+//----------------------------------------------
 .grid-full, .grid--full {
   @extend .grid;
   width: 100%;
   max-width: 100%;
 }
 
-/*----------------------------------------------
--GRID : Full width Small
------------------------------------------------*/
-.grid--full-small{
+//----------------------------------------------
+//  GRID Full on small
+//
+//  @group Grid
+//----------------------------------------------
+.grid-full-sm{
   @media (max-width: $mq-med){
     width: 100%;
   }
 }
-/*----------------------------------------------
--Grid-Wrap - parent wrapper to apply on large up.
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Wrap
+//  Grid parent wrapper if you want to keep the
+//  container contained on larger screens
+//
+//  @group Grid
+//----------------------------------------------
 .grid-wrap{
   @media (min-width: $mq-xlarge){
     margin: 0 auto;
@@ -123,9 +147,11 @@ Apply if you want to use a flexbox grid instead
     max-width: 90%;
   }
 }
-/*----------------------------------------------
--Grid: Columns
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Columns
+//
+//  @group Grid
+//----------------------------------------------
 .grid__col { 
   position: relative;
   float: left;
@@ -139,9 +165,11 @@ Apply if you want to use a flexbox grid instead
   }
 }
 
-/*----------------------------------------------
--Grid : Nested
------------------------------------------------*/
+//----------------------------------------------
+//  Nested Grids
+//
+//  @group Grid
+//----------------------------------------------
 .grid .grid__col + .grid{
   width: auto;
   max-width: none;
@@ -150,40 +178,37 @@ Apply if you want to use a flexbox grid instead
   margin-right: -$grid-col-pad;
 }
 
-/*----------------------------------------------   
--Grid Cols: XSmall (mobile)
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Cols : Sm
+//  Grid column helpers and placeholders for small
+//  @group Grid
+//----------------------------------------------
 @for $i from 1 through $grid-cols {
  //Columns "xsm-*"  
-  %g-xsm-#{$i} {
-    max-width: ((100 / $grid-cols) * $i) * 1%;
-    flex-basis: ((100 / $grid-cols) * $i) * 1%;
-  }
-  .g-xsm-#{$i} {
+  %g-xsm-#{$i}, .g-xsm-#{$i} {
     max-width: ((100 / $grid-cols) * $i) * 1%;
     flex-basis: ((100 / $grid-cols) * $i) * 1%;
   }
 }
-/*----------------------------------------------
--Grid Cols: Med
------------------------------------------------*/
+//----------------------------------------------
+//  GRID Cols : Med
+//  Grid column helpers and placeholders for med up
+//  @group Grid
+//----------------------------------------------
 @media (min-width: $mq-med) {
   @for $i from 1 through $grid-cols {
     //Columns "g-*"  
-    %g-#{$i} {
+    %g-#{$i}, .g-#{$i} {
       max-width: ((100 / $grid-cols) * $i) * 1%;
       flex-basis: ((100 / $grid-cols) * $i) * 1%;
     }
-    .g-#{$i} {
-      max-width: ((100 / $grid-cols) * $i) * 1%;
-      flex-basis: ((100 / $grid-cols) * $i) * 1%;
-    }
+
     // Offsets "os-*"
-    %g-offset-#{$i}{
+    %g-ml-#{$i}, .g-ml-#{$i}{
       margin-left: ((100 / $grid-cols) * $i) * 1%;
     }
-    .g-offset-#{$i}{
-      margin-left: ((100 / $grid-cols) * $i) * 1%;
+    %g-mr-#{$i}, .g-ml-#{$i}{
+      margin-right: ((100 / $grid-cols) * $i) * 1%;
     }
   }
 }
