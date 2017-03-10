@@ -26,7 +26,7 @@
 //
 //  @group Grid
 //----------------------------------------------
-.grid--flex{
+[class*="grid"].grid--flex{
 @media (min-width: $mq-med){
     display: flex;
   }
@@ -81,7 +81,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @include cf; 
+
   @media (min-width: $mq-med){
     max-width: $grid-max-width-xl;
   }
@@ -103,7 +103,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @include cf; 
+
   @media (min-width: $mq-med){
     max-width: $grid-max-width-xl;
   }

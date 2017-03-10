@@ -23,14 +23,13 @@
     max-width: 54em;
   }
   
-/*----------------------------------------------   
--Heading--Left modifier
------------------------------------------------  */
+/**
+ * Intro Section
+ */
   &.intro--left{
     text-align: left;
     background-color: transparent;
 
-    
     .intro__header, .intro__content{
       margin: 0 auto;
       text-align: left;

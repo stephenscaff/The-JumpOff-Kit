@@ -4,12 +4,23 @@
 .pad{
   padding: $pad 0; 
 }
+
 .pad-sm{
   padding: $pad-sm 0; 
 }
+
 .pad-lg{
   padding: $pad-lg 0;
 }
+
+.pad-b{
+  padding-bottom: $pad;
+}
+
+.pad-t{
+  padding-top: $pad;
+}
+
 .no-pad{
   padding: 0;
 }

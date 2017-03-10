@@ -9,14 +9,64 @@
 
   &__input{
     @extend .field--minimal;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.75em;
   }
 
   &__btn{
     display: inherit;
     margin: 1em 0;
   }
+
+  .error{
+    background-color: #ffeded;
+    border-bottom: 1px solid $color-alert !important;
+    
+    &::placeholder{
+      position: relative;
+      letter-spacing: 0px;
+      color: $color-alpha;
+    }
+    &::-webkit-input-placeholder {
+      color: $color-alert;
+    }
+
+    &:-moz-placeholder { 
+      color: $color-alert;  
+    }
+
+    &::-moz-placeholder {  
+      color: $color-alert; 
+    }
+
+    &:-ms-input-placeholder {  
+      color: $color-alert;  
+    }
+  }
 }
+
+//----------------------------------------------
+//  Signup Button
+//  Since this is really the only instance of this style
+//  of button, we're just styling it here instead of buttons.scss
+//  @group: signup
+//-----------------------------------------------
+
+.btn-signup{
+  display: block;
+  margin: 1.75em 0 1em;
+  padding: 0.5em 1.5em;
+  font-weight: 500;
+  border: 1px solid $color-dark !important;
+  color: #fff;
+  background-color: $color-dark;
+
+
+  &:hover{
+    color: $color-dark;
+    background-color: rgba(#fff,0);
+  }
+}
+
 
 //----------------------------------------------
 //  Signup

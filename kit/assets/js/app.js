@@ -4,31 +4,14 @@
  * @see http://en.wikipedia.org/wiki/Immediately-invoked_function_expression
  /
 
-/*----------------------------------------
-  Vendor
------------------------------------------*/
+/** Vendor **/
 // @codekit-append "vendor/_feature.js"
 
-/*---------------------------------------------
-Components
-----------------------------------------------*/
+/** Components **/
 // @codekit-append "components/_page-transitions.js"
 // @codekit-append "components/_scrolling-nav.js"
 // @codekit-append "components/_menu-nav.js"
 // @codekit-append "components/_popups.js"
 
-/*---------------------------------------------
-inits
-----------------------------------------------*/
+/** Inits **/
 // @codekit-append "_inits.js"
-
-
-/*----------------------------------------
- Need more? Recommended third party plugins:
- - Waypoints (for scroll detection)
- - Prism (for code syntax highlighting)
- - Slick (for carousels)
- - MixItUp (for filtering/sorting lists)
- - jQuery Validation (for form validation)
- - LazyLoad (https://verlok.github.io/lazyload)
------------------------------------------*/

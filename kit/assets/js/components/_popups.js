@@ -139,5 +139,3 @@
     };
   })();
  PopItUp.init();
-
-// $('#'+popup).addClass('is-open').fadeIn($(this).data());

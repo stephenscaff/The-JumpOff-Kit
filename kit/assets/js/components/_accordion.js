@@ -1,7 +1,6 @@
-/*----------------------------------------   
--Expander
-Simple Expander made reuseable via data attributes
------------------------------------------*/
+/**
+ * Accordian
+ */
 (function($) {
   var s,
   accordionIt = {

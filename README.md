@@ -55,7 +55,7 @@ All working page files (index, about, etc) inside 'kit/pages' use the '.kit' ext
 |               |-- _site-header.scss
 |               |-- _site-footer.scss       
 |               |-- _filterbar.scss
-|           |--helpers/
+|           |--utils/
 |               |-- _grid.scss      
 |               |-- _helpers.scss  
 |               |-- _animations.scss   

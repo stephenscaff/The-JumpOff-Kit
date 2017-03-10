@@ -1,16 +1,16 @@
 /*global jQuery */
 /*jshint unused:false */
 
-/*------------------------------
-Scroll to Anchor
-@description: a stupid simple sroll to anchor using data-attributes 
-@useage: 
-$('html').scrollAnchor({
-  offset: '0',
-  addActive: 'true',
-  complete : function() {},
-});
-----------------------------------*/
+/** 
+ * Scroll To Anchor
+ *
+ * @useage: 
+  $('html').scrollAnchor({
+    offset: '0',
+    addActive: 'true',
+    complete : function() {},
+  });
+ */
 (function($) {
   $.fn.scrollAnchor = function(options, callback) {
     // Establish our default settings
@@ -55,11 +55,9 @@ $('html').scrollAnchor({
   offset: '170',
 });
 
-
-
-/*----------------------------------------------   
---Load then scroll to hash
------------------------------------------------  */
+/** 
+ * Load to Scroll
+ */
 (function($) {
 
   var loadThenScroll = {
@@ -73,13 +71,10 @@ $('html').scrollAnchor({
         $('html, body').animate({
        //how about a touch of offset, cause I'm rockin' a fixed nav
         scrollTop: $(window.location.hash).offset().top-60
-          }, 1200, 'swing');
+          }, 1200, 'linear');
         }, 100);
       }
     }
   };
   loadThenScroll.init();
 })(jQuery);
-
-
-

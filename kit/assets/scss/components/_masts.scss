@@ -84,21 +84,13 @@
     object-fit: cover;
   }
 }
-
-/*----------------------------------------------
--Masts Modifier: full height
------------------------------------------------*/
+/**
+ * Mast Modifier
+ */
 %mast--vh,
 .mast--vh{
   @media (min-width: $mq-small) {
     min-height: 100vh;
   }
-}
-/*----------------------------------------------
--Mast Pages
------------------------------------------------*/
-.mast--page{
-  min-height: auto;
-  padding: 8em 0 4em;
 }
 
