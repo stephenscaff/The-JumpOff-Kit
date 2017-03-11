@@ -35,22 +35,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/assets\/images\/logo-jumpoff-dark.png": {
-		"ft": 32768,
-		"iS": 2061,
-		"oA": 0,
-		"oAP": "\/assets\/images\/logo-jumpoff-dark.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/images\/logo-jumpoff-white.png": {
-		"ft": 32768,
-		"iS": 2064,
-		"oA": 0,
-		"oAP": "\/assets\/images\/logo-jumpoff-white.png",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/assets\/js\/app.min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -60,20 +44,17 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/app.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/js\/app.min.js.map",
+		"oF": 0
+		},
 	"\/assets\/js\/jquery.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/jquery.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/js\/modernizr.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/min\/modernizr-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -97,8 +78,8 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/kit\/assets\/js\/min\/app-min.js",
-		"oF": 0,
+		"oAP": "\/assets\/js\/app.min.js",
+		"oF": 2,
 		"sC": 1,
 		"tS": 0
 		},
@@ -268,8 +249,8 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/kit\/assets\/js\/min\/jquery-min.js",
-		"oF": 0,
+		"oAP": "\/assets\/js\/jquery.min.js",
+		"oF": 2,
 		"sC": 1,
 		"tS": 0
 		},
@@ -278,6 +259,15 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/js\/vendor\/min\/_feature-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/kit\/assets\/js\/vendor\/_jquery.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/js\/vendor\/min\/_jquery-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -304,6 +294,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/kit\/assets\/scss\/.sass-cache\/0f55b9e69e8e0c107bf364c0da34d31c95af3915\/app.scssc",
+		"oF": 0
+		},
+	"\/kit\/assets\/scss\/.sass-cache\/0f55b9e69e8e0c107bf364c0da34d31c95af3915\/fonts.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/0f55b9e69e8e0c107bf364c0da34d31c95af3915\/fonts.scssc",
 		"oF": 0
 		},
 	"\/kit\/assets\/scss\/.sass-cache\/11c78b03789761fcf07aa8d32abeb937f8bb383e\/_animations-keyframes.scssc": {
@@ -442,6 +438,24 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/scss\/.sass-cache\/1e8815ca492090bf1ae41afcf7b08ece499daed0\/_mixins-type.scssc",
+		"oF": 0
+		},
+	"\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_iconfont.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_iconfont.scssc",
+		"oF": 0
+		},
+	"\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_tiempos.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_tiempos.scssc",
+		"oF": 0
+		},
+	"\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_verlag.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/3dd0f82982fcd7f58f00f3cfe00f0a78abf065b5\/_verlag.scssc",
 		"oF": 0
 		},
 	"\/kit\/assets\/scss\/.sass-cache\/49cb6e3fead3a8b664f742ac3e0d8a1fc29c2430\/_auto-cols.scssc": {
@@ -739,16 +753,16 @@
 		"oF": 0
 		},
 	"\/kit\/assets\/scss\/app.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 5,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
-		"oAP": "\/kit\/assets\/css\/app.css",
-		"oF": 0,
-		"oS": 0,
+		"oAP": "\/assets\/css\/app.min.css",
+		"oF": 2,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/kit\/assets\/scss\/base\/_code.scss": {
@@ -1090,17 +1104,17 @@
 		"uL": 1
 		},
 	"\/kit\/assets\/scss\/fonts.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 5,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/kit\/assets\/css\/fonts.css",
-		"oF": 0,
+		"oAP": "\/assets\/css\/fonts.min.css",
+		"oF": 2,
 		"oS": 0,
-		"uL": 1
+		"uL": 0
 		},
 	"\/kit\/assets\/scss\/fonts\/_base64starter.scss": {
 		"aP": 0,
@@ -1132,6 +1146,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/scss\/css\/_iconfont.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/kit\/assets\/scss\/fonts\/_tiempos.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 5,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/css\/_tiempos.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/kit\/assets\/scss\/fonts\/_verlag.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 5,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/css\/_verlag.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1401,16 +1441,16 @@
 		"oAP": "\/kit\/pages\/includes\/_header.html",
 		"oF": 0
 		},
+	"\/kit\/pages\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/kit\/pages\/index.html",
+		"oF": 0
+		},
 	"\/kit\/pages\/index.kit": {
 		"ft": 2048,
 		"oA": 0,
 		"oAP": "\/kit\/pages\/index.html",
-		"oF": 0
-		},
-	"\/README.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/README.html",
 		"oF": 0
 		},
 	"\/README.md": {
@@ -1421,9 +1461,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/README.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
